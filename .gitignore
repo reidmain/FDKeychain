@@ -1,0 +1,9 @@
+# OS X
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Xcode
+project.xcworkspace/
+xcuserdata/

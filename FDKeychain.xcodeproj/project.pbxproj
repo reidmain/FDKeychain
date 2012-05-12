@@ -743,7 +743,7 @@
 			attributes = {
 				CLASSPREFIX = FD;
 				LastUpgradeCheck = 0430;
-				ORGANIZATIONNAME = "Nascent Digital";
+				ORGANIZATIONNAME = "1414 Degrees";
 			};
 			buildConfigurationList = 07D974C71544F877005B4023 /* Build configuration list for PBXProject "FDKeychain" */;
 			compatibilityVersion = "Xcode 3.2";

@@ -36,7 +36,7 @@ To get the item from the keychain:
 
 To delete the item from the keychain:  
 
-	[FDKeychain deleteItemForKey: KeychainItem_Key_SharedPassword  
+	[FDKeychain deleteItemForKey: @"password" 
 		forService: @"Trambopoline"];
 
 Now let us pretend you have two apps named "Moon Unit Alpha" and "Moon Until Zappa" and you want them to share the OAuth token you have stored so that they don't need to login to both apps. You need to add an Entitlements file to the target of both apps and ensure "XXXXXXXXXX.com.1414degrees.moonunit" is one of the possible keychain access groups (Replace XXXXXXXXXX with the App Id of the provisioning profile you are using to sign the app).

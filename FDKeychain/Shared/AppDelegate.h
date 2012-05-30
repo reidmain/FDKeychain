@@ -1,7 +1,7 @@
 #pragma mark Class Interface
 
 @interface AppDelegate : NSObject<
-    UIApplicationDelegate>
+	UIApplicationDelegate>
 
 
 @end // @interface AppDelegate

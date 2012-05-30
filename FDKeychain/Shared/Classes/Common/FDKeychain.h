@@ -1,8 +1,6 @@
 #pragma mark Class Interface
 
 @interface FDKeychain : NSObject
-{
-}
 
 
 #pragma mark -

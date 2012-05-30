@@ -19,11 +19,6 @@ static NSString * const KeychainItem_AccessGroup_Shared = @"XXXXXXXXXX.com.1414d
 #pragma mark Class Extension
 
 @interface FDRootViewController ()
-{
-	@private UITextField *_localPasswordTextField;
-	@private UITextField *_sharedPasswordTextField;
-}
-
 
 @property (nonatomic, retain) IBOutlet UITextField *localPasswordTextField;
 @property (nonatomic, retain) IBOutlet UITextField *sharedPasswordTextField;
@@ -39,6 +34,10 @@ static NSString * const KeychainItem_AccessGroup_Shared = @"XXXXXXXXXX.com.1414d
 #pragma mark Class Definition
 
 @implementation FDRootViewController
+{
+	@private UITextField *_localPasswordTextField;
+	@private UITextField *_sharedPasswordTextField;
+}
 
 
 #pragma mark -

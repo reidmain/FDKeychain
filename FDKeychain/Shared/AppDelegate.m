@@ -2,21 +2,12 @@
 #import "FDRootViewController.h"
 
 
-#pragma mark Class Extension
-
-@interface AppDelegate ()
-{
-	@private UIWindow *_mainWindow;
-}
-
-
-@end // @interface AppDelegate ()
-
-
-#pragma mark -
 #pragma mark Class Definition
 
 @implementation AppDelegate
+{
+	@private UIWindow *_mainWindow;
+}
 
 
 #pragma mark -

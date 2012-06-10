@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071193161585450300C57872 /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 071193141585450300C57872 /* FDKeychain.m */; };
+		071193171585450300C57872 /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 071193141585450300C57872 /* FDKeychain.m */; };
+		071193181585450300C57872 /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 071193141585450300C57872 /* FDKeychain.m */; };
 		07C5BFC3154642610018C348 /* FDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C5BFC2154642610018C348 /* FDRootViewController.m */; };
 		07C5BFC9154647580018C348 /* FDRootView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C5BFC8154647580018C348 /* FDRootView_iPhone.xib */; };
 		07C5BFCB154647680018C348 /* FDRootView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C5BFCA154647680018C348 /* FDRootView_iPad.xib */; };
 		07C5BFDF154652EF0018C348 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D974DD1544F878005B4023 /* main.m */; };
 		07C5BFE0154652EF0018C348 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D974E11544F878005B4023 /* AppDelegate.m */; };
-		07C5BFE1154652EF0018C348 /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D975A2154501A1005B4023 /* FDKeychain.m */; };
 		07C5BFE2154652EF0018C348 /* FDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C5BFC2154642610018C348 /* FDRootViewController.m */; };
 		07C5BFE4154652EF0018C348 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D975991544FEEE005B4023 /* Security.framework */; };
 		07C5BFE5154652EF0018C348 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D11544F877005B4023 /* Foundation.framework */; };
@@ -29,7 +31,6 @@
 		07C5BFFD154652EF0018C348 /* FDRootView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C5BFCA154647680018C348 /* FDRootView_iPad.xib */; };
 		07C5C007154652F10018C348 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D974DD1544F878005B4023 /* main.m */; };
 		07C5C008154652F10018C348 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D974E11544F878005B4023 /* AppDelegate.m */; };
-		07C5C009154652F10018C348 /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D975A2154501A1005B4023 /* FDKeychain.m */; };
 		07C5C00A154652F10018C348 /* FDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C5BFC2154642610018C348 /* FDRootViewController.m */; };
 		07C5C00C154652F10018C348 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D975991544FEEE005B4023 /* Security.framework */; };
 		07C5C00D154652F10018C348 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D11544F877005B4023 /* Foundation.framework */; };
@@ -90,10 +91,12 @@
 		07D9757F1544FEE4005B4023 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 07D975441544FEE4005B4023 /* iTunesArtwork@2x */; };
 		07D9759A1544FEEE005B4023 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D975991544FEEE005B4023 /* Security.framework */; };
 		07D975A01544FF96005B4023 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07D9759F1544FF96005B4023 /* InfoPlist.strings */; };
-		07D975A3154501ED005B4023 /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D975A2154501A1005B4023 /* FDKeychain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		071193131585450300C57872 /* FDKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FDKeychain.h; path = ../../../../FDKeychain/FDKeychain.h; sourceTree = "<group>"; };
+		071193141585450300C57872 /* FDKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FDKeychain.m; path = ../../../../FDKeychain/FDKeychain.m; sourceTree = "<group>"; };
+		071193151585450300C57872 /* FDNullOrEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FDNullOrEmpty.h; path = ../../../../FDKeychain/FDNullOrEmpty.h; sourceTree = "<group>"; };
 		0760B4621546FBDD00AC1232 /* Entitlements.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Entitlements.entitlements; sourceTree = "<group>"; };
 		0760B4641546FBEF00AC1232 /* Entitlements.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Entitlements.entitlements; sourceTree = "<group>"; };
 		0760B4651546FC0C00AC1232 /* Entitlements.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Entitlements.entitlements; sourceTree = "<group>"; };
@@ -155,9 +158,6 @@
 		07D9759B1544FF62005B4023 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		07D9759D1544FF70005B4023 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		07D9759F1544FF96005B4023 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
-		07D975A1154501A1005B4023 /* FDKeychain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDKeychain.h; sourceTree = "<group>"; };
-		07D975A2154501A1005B4023 /* FDKeychain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDKeychain.m; sourceTree = "<group>"; };
-		07D975A815450309005B4023 /* FDNullOrEmpty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDNullOrEmpty.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +200,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		071193111585441F00C57872 /* FDKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				071193151585450300C57872 /* FDNullOrEmpty.h */,
+				071193131585450300C57872 /* FDKeychain.h */,
+				071193141585450300C57872 /* FDKeychain.m */,
+			);
+			name = FDKeychain;
+			sourceTree = "<group>";
+		};
 		07D974C21544F877005B4023 = {
 			isa = PBXGroup;
 			children = (
@@ -267,7 +277,7 @@
 		07D974F11544F878005B4023 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				07D974F71544F878005B4023 /* Common */,
+				071193111585441F00C57872 /* FDKeychain */,
 				07D974F61544F878005B4023 /* Controllers */,
 			);
 			path = Classes;
@@ -280,16 +290,6 @@
 				07C5BFC2154642610018C348 /* FDRootViewController.m */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		07D974F71544F878005B4023 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				07D975A815450309005B4023 /* FDNullOrEmpty.h */,
-				07D975A1154501A1005B4023 /* FDKeychain.h */,
-				07D975A2154501A1005B4023 /* FDKeychain.m */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		07D974F91544F878005B4023 /* iPhone */ = {
@@ -852,8 +852,8 @@
 			files = (
 				07C5BFDF154652EF0018C348 /* main.m in Sources */,
 				07C5BFE0154652EF0018C348 /* AppDelegate.m in Sources */,
-				07C5BFE1154652EF0018C348 /* FDKeychain.m in Sources */,
 				07C5BFE2154652EF0018C348 /* FDRootViewController.m in Sources */,
+				071193171585450300C57872 /* FDKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -863,8 +863,8 @@
 			files = (
 				07C5C007154652F10018C348 /* main.m in Sources */,
 				07C5C008154652F10018C348 /* AppDelegate.m in Sources */,
-				07C5C009154652F10018C348 /* FDKeychain.m in Sources */,
 				07C5C00A154652F10018C348 /* FDRootViewController.m in Sources */,
+				071193181585450300C57872 /* FDKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -874,8 +874,8 @@
 			files = (
 				07D974DE1544F878005B4023 /* main.m in Sources */,
 				07D974E21544F878005B4023 /* AppDelegate.m in Sources */,
-				07D975A3154501ED005B4023 /* FDKeychain.m in Sources */,
 				07C5BFC3154642610018C348 /* FDRootViewController.m in Sources */,
+				071193161585450300C57872 /* FDKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

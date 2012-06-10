@@ -1,6 +1,6 @@
 Overview
 ========
-When I first started programming iOS apps, NSUserDefaults seemed like the ideal place to store user preferences. I made the novice mistake (like a lot of programmers do) of storing username/password or tokens in NSUserDefaults as well. When I realized that NSUserDefaults was completely insecure I looked for alternatives and saw that Apple had built-in support for the keychain since iOS 2.0. However, the API for the iOS keychain was entirely in C and I was hoping for a simple "object for key" interface similar to NSDictionary. I wanted to simply take any object/key pair and save it to the keychain and then retrieve the same object by using the corresponding key. So what did I do? Well, like any self respecting programmer, I wrote this interface.
+When I first started programming iOS apps, NSUserDefaults seemed like the ideal place to store user preferences. I made the novice mistake (like a lot of programmers do) of storing username/password or tokens in NSUserDefaults as well. When I realized that NSUserDefaults was completely insecure I looked for an alternative and found that Apple had built-in support for the keychain since iOS 2.0. However, the API for the keychain was entirely in C and I was hoping for a simple "object for key" interface similar to NSDictionary. I wanted to simply take any object/key pair and save it to the keychain and then retrieve the same object by using the corresponding key. So what did I do? Well, like any self respecting programmer, I wrote this interface.
 
 Over the span of three projects I refined my class until I created what we have here: the FDKeychain. This is a static class that has three simple methods: save, load, delete. You can take any object that conforms to the NSCoding protocol and save it to the keychain. That key can then be used to load or delete that object from the keychain.
 
@@ -21,7 +21,7 @@ Usage
 =====
 Let us pretend you have an application named "Trambopoline" and you have a password that you want to store securely.
 
-To save an item to the keychain:  
+To save the password to the keychain:  
 
 	NSString *password = @"My super secret password";	
 
@@ -29,17 +29,17 @@ To save an item to the keychain:
 		forKey: @"password"  
 		forService: @"Trambopoline"];
 
-To get the item from the keychain:  
+To get the password from the keychain:  
 
 	NSString *password = [FDKeychain itemForKey: @"password"  
 		forService: @"Trambopoline"];
 
-To delete the item from the keychain:  
+To delete the password from the keychain:  
 
 	[FDKeychain deleteItemForKey: @"password" 
 		forService: @"Trambopoline"];
 
-Now let us pretend you have two applications named "Moon Unit Alpha" and "Moon Until Zappa" and you want them to share a OAuth token you have stored so that they don't need to login to both applications. You need to add an Entitlements file to the target of both applications and ensure "XXXXXXXXXX.com.1414degrees.moonunit" is one of the possible keychain access groups (Replace XXXXXXXXXX with the App Id of the provisioning profile you are using to sign the application).
+Now let us pretend you have two applications named "Moon Unit Alpha" and "Moon Until Zappa" and you want them to share a OAuth token so the user does not need to login to both applications. First, you will need to add an entitlements file to the target of both applications and ensure "XXXXXXXXXX.com.1414degrees.moonunit" is one of the possible keychain access groups (Replace XXXXXXXXXX with the App Id of the provisioning profile you are using to sign the application).
 a
 Saving:  
 
@@ -62,8 +62,8 @@ Deleting:
 
 This code will allow you to manipulate the same keychain item in both apps.
 
-Sample Project
+Example Project
 ==============
-This repo is also a sample project that has three targets inside it. If you change the access group in FDRootViewController.m to have the App Id of the provisioning profile you are going to use to sign the app you can then install all three targets to your device and see an example of shared keychain items.
+The example project has three targets. Each target will install an application that shows two UITextFields: one for local password and another for shared password. Anything you enter in the "Local Password" field will be accessible only in the application it was entered and anything entered in "Shared Password" will be shared amongst the three applications.
 
-This sample project shows two UITextFields: one for local password and another for shared password. Anything you enter in the "Local Password" field will be accessible only in the app it was entered and anything entered in "Shared Password" will be shared amongst the three apps.
+If you change the access group in FDRootViewController.m to have the App Id of the provisioning profile you are going to use to sign the app you can then install all three targets to your device and see an example of shared keychain items.

@@ -94,9 +94,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		071193131585450300C57872 /* FDKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FDKeychain.h; path = ../../../../FDKeychain/FDKeychain.h; sourceTree = "<group>"; };
-		071193141585450300C57872 /* FDKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FDKeychain.m; path = ../../../../FDKeychain/FDKeychain.m; sourceTree = "<group>"; };
-		071193151585450300C57872 /* FDNullOrEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FDNullOrEmpty.h; path = ../../../../FDKeychain/FDNullOrEmpty.h; sourceTree = "<group>"; };
+		071193131585450300C57872 /* FDKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDKeychain.h; sourceTree = "<group>"; };
+		071193141585450300C57872 /* FDKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDKeychain.m; sourceTree = "<group>"; };
+		071193151585450300C57872 /* FDNullOrEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDNullOrEmpty.h; sourceTree = "<group>"; };
 		0760B4621546FBDD00AC1232 /* Entitlements.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Entitlements.entitlements; sourceTree = "<group>"; };
 		0760B4641546FBEF00AC1232 /* Entitlements.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Entitlements.entitlements; sourceTree = "<group>"; };
 		0760B4651546FC0C00AC1232 /* Entitlements.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Entitlements.entitlements; sourceTree = "<group>"; };
@@ -208,6 +208,7 @@
 				071193141585450300C57872 /* FDKeychain.m */,
 			);
 			name = FDKeychain;
+			path = ../../../../FDKeychain;
 			sourceTree = "<group>";
 		};
 		07D974C21544F877005B4023 = {

@@ -67,6 +67,9 @@
 		07C5C0411546536C0018C348 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07D9759D1544FF70005B4023 /* InfoPlist.strings */; };
 		07C5C043154653700018C348 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 07D9755A1544FEE4005B4023 /* iTunesArtwork */; };
 		07C5C044154653700018C348 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 07D9755B1544FEE4005B4023 /* iTunesArtwork@2x */; };
+		07CE042D1613EC0100EC19FA /* launch_iphone-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CE042C1613EC0100EC19FA /* launch_iphone-568h@2x.png */; };
+		07CE042E1613EC0100EC19FA /* launch_iphone-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CE042C1613EC0100EC19FA /* launch_iphone-568h@2x.png */; };
+		07CE042F1613EC0100EC19FA /* launch_iphone-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CE042C1613EC0100EC19FA /* launch_iphone-568h@2x.png */; };
 		07D974D21544F877005B4023 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D11544F877005B4023 /* Foundation.framework */; };
 		07D974D41544F877005B4023 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D31544F877005B4023 /* CoreGraphics.framework */; };
 		07D974D61544F877005B4023 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D51544F877005B4023 /* QuartzCore.framework */; };
@@ -106,6 +109,7 @@
 		07C5BFCA154647680018C348 /* FDRootView_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FDRootView_iPad.xib; sourceTree = "<group>"; };
 		07C5C002154652EF0018C348 /* Keychain Pi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keychain Pi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C5C02A154652F10018C348 /* Keychain Omega.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keychain Omega.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07CE042C1613EC0100EC19FA /* launch_iphone-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch_iphone-568h@2x.png"; sourceTree = "<group>"; };
 		07D974CD1544F877005B4023 /* Keychain Alpha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keychain Alpha.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D974D11544F877005B4023 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07D974D31544F877005B4023 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -316,6 +320,7 @@
 			children = (
 				07D975071544F878005B4023 /* launch_iphone.png */,
 				07D975091544F878005B4023 /* launch_iphone@2x.png */,
+				07CE042C1613EC0100EC19FA /* launch_iphone-568h@2x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -790,6 +795,7 @@
 				07C5C035154653590018C348 /* InfoPlist.strings in Resources */,
 				07C5C0371546535C0018C348 /* iTunesArtwork in Resources */,
 				07C5C0381546535C0018C348 /* iTunesArtwork@2x in Resources */,
+				07CE042E1613EC0100EC19FA /* launch_iphone-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -816,6 +822,7 @@
 				07C5C0411546536C0018C348 /* InfoPlist.strings in Resources */,
 				07C5C043154653700018C348 /* iTunesArtwork in Resources */,
 				07C5C044154653700018C348 /* iTunesArtwork@2x in Resources */,
+				07CE042F1613EC0100EC19FA /* launch_iphone-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -842,6 +849,7 @@
 				07D975A01544FF96005B4023 /* InfoPlist.strings in Resources */,
 				07C5BFC9154647580018C348 /* FDRootView_iPhone.xib in Resources */,
 				07C5BFCB154647680018C348 /* FDRootView_iPad.xib in Resources */,
+				07CE042D1613EC0100EC19FA /* launch_iphone-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

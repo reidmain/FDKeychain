@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		071193161585450300C57872 /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 071193141585450300C57872 /* FDKeychain.m */; };
-		071193171585450300C57872 /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 071193141585450300C57872 /* FDKeychain.m */; };
-		071193181585450300C57872 /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 071193141585450300C57872 /* FDKeychain.m */; };
 		07C5BFC3154642610018C348 /* FDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C5BFC2154642610018C348 /* FDRootViewController.m */; };
 		07C5BFC9154647580018C348 /* FDRootView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C5BFC8154647580018C348 /* FDRootView_iPhone.xib */; };
 		07C5BFCB154647680018C348 /* FDRootView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C5BFCA154647680018C348 /* FDRootView_iPad.xib */; };
@@ -70,6 +67,9 @@
 		07CE042D1613EC0100EC19FA /* launch_iphone-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CE042C1613EC0100EC19FA /* launch_iphone-568h@2x.png */; };
 		07CE042E1613EC0100EC19FA /* launch_iphone-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CE042C1613EC0100EC19FA /* launch_iphone-568h@2x.png */; };
 		07CE042F1613EC0100EC19FA /* launch_iphone-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CE042C1613EC0100EC19FA /* launch_iphone-568h@2x.png */; };
+		07CE04351613EC7B00EC19FA /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE04331613EC7B00EC19FA /* FDKeychain.m */; };
+		07CE04361613EC7B00EC19FA /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE04331613EC7B00EC19FA /* FDKeychain.m */; };
+		07CE04371613EC7B00EC19FA /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE04331613EC7B00EC19FA /* FDKeychain.m */; };
 		07D974D21544F877005B4023 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D11544F877005B4023 /* Foundation.framework */; };
 		07D974D41544F877005B4023 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D31544F877005B4023 /* CoreGraphics.framework */; };
 		07D974D61544F877005B4023 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D51544F877005B4023 /* QuartzCore.framework */; };
@@ -97,9 +97,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		071193131585450300C57872 /* FDKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDKeychain.h; sourceTree = "<group>"; usesTabs = 1; };
-		071193141585450300C57872 /* FDKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDKeychain.m; sourceTree = "<group>"; usesTabs = 1; };
-		071193151585450300C57872 /* FDNullOrEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDNullOrEmpty.h; sourceTree = "<group>"; usesTabs = 1; };
 		0760B4621546FBDD00AC1232 /* Entitlements.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Entitlements.entitlements; sourceTree = "<group>"; };
 		0760B4641546FBEF00AC1232 /* Entitlements.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Entitlements.entitlements; sourceTree = "<group>"; };
 		0760B4651546FC0C00AC1232 /* Entitlements.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Entitlements.entitlements; sourceTree = "<group>"; };
@@ -110,6 +107,9 @@
 		07C5C002154652EF0018C348 /* Keychain Pi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keychain Pi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C5C02A154652F10018C348 /* Keychain Omega.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keychain Omega.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07CE042C1613EC0100EC19FA /* launch_iphone-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch_iphone-568h@2x.png"; sourceTree = "<group>"; };
+		07CE04321613EC7B00EC19FA /* FDKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDKeychain.h; sourceTree = "<group>"; };
+		07CE04331613EC7B00EC19FA /* FDKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDKeychain.m; sourceTree = "<group>"; };
+		07CE04341613EC7B00EC19FA /* FDNullOrEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDNullOrEmpty.h; sourceTree = "<group>"; };
 		07D974CD1544F877005B4023 /* Keychain Alpha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keychain Alpha.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D974D11544F877005B4023 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07D974D31544F877005B4023 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -204,21 +204,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		071193111585441F00C57872 /* FDKeychain */ = {
+		07CE04301613EC7000EC19FA /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				071193151585450300C57872 /* FDNullOrEmpty.h */,
-				071193131585450300C57872 /* FDKeychain.h */,
-				071193141585450300C57872 /* FDKeychain.m */,
+				07CE04311613EC7B00EC19FA /* FDKeychain */,
+			);
+			name = Vendors;
+			path = FDKeychain/Vendors;
+			sourceTree = "<group>";
+		};
+		07CE04311613EC7B00EC19FA /* FDKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				07CE04321613EC7B00EC19FA /* FDKeychain.h */,
+				07CE04331613EC7B00EC19FA /* FDKeychain.m */,
+				07CE04341613EC7B00EC19FA /* FDNullOrEmpty.h */,
 			);
 			name = FDKeychain;
-			path = ../../../../FDKeychain;
+			path = ../../../FDKeychain;
 			sourceTree = "<group>";
 		};
 		07D974C21544F877005B4023 = {
 			isa = PBXGroup;
 			children = (
 				07D974D91544F877005B4023 /* FDKeychain */,
+				07CE04301613EC7000EC19FA /* Vendors */,
 				07D975301544FEE4005B4023 /* Keychain Alpha */,
 				07D9755E1544FEE4005B4023 /* Keychain Pi */,
 				07D975471544FEE4005B4023 /* Keychain Omega */,
@@ -283,7 +293,6 @@
 		07D974F11544F878005B4023 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				071193111585441F00C57872 /* FDKeychain */,
 				07D974F61544F878005B4023 /* Controllers */,
 			);
 			path = Classes;
@@ -863,7 +872,7 @@
 				07C5BFDF154652EF0018C348 /* main.m in Sources */,
 				07C5BFE0154652EF0018C348 /* AppDelegate.m in Sources */,
 				07C5BFE2154652EF0018C348 /* FDRootViewController.m in Sources */,
-				071193171585450300C57872 /* FDKeychain.m in Sources */,
+				07CE04361613EC7B00EC19FA /* FDKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -874,7 +883,7 @@
 				07C5C007154652F10018C348 /* main.m in Sources */,
 				07C5C008154652F10018C348 /* AppDelegate.m in Sources */,
 				07C5C00A154652F10018C348 /* FDRootViewController.m in Sources */,
-				071193181585450300C57872 /* FDKeychain.m in Sources */,
+				07CE04371613EC7B00EC19FA /* FDKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -885,7 +894,7 @@
 				07D974DE1544F878005B4023 /* main.m in Sources */,
 				07D974E21544F878005B4023 /* AppDelegate.m in Sources */,
 				07C5BFC3154642610018C348 /* FDRootViewController.m in Sources */,
-				071193161585450300C57872 /* FDKeychain.m in Sources */,
+				07CE04351613EC7B00EC19FA /* FDKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

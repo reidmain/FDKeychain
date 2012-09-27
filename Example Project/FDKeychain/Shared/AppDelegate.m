@@ -11,19 +11,6 @@
 
 
 #pragma mark -
-#pragma mark Destructor
-
-- (void)dealloc
-{
-	// Release instance variables.
-	[_mainWindow release];
-	
-	// Call the base destructor.
-	[super dealloc];
-}
-
-
-#pragma mark -
 #pragma mark UIApplicationDelegate Methods
 
 - (BOOL)application: (UIApplication *)application 
@@ -58,8 +45,6 @@
 			bundle: nil];
 	
 	_mainWindow.rootViewController = rootViewController;
-	
-	[rootViewController release];
 	
 	// Show the main window.
     [_mainWindow makeKeyAndVisible];

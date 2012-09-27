@@ -49,27 +49,27 @@
 		forService: service 
 		inAccessGroup: accessGroup];
 	
-	[queryDictionary setObject: (id)kSecMatchLimitOne 
-		forKey: (id)kSecMatchLimit];
+	[queryDictionary setObject: (__bridge id)kSecMatchLimitOne 
+		forKey: (__bridge id)kSecMatchLimit];
 	[queryDictionary setObject: (id)kCFBooleanTrue 
-		forKey: (id)kSecReturnAttributes];
+		forKey: (__bridge id)kSecReturnAttributes];
 	[queryDictionary setObject: (id)kCFBooleanTrue 
-		forKey: (id)kSecReturnData];
+		forKey: (__bridge id)kSecReturnData];
 	
-	NSDictionary *itemAttributesAndData = nil;
+	CFTypeRef itemAttributesAndDataTypeRef = nil;
 	
-	SecItemCopyMatching((CFDictionaryRef)queryDictionary, (CFTypeRef *)&itemAttributesAndData);
+	SecItemCopyMatching((__bridge CFDictionaryRef)queryDictionary, &itemAttributesAndDataTypeRef);
+	
+	NSDictionary *itemAttributesAndData = (__bridge NSDictionary *)itemAttributesAndDataTypeRef;
 	
 	// Unarchive the data that was saved to the keychain.
 	if (nil != itemAttributesAndData)
 	{
 		NSData *valueData = [NSData dataWithData: 
-			[itemAttributesAndData objectForKey: (id)kSecValueData]];
+			[itemAttributesAndData objectForKey: (__bridge id)kSecValueData]];
 		
 		item = [NSKeyedUnarchiver unarchiveObjectWithData: valueData];
 	}
-	
-	[itemAttributesAndData release];
 
 	return item;
 }
@@ -119,12 +119,12 @@
 			inAccessGroup: accessGroup];
 		
 		[attributes setObject: valueData 
-			forKey: (id)kSecValueData];
+			forKey: (__bridge id)kSecValueData];
 		
-		[attributes setObject: (id)kSecAttrAccessibleWhenUnlocked 
-			forKey: (id)kSecAttrAccessible];
+		[attributes setObject: (__bridge id)kSecAttrAccessibleWhenUnlocked 
+			forKey: (__bridge id)kSecAttrAccessible];
 		
-		OSStatus result = SecItemAdd((CFDictionaryRef)attributes, NULL);
+		OSStatus result = SecItemAdd((__bridge CFDictionaryRef)attributes, NULL);
 		
 		if (result != noErr)
 		{
@@ -141,10 +141,10 @@
 		
 		NSDictionary *attributesToUpdate = [NSDictionary dictionaryWithObjectsAndKeys: 
 			valueData, 
-			(id)kSecValueData, 
+			(__bridge id)kSecValueData, 
 			nil];
 		
-		OSStatus result = SecItemUpdate((CFDictionaryRef)queryDictionary, (CFDictionaryRef)attributesToUpdate);
+		OSStatus result = SecItemUpdate((__bridge CFDictionaryRef)queryDictionary, (__bridge CFDictionaryRef)attributesToUpdate);
 		
 		if (result != noErr)
 		{
@@ -187,7 +187,7 @@
 		forService: service 
 		inAccessGroup: accessGroup];
 	
-	OSStatus result = SecItemDelete((CFDictionaryRef)queryDictionary);
+	OSStatus result = SecItemDelete((__bridge CFDictionaryRef)queryDictionary);
 	
 	if (result != noErr)
 	{
@@ -213,27 +213,25 @@
 	inAccessGroup: (NSString *)accessGroup
 {
 	// Create dictionary that will be the basis for all queries against the keychain.
-	NSMutableDictionary *baseQueryDictionary = [[[NSMutableDictionary alloc] 
-		initWithCapacity: 4] 
-			autorelease];
+	NSMutableDictionary *baseQueryDictionary = [[NSMutableDictionary alloc] 
+		initWithCapacity: 4];
 	
-	[baseQueryDictionary setObject: (id)kSecClassGenericPassword 
-		forKey: (id)kSecClass];
+	[baseQueryDictionary setObject: (__bridge id)kSecClassGenericPassword 
+		forKey: (__bridge id)kSecClass];
 	
 	[baseQueryDictionary setObject: key 
-		forKey: (id)kSecAttrAccount];
+		forKey: (__bridge id)kSecAttrAccount];
 	
 	[baseQueryDictionary setObject: service 
-		forKey: (id)kSecAttrService];
+		forKey: (__bridge id)kSecAttrService];
 	
 #if TARGET_IPHONE_SIMULATOR
 	// Note: If we are running in the Simulator we cannot set the access group. Apps running in the Simulator are not signed so there is no access group for them to check. All apps running in the simulator can see all the keychain items. If you need to test apps that share access groups you will need to install the apps on a device.
 #else
 	if (FDIsEmpty(accessGroup) == NO)
 	{
-	
 		[baseQueryDictionary setObject: accessGroup 
-			forKey: (id)kSecAttrAccessGroup];
+			forKey: (__bridge id)kSecAttrAccessGroup];
 	}
 #endif
 	

@@ -20,8 +20,8 @@ static NSString * const KeychainItem_AccessGroup_Shared = @"XXXXXXXXXX.com.1414d
 
 @interface FDRootViewController ()
 
-@property (nonatomic, retain) IBOutlet UITextField *localPasswordTextField;
-@property (nonatomic, retain) IBOutlet UITextField *sharedPasswordTextField;
+@property (nonatomic, strong) IBOutlet UITextField *localPasswordTextField;
+@property (nonatomic, strong) IBOutlet UITextField *sharedPasswordTextField;
 
 
 - (void)_updateTextFieldsWithKeychainItems;
@@ -34,17 +34,6 @@ static NSString * const KeychainItem_AccessGroup_Shared = @"XXXXXXXXXX.com.1414d
 #pragma mark Class Definition
 
 @implementation FDRootViewController
-{
-	@private UITextField *_localPasswordTextField;
-	@private UITextField *_sharedPasswordTextField;
-}
-
-
-#pragma mark -
-#pragma mark Properties
-
-@synthesize localPasswordTextField = _localPasswordTextField;
-@synthesize sharedPasswordTextField = _sharedPasswordTextField;
 
 
 #pragma mark -
@@ -88,13 +77,6 @@ static NSString * const KeychainItem_AccessGroup_Shared = @"XXXXXXXXXX.com.1414d
 	// nil out delegates of any instance variables.
 	_localPasswordTextField.delegate = nil;
 	_sharedPasswordTextField.delegate = nil;
-	
-	// Release instance variables.
-	[_localPasswordTextField release];
-	[_sharedPasswordTextField release];
-	
-	// Call the base destructor.
-	[super dealloc];
 }
 
 

@@ -17,6 +17,8 @@ FDNullOrEmpty.h
 FDKeychain.h  
 FDKeychain.m  
 
+and add Security.framework to the the build phase of whatever target is doing to be using FDKeychain.
+
 Usage
 =====
 Let us pretend you have an application named "Trambopoline" and you have a password that you want to store securely.

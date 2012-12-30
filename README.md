@@ -17,7 +17,7 @@ FDNullOrEmpty.h
 FDKeychain.h  
 FDKeychain.m  
 
-and add Security.framework to the the build phase of whatever target is doing to be using FDKeychain.
+and add Security.framework to the the build phase of whatever target is using FDKeychain.
 
 Usage
 =====

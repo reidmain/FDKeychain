@@ -10,6 +10,10 @@
 	forService: (NSString *)service 
 	inAccessGroup: (NSString *)accessGroup;
 
++ (NSDictionary *)_itemAttributesAndDataForKey: (NSString *)key 
+	forService: (NSString *)service 
+	inAccessGroup: (NSString *)accessGroup;
+
 
 @end // @interface FDKeychain ()
 
@@ -23,60 +27,60 @@
 #pragma mark -
 #pragma mark Public Methods
 
++ (NSData *)rawDataForKey: (NSString *)key 
+	forService: (NSString *)service 
+	inAccessGroup: (NSString *)accessGroup
+{
+	// Load the item from the keychain.
+	NSDictionary *itemAttributesAndData = [self _itemAttributesAndDataForKey: key 
+		forService: service 
+		inAccessGroup: accessGroup];
+	
+	// Extract the item's value data.
+	NSData *rawData = nil;
+	
+	if (nil != itemAttributesAndData)
+	{
+		rawData = [itemAttributesAndData objectForKey: (__bridge id)kSecValueData];
+	}
+
+	return rawData;
+}
+
++ (NSData *)rawDataForKey: (NSString *)key 
+	forService: (NSString *)service
+{
+	NSData *rawData = [self rawDataForKey: key 
+		forService: service 
+		inAccessGroup: nil];
+	
+	return rawData;
+}
+
 + (id)itemForKey: (NSString *)key 
 	forService: (NSString *)service 
 	inAccessGroup: (NSString *)accessGroup
 {
-	// Raise exception if either the key or the service parameter are empty.
-	if (FDIsEmpty(key) == YES)
-	{
-		[NSException raise: NSInvalidArgumentException 
-			format: @"%s key argument cannot be nil", 
-				__PRETTY_FUNCTION__];
-	}
-	else if (FDIsEmpty(service) == YES)
-	{
-		[NSException raise: NSInvalidArgumentException 
-			format: @"%s service argument cannot be nil", 
-				__PRETTY_FUNCTION__];
-	}
-	
-	// Load the item from the keychain, if it exists.
-	id item = nil;
-	
-	NSMutableDictionary *queryDictionary = [FDKeychain _baseQueryDictionaryForKey: key 
+	// Load the raw data for the item from the keychain.
+	NSData *rawData = [self rawDataForKey: key 
 		forService: service 
 		inAccessGroup: accessGroup];
 	
-	[queryDictionary setObject: (__bridge id)kSecMatchLimitOne 
-		forKey: (__bridge id)kSecMatchLimit];
-	[queryDictionary setObject: (id)kCFBooleanTrue 
-		forKey: (__bridge id)kSecReturnAttributes];
-	[queryDictionary setObject: (id)kCFBooleanTrue 
-		forKey: (__bridge id)kSecReturnData];
+	// Unarchive the data that was received from the keychain.
+	id item = nil;
 	
-	CFTypeRef itemAttributesAndDataTypeRef = nil;
-	
-	SecItemCopyMatching((__bridge CFDictionaryRef)queryDictionary, &itemAttributesAndDataTypeRef);
-	
-	NSDictionary *itemAttributesAndData = (__bridge NSDictionary *)itemAttributesAndDataTypeRef;
-	
-	// Unarchive the data that was saved to the keychain.
-	if (nil != itemAttributesAndData)
+	if (FDIsEmpty(rawData) == NO)
 	{
-		NSData *valueData = [NSData dataWithData: 
-			[itemAttributesAndData objectForKey: (__bridge id)kSecValueData]];
-		
-		item = [NSKeyedUnarchiver unarchiveObjectWithData: valueData];
+		item = [NSKeyedUnarchiver unarchiveObjectWithData: rawData];
 	}
-
+	
 	return item;
 }
 
 + (id)itemForKey: (NSString *)key 
 	forService: (NSString *)service
 {
-	NSString *item = [FDKeychain itemForKey: key 
+	id item = [FDKeychain itemForKey: key 
 		forService: service 
 		inAccessGroup: nil];
 	
@@ -105,13 +109,13 @@
 	// Archive the item so it can be saved to the keychain.
 	NSData *valueData = [NSKeyedArchiver archivedDataWithRootObject: item];
 	
-	// Load the item from the keychain, if it exists.
-	id itemInKeychain = [FDKeychain itemForKey: key 
+	// Load the item from the keychain for the key, service and access group to check if it already exists.
+	NSDictionary *itemFromKeychain = [self _itemAttributesAndDataForKey: key 
 		forService: service 
 		inAccessGroup: accessGroup];
 	
 	// If the item does not exist, add it to the keychain.
-	if (itemInKeychain == nil)
+	if (FDIsEmpty(itemFromKeychain) == YES)
 	{
 		NSMutableDictionary *attributes = [FDKeychain _baseQueryDictionaryForKey: key 
 			forService: service 
@@ -235,6 +239,45 @@
 #endif
 	
 	return baseQueryDictionary;
+}
+
++ (NSDictionary *)_itemAttributesAndDataForKey: (NSString *)key 
+	forService: (NSString *)service 
+	inAccessGroup: (NSString *)accessGroup
+{
+	// Raise exception if either the key or the service parameter are empty.
+	if (FDIsEmpty(key) == YES)
+	{
+		[NSException raise: NSInvalidArgumentException 
+			format: @"%s key argument cannot be nil", 
+				__PRETTY_FUNCTION__];
+	}
+	else if (FDIsEmpty(service) == YES)
+	{
+		[NSException raise: NSInvalidArgumentException 
+			format: @"%s service argument cannot be nil", 
+				__PRETTY_FUNCTION__];
+	}
+	
+	// Load the item from the keychain that matches the key, service and access group.
+	NSMutableDictionary *queryDictionary = [FDKeychain _baseQueryDictionaryForKey: key 
+		forService: service 
+		inAccessGroup: accessGroup];
+	
+	[queryDictionary setObject: (__bridge id)kSecMatchLimitOne 
+		forKey: (__bridge id)kSecMatchLimit];
+	[queryDictionary setObject: (id)kCFBooleanTrue 
+		forKey: (__bridge id)kSecReturnAttributes];
+	[queryDictionary setObject: (id)kCFBooleanTrue 
+		forKey: (__bridge id)kSecReturnData];
+	
+	CFTypeRef itemAttributesAndDataTypeRef = nil;
+	
+	SecItemCopyMatching((__bridge CFDictionaryRef)queryDictionary, &itemAttributesAndDataTypeRef);
+	
+	NSDictionary *itemAttributesAndData = (__bridge NSDictionary *)itemAttributesAndDataTypeRef;
+
+	return itemAttributesAndData;
 }
 
 

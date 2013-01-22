@@ -9,6 +9,12 @@
 #pragma mark -
 #pragma mark Static Methods
 
++ (NSData *)rawDataForKey: (NSString *)key 
+	forService: (NSString *)service 
+	inAccessGroup: (NSString *)accessGroup;
++ (NSData *)rawDataForKey: (NSString *)key 
+	forService: (NSString *)service;
+
 + (id)itemForKey: (NSString *)key 
 	forService: (NSString *)service 
 	inAccessGroup: (NSString *)accessGroup;

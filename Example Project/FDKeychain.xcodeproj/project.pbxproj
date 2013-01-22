@@ -67,9 +67,6 @@
 		07CE042D1613EC0100EC19FA /* launch_iphone-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CE042C1613EC0100EC19FA /* launch_iphone-568h@2x.png */; };
 		07CE042E1613EC0100EC19FA /* launch_iphone-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CE042C1613EC0100EC19FA /* launch_iphone-568h@2x.png */; };
 		07CE042F1613EC0100EC19FA /* launch_iphone-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CE042C1613EC0100EC19FA /* launch_iphone-568h@2x.png */; };
-		07CE04351613EC7B00EC19FA /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE04331613EC7B00EC19FA /* FDKeychain.m */; };
-		07CE04361613EC7B00EC19FA /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE04331613EC7B00EC19FA /* FDKeychain.m */; };
-		07CE04371613EC7B00EC19FA /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE04331613EC7B00EC19FA /* FDKeychain.m */; };
 		07D974D21544F877005B4023 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D11544F877005B4023 /* Foundation.framework */; };
 		07D974D41544F877005B4023 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D31544F877005B4023 /* CoreGraphics.framework */; };
 		07D974D61544F877005B4023 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D51544F877005B4023 /* QuartzCore.framework */; };
@@ -92,9 +89,43 @@
 		07D9757C1544FEE4005B4023 /* icon_iphone_spotlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07D9753E1544FEE4005B4023 /* icon_iphone_spotlight@2x.png */; };
 		07D9757E1544FEE4005B4023 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 07D975431544FEE4005B4023 /* iTunesArtwork */; };
 		07D9757F1544FEE4005B4023 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 07D975441544FEE4005B4023 /* iTunesArtwork@2x */; };
-		07D9759A1544FEEE005B4023 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D975991544FEEE005B4023 /* Security.framework */; };
 		07D975A01544FF96005B4023 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07D9759F1544FF96005B4023 /* InfoPlist.strings */; };
+		27F511CB16AF218E00B05F89 /* libFDKeychain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F511A716AF210500B05F89 /* libFDKeychain.a */; };
+		27F511CC16AF236F00B05F89 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D975991544FEEE005B4023 /* Security.framework */; };
+		27F511CD16AF246700B05F89 /* libFDKeychain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F511A716AF210500B05F89 /* libFDKeychain.a */; };
+		27F511D016AF247300B05F89 /* libFDKeychain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F511A716AF210500B05F89 /* libFDKeychain.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27F511A616AF210500B05F89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27F5119F16AF210500B05F89 /* FDKeychain Static Library.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 27F5117916AF1FEE00B05F89;
+			remoteInfo = FDKeychain;
+		};
+		27F511C916AF218A00B05F89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27F5119F16AF210500B05F89 /* FDKeychain Static Library.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 27F5117816AF1FEE00B05F89;
+			remoteInfo = FDKeychain;
+		};
+		27F511CE16AF246D00B05F89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27F5119F16AF210500B05F89 /* FDKeychain Static Library.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 27F5117816AF1FEE00B05F89;
+			remoteInfo = FDKeychain;
+		};
+		27F511D116AF247500B05F89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27F5119F16AF210500B05F89 /* FDKeychain Static Library.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 27F5117816AF1FEE00B05F89;
+			remoteInfo = FDKeychain;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0760B4621546FBDD00AC1232 /* Entitlements.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Entitlements.entitlements; sourceTree = "<group>"; };
@@ -107,9 +138,6 @@
 		07C5C002154652EF0018C348 /* Keychain Pi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keychain Pi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C5C02A154652F10018C348 /* Keychain Omega.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keychain Omega.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07CE042C1613EC0100EC19FA /* launch_iphone-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch_iphone-568h@2x.png"; sourceTree = "<group>"; };
-		07CE04321613EC7B00EC19FA /* FDKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDKeychain.h; sourceTree = "<group>"; };
-		07CE04331613EC7B00EC19FA /* FDKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDKeychain.m; sourceTree = "<group>"; };
-		07CE04341613EC7B00EC19FA /* FDNullOrEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDNullOrEmpty.h; sourceTree = "<group>"; };
 		07D974CD1544F877005B4023 /* Keychain Alpha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keychain Alpha.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D974D11544F877005B4023 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07D974D31544F877005B4023 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -162,6 +190,7 @@
 		07D9759B1544FF62005B4023 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		07D9759D1544FF70005B4023 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		07D9759F1544FF96005B4023 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		27F5119F16AF210500B05F89 /* FDKeychain Static Library.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "FDKeychain Static Library.xcodeproj"; path = "../Static Library Project/FDKeychain Static Library.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,11 +198,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C5BFE4154652EF0018C348 /* Security.framework in Frameworks */,
 				07C5BFE5154652EF0018C348 /* Foundation.framework in Frameworks */,
 				07C5BFE6154652EF0018C348 /* CoreGraphics.framework in Frameworks */,
 				07C5BFE7154652EF0018C348 /* QuartzCore.framework in Frameworks */,
 				07C5BFE8154652EF0018C348 /* UIKit.framework in Frameworks */,
+				07C5BFE4154652EF0018C348 /* Security.framework in Frameworks */,
+				27F511CD16AF246700B05F89 /* libFDKeychain.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,11 +211,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C5C00C154652F10018C348 /* Security.framework in Frameworks */,
 				07C5C00D154652F10018C348 /* Foundation.framework in Frameworks */,
 				07C5C00E154652F10018C348 /* CoreGraphics.framework in Frameworks */,
 				07C5C00F154652F10018C348 /* QuartzCore.framework in Frameworks */,
 				07C5C010154652F10018C348 /* UIKit.framework in Frameworks */,
+				07C5C00C154652F10018C348 /* Security.framework in Frameworks */,
+				27F511D016AF247300B05F89 /* libFDKeychain.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,11 +224,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07D9759A1544FEEE005B4023 /* Security.framework in Frameworks */,
 				07D974D21544F877005B4023 /* Foundation.framework in Frameworks */,
 				07D974D41544F877005B4023 /* CoreGraphics.framework in Frameworks */,
 				07D974D61544F877005B4023 /* QuartzCore.framework in Frameworks */,
 				07D974D81544F877005B4023 /* UIKit.framework in Frameworks */,
+				27F511CC16AF236F00B05F89 /* Security.framework in Frameworks */,
+				27F511CB16AF218E00B05F89 /* libFDKeychain.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,21 +239,9 @@
 		07CE04301613EC7000EC19FA /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				07CE04311613EC7B00EC19FA /* FDKeychain */,
+				27F5119F16AF210500B05F89 /* FDKeychain Static Library.xcodeproj */,
 			);
 			name = Vendors;
-			path = FDKeychain/Vendors;
-			sourceTree = "<group>";
-		};
-		07CE04311613EC7B00EC19FA /* FDKeychain */ = {
-			isa = PBXGroup;
-			children = (
-				07CE04321613EC7B00EC19FA /* FDKeychain.h */,
-				07CE04331613EC7B00EC19FA /* FDKeychain.m */,
-				07CE04341613EC7B00EC19FA /* FDNullOrEmpty.h */,
-			);
-			name = FDKeychain;
-			path = ../../../FDKeychain;
 			sourceTree = "<group>";
 		};
 		07D974C21544F877005B4023 = {
@@ -697,6 +717,14 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		27F511A016AF210500B05F89 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27F511A716AF210500B05F89 /* libFDKeychain.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -711,6 +739,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				27F511CF16AF246D00B05F89 /* PBXTargetDependency */,
 			);
 			name = "Keychain Pi";
 			productName = FDKeychain;
@@ -728,6 +757,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				27F511D216AF247500B05F89 /* PBXTargetDependency */,
 			);
 			name = "Keychain Omega";
 			productName = FDKeychain;
@@ -745,6 +775,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				27F511CA16AF218A00B05F89 /* PBXTargetDependency */,
 			);
 			name = "Keychain Alpha";
 			productName = FDKeychain;
@@ -771,6 +802,12 @@
 			mainGroup = 07D974C21544F877005B4023;
 			productRefGroup = 07D974CE1544F877005B4023 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 27F511A016AF210500B05F89 /* Products */;
+					ProjectRef = 27F5119F16AF210500B05F89 /* FDKeychain Static Library.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				07D974CC1544F877005B4023 /* Keychain Alpha */,
@@ -779,6 +816,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		27F511A716AF210500B05F89 /* libFDKeychain.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFDKeychain.a;
+			remoteRef = 27F511A616AF210500B05F89 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		07C5BFE9154652EF0018C348 /* Resources */ = {
@@ -872,7 +919,6 @@
 				07C5BFDF154652EF0018C348 /* main.m in Sources */,
 				07C5BFE0154652EF0018C348 /* AppDelegate.m in Sources */,
 				07C5BFE2154652EF0018C348 /* FDRootViewController.m in Sources */,
-				07CE04361613EC7B00EC19FA /* FDKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -883,7 +929,6 @@
 				07C5C007154652F10018C348 /* main.m in Sources */,
 				07C5C008154652F10018C348 /* AppDelegate.m in Sources */,
 				07C5C00A154652F10018C348 /* FDRootViewController.m in Sources */,
-				07CE04371613EC7B00EC19FA /* FDKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -894,11 +939,28 @@
 				07D974DE1544F878005B4023 /* main.m in Sources */,
 				07D974E21544F878005B4023 /* AppDelegate.m in Sources */,
 				07C5BFC3154642610018C348 /* FDRootViewController.m in Sources */,
-				07CE04351613EC7B00EC19FA /* FDKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27F511CA16AF218A00B05F89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FDKeychain;
+			targetProxy = 27F511C916AF218A00B05F89 /* PBXContainerItemProxy */;
+		};
+		27F511CF16AF246D00B05F89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FDKeychain;
+			targetProxy = 27F511CE16AF246D00B05F89 /* PBXContainerItemProxy */;
+		};
+		27F511D216AF247500B05F89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FDKeychain;
+			targetProxy = 27F511D116AF247500B05F89 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		07C5BFFF154652EF0018C348 /* Debug */ = {

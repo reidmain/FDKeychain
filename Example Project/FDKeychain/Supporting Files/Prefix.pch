@@ -6,4 +6,5 @@
 	#import <Foundation/Foundation.h>
 	#import <QuartzCore/QuartzCore.h>
 	#import <UIKIt/UIKit.h>
+	#import <FDKeychain/FDKeychain.h>
 #endif

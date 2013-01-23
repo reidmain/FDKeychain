@@ -275,7 +275,7 @@
 	
 	SecItemCopyMatching((__bridge CFDictionaryRef)queryDictionary, &itemAttributesAndDataTypeRef);
 	
-	NSDictionary *itemAttributesAndData = (__bridge NSDictionary *)itemAttributesAndDataTypeRef;
+	NSDictionary *itemAttributesAndData = (__bridge_transfer NSDictionary *)itemAttributesAndDataTypeRef;
 
 	return itemAttributesAndData;
 }

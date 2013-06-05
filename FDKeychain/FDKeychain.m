@@ -15,17 +15,15 @@
 	inAccessGroup: (NSString *)accessGroup;
 
 
-@end // @interface FDKeychain ()
+@end
 
 
-#pragma mark -
-#pragma mark Class Definition
+#pragma mark - Class Definition
 
 @implementation FDKeychain
 
 
-#pragma mark -
-#pragma mark Public Methods
+#pragma mark - Public Methods
 
 + (NSData *)rawDataForKey: (NSString *)key 
 	forService: (NSString *)service 
@@ -106,53 +104,62 @@
 				__PRETTY_FUNCTION__];
 	}
 	
-	// Archive the item so it can be saved to the keychain.
-	NSData *valueData = [NSKeyedArchiver archivedDataWithRootObject: item];
-	
-	// Load the item from the keychain for the key, service and access group to check if it already exists.
-	NSDictionary *itemFromKeychain = [self _itemAttributesAndDataForKey: key 
-		forService: service 
-		inAccessGroup: accessGroup];
-	
-	// If the item does not exist, add it to the keychain.
-	if (FDIsEmpty(itemFromKeychain) == YES)
+	// If the item is empty attempt to delete it from the keychain.
+	if (FDIsEmpty(item) == YES)
 	{
-		NSMutableDictionary *attributes = [FDKeychain _baseQueryDictionaryForKey: key 
-			forService: service 
-			inAccessGroup: accessGroup];
-		
-		[attributes setObject: valueData 
-			forKey: (__bridge id)kSecValueData];
-		
-		[attributes setObject: (__bridge id)kSecAttrAccessibleWhenUnlocked 
-			forKey: (__bridge id)kSecAttrAccessible];
-		
-		OSStatus result = SecItemAdd((__bridge CFDictionaryRef)attributes, NULL);
-		
-		if (result != noErr)
-		{
-			NSLog(@"Could not add keychain item. (Error code: %ld)", 
-				result);
-		}
+		[self deleteItemForKey: key 
+			forService: service];
 	}
-	// If the item does exist, update the item in the keychain.
 	else
 	{
-		NSDictionary *queryDictionary = [FDKeychain _baseQueryDictionaryForKey: key 
+		// Archive the item so it can be saved to the keychain.
+		NSData *valueData = [NSKeyedArchiver archivedDataWithRootObject: item];
+		
+		// Load the item from the keychain for the key, service and access group to check if it already exists.
+		NSDictionary *itemFromKeychain = [self _itemAttributesAndDataForKey: key 
 			forService: service 
 			inAccessGroup: accessGroup];
 		
-		NSDictionary *attributesToUpdate = [NSDictionary dictionaryWithObjectsAndKeys: 
-			valueData, 
-			(__bridge id)kSecValueData, 
-			nil];
-		
-		OSStatus result = SecItemUpdate((__bridge CFDictionaryRef)queryDictionary, (__bridge CFDictionaryRef)attributesToUpdate);
-		
-		if (result != noErr)
+		// If the item does not exist, add it to the keychain.
+		if (FDIsEmpty(itemFromKeychain) == YES)
 		{
-			NSLog(@"Could not update keychain item. (Error code: %ld)", 
-				result);
+			NSMutableDictionary *attributes = [FDKeychain _baseQueryDictionaryForKey: key 
+				forService: service 
+				inAccessGroup: accessGroup];
+			
+			[attributes setObject: valueData 
+				forKey: (__bridge id)kSecValueData];
+			
+			[attributes setObject: (__bridge id)kSecAttrAccessibleWhenUnlocked 
+				forKey: (__bridge id)kSecAttrAccessible];
+			
+			OSStatus result = SecItemAdd((__bridge CFDictionaryRef)attributes, NULL);
+			
+			if (result != noErr)
+			{
+				NSLog(@"Could not add keychain item. (Error code: %ld)", 
+					result);
+			}
+		}
+		// If the item does exist, update the item in the keychain.
+		else
+		{
+			NSDictionary *queryDictionary = [FDKeychain _baseQueryDictionaryForKey: key 
+				forService: service 
+				inAccessGroup: accessGroup];
+			
+			NSDictionary *attributesToUpdate = [NSDictionary dictionaryWithObjectsAndKeys: 
+				valueData, 
+				(__bridge id)kSecValueData, 
+				nil];
+			
+			OSStatus result = SecItemUpdate((__bridge CFDictionaryRef)queryDictionary, (__bridge CFDictionaryRef)attributesToUpdate);
+			
+			if (result != noErr)
+			{
+				NSLog(@"Could not update keychain item. (Error code: %ld)", 
+					result);
+			}
 		}
 	}
 }
@@ -208,8 +215,7 @@
 }
 
 
-#pragma mark -
-#pragma mark Private Methods
+#pragma mark - Private Methods
 
 + (NSMutableDictionary *)_baseQueryDictionaryForKey: (NSString *)key 
 	forService: (NSString *)service 
@@ -281,4 +287,4 @@
 }
 
 
-@end // @implementation FDKeychain
+@end

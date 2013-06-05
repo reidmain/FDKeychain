@@ -6,8 +6,7 @@
 @interface FDKeychain : NSObject
 
 
-#pragma mark -
-#pragma mark Static Methods
+#pragma mark - Static Methods
 
 + (NSData *)rawDataForKey: (NSString *)key 
 	forService: (NSString *)service 
@@ -36,4 +35,4 @@
 	forService: (NSString *)service;
 
 
-@end // @interface FDKeychain
+@end

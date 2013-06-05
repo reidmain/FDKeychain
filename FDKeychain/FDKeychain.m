@@ -201,8 +201,17 @@
 	
 	if (result != noErr)
 	{
-		NSLog(@"Could not delete keychain item. (Error code: %ld)", 
-			result);
+		// Display a detailed error message if the item being deleted did not exist in the keychain.
+		if (result == errSecItemNotFound)
+		{
+			NSLog(@"Could not delete item with key '%@' from the keychain because it does not exist.", 
+				key);
+		}
+		else
+		{
+			NSLog(@"Could not delete keychain item. (Error code: %ld)", 
+				result);
+		}
 	}
 }
 

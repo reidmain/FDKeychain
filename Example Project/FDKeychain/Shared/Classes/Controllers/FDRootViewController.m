@@ -14,8 +14,7 @@ static NSString * const KeychainItem_AccessGroup_Shared = @"XXXXXXXXXX.com.1414d
 #endif
 
 
-#pragma mark -
-#pragma mark Class Extension
+#pragma mark - Class Extension
 
 @interface FDRootViewController ()
 
@@ -26,17 +25,15 @@ static NSString * const KeychainItem_AccessGroup_Shared = @"XXXXXXXXXX.com.1414d
 - (void)_updateTextFieldsWithKeychainItems;
 
 
-@end // @interface FDRootViewController ()
+@end
 
 
-#pragma mark -
-#pragma mark Class Definition
+#pragma mark - Class Definition
 
 @implementation FDRootViewController
 
 
-#pragma mark -
-#pragma mark Constructors
+#pragma mark - Constructors
 
 - (id)initWithNibName: (NSString *)nibName 
 	bundle: (NSBundle *)bundle
@@ -61,8 +58,7 @@ static NSString * const KeychainItem_AccessGroup_Shared = @"XXXXXXXXXX.com.1414d
 }
 
 
-#pragma mark -
-#pragma mark Destructor
+#pragma mark - Destructor
 
 - (void)dealloc 
 {
@@ -79,8 +75,7 @@ static NSString * const KeychainItem_AccessGroup_Shared = @"XXXXXXXXXX.com.1414d
 }
 
 
-#pragma mark -
-#pragma mark Overridden Methods
+#pragma mark - Overridden Methods
 
 - (BOOL)shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation)interfaceOrientation
 {
@@ -123,8 +118,7 @@ static NSString * const KeychainItem_AccessGroup_Shared = @"XXXXXXXXXX.com.1414d
 }
 
 
-#pragma mark -
-#pragma mark Private Methods
+#pragma mark - Private Methods
 
 - (void)_updateTextFieldsWithKeychainItems
 {
@@ -139,8 +133,7 @@ static NSString * const KeychainItem_AccessGroup_Shared = @"XXXXXXXXXX.com.1414d
 }
 
 
-#pragma mark -
-#pragma mark UITextFieldDelegate Methods
+#pragma mark - UITextFieldDelegate Methods
 
 - (BOOL)textField: (UITextField *)textField 
 	shouldChangeCharactersInRange: (NSRange)range 
@@ -196,4 +189,4 @@ static NSString * const KeychainItem_AccessGroup_Shared = @"XXXXXXXXXX.com.1414d
 }
 
 
-@end // @implementation FDRootViewController
+@end

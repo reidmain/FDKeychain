@@ -10,29 +10,37 @@
 
 + (NSData *)rawDataForKey: (NSString *)key 
 	forService: (NSString *)service 
-	inAccessGroup: (NSString *)accessGroup;
+	inAccessGroup: (NSString *)accessGroup 
+	error: (NSError **)error;
 + (NSData *)rawDataForKey: (NSString *)key 
-	forService: (NSString *)service;
+	forService: (NSString *)service 
+	error: (NSError **)error;
 
 + (id)itemForKey: (NSString *)key 
 	forService: (NSString *)service 
-	inAccessGroup: (NSString *)accessGroup;
+	inAccessGroup: (NSString *)accessGroup 
+	error: (NSError **)error;
 + (id)itemForKey: (NSString *)key 
-	forService: (NSString *)service;
+	forService: (NSString *)service 
+	error: (NSError **)error;
 
 + (void)saveItem: (id<NSCoding>)item 
 	forKey: (NSString *)key 
 	forService: (NSString *)service 
-	inAccessGroup: (NSString *)accessGroup;
+	inAccessGroup: (NSString *)accessGroup 
+	error: (NSError **)error;
 + (void)saveItem: (id<NSCoding>)item 
 	forKey: (NSString *)key 
-	forService: (NSString *)service;
+	forService: (NSString *)service 
+	error: (NSError **)error;
 
 + (void)deleteItemForKey: (NSString *)key 
 	forService: (NSString *)service 
-	inAccessGroup: (NSString *)accessGroup;
+	inAccessGroup: (NSString *)accessGroup 
+	error: (NSError **)error;
 + (void)deleteItemForKey: (NSString *)key 
-	forService: (NSString *)service;
+	forService: (NSString *)service 
+	error: (NSError **)error;
 
 
 @end

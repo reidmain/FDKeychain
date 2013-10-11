@@ -129,11 +129,13 @@ static NSString * const KeychainItem_AccessGroup_Shared = @"XXXXXXXXXX.com.1414d
 - (void)_updateTextFieldsWithKeychainItems
 {
 	_localPasswordTextField.text = [FDKeychain itemForKey: KeychainItem_Key_LocalPassword 
-		forService: KeychainItem_Service];
+		forService: KeychainItem_Service
+		error: nil];
 	
 	_sharedPasswordTextField.text = [FDKeychain itemForKey: KeychainItem_Key_SharedPassword 
 		forService: KeychainItem_Service 
-		inAccessGroup: KeychainItem_AccessGroup_Shared];
+		inAccessGroup: KeychainItem_AccessGroup_Shared 
+		error: nil];
 }
 
 
@@ -151,14 +153,16 @@ static NSString * const KeychainItem_AccessGroup_Shared = @"XXXXXXXXXX.com.1414d
 	{
 		[FDKeychain saveItem: candidateString 
 			forKey: KeychainItem_Key_LocalPassword 
-			forService: KeychainItem_Service];
+			forService: KeychainItem_Service 
+			error: nil];
 	}
 	else if (textField == _sharedPasswordTextField)
 	{
 		[FDKeychain saveItem: candidateString 
 			forKey: KeychainItem_Key_SharedPassword 
 			forService: KeychainItem_Service 
-			inAccessGroup: KeychainItem_AccessGroup_Shared];
+			inAccessGroup: KeychainItem_AccessGroup_Shared 
+			error: nil];
 	}
 	
 	return YES;
@@ -169,13 +173,15 @@ static NSString * const KeychainItem_AccessGroup_Shared = @"XXXXXXXXXX.com.1414d
 	if (textField == _localPasswordTextField)
 	{
 		[FDKeychain deleteItemForKey: KeychainItem_Key_LocalPassword 
-			forService: KeychainItem_Service];
+			forService: KeychainItem_Service 
+			error: nil];
 	}
 	else if (textField == _sharedPasswordTextField)
 	{
 		[FDKeychain deleteItemForKey: KeychainItem_Key_SharedPassword 
 			forService: KeychainItem_Service 
-			inAccessGroup: KeychainItem_AccessGroup_Shared];
+			inAccessGroup: KeychainItem_AccessGroup_Shared 
+			error: nil];
 	}
 	
 	return YES;

@@ -102,6 +102,7 @@
 	forKey: (NSString *)key 
 	forService: (NSString *)service 
 	inAccessGroup: (NSString *)accessGroup 
+	withAccessibility: (FDKeychainAccessibility)accessibility
 	error: (NSError **)error
 {
 	// Raise exception if either the key or the service parameter are empty.
@@ -157,8 +158,16 @@
 				[attributes setObject: valueData 
 					forKey: (__bridge id)kSecValueData];
 				
-				[attributes setObject: (__bridge id)kSecAttrAccessibleWhenUnlocked 
-					forKey: (__bridge id)kSecAttrAccessible];
+				if (accessibility == FDKeychainAccessibleAfterFirstUnlock)
+				{
+					[attributes setObject: (__bridge id)kSecAttrAccessibleAfterFirstUnlock 
+						forKey: (__bridge id)kSecAttrAccessible];
+				}
+				else
+				{
+					[attributes setObject: (__bridge id)kSecAttrAccessibleWhenUnlocked 
+						forKey: (__bridge id)kSecAttrAccessible];
+				}
 				
 				OSStatus resultCode = SecItemAdd((__bridge CFDictionaryRef)attributes, NULL);
 				
@@ -205,6 +214,7 @@
 		forKey: key 
 		forService: service 
 		inAccessGroup: nil 
+		withAccessibility: FDKeychainAccessibleWhenUnlocked 
 		error: error];
 }
 

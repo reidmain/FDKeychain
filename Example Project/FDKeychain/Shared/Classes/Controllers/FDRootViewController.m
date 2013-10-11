@@ -162,6 +162,7 @@ static NSString * const KeychainItem_AccessGroup_Shared = @"XXXXXXXXXX.com.1414d
 			forKey: KeychainItem_Key_SharedPassword 
 			forService: KeychainItem_Service 
 			inAccessGroup: KeychainItem_AccessGroup_Shared 
+			withAccessibility: FDKeychainAccessibleWhenUnlocked 
 			error: nil];
 	}
 	

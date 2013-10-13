@@ -5,8 +5,12 @@
 
 typedef NS_ENUM(NSInteger, FDKeychainAccessibility)
 {
+	FDKeychainAccessibleAlways,
 	FDKeychainAccessibleWhenUnlocked,
 	FDKeychainAccessibleAfterFirstUnlock,
+    FDKeychainAccessibleAlwaysThisDeviceOnly,
+    FDKeychainAccessibleAfterFirstUnlockThisDeviceOnly,
+    FDKeychainAccessibleWhenUnlockedThisDeviceOnly
 };
 
 

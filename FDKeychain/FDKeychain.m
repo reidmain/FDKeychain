@@ -158,15 +158,31 @@
 				[attributes setObject: valueData 
 					forKey: (__bridge id)kSecValueData];
 				
-				if (accessibility == FDKeychainAccessibleAfterFirstUnlock)
-				{
-					[attributes setObject: (__bridge id)kSecAttrAccessibleAfterFirstUnlock 
-						forKey: (__bridge id)kSecAttrAccessible];
-				}
-				else
-				{
-					[attributes setObject: (__bridge id)kSecAttrAccessibleWhenUnlocked 
-						forKey: (__bridge id)kSecAttrAccessible];
+				switch(accessibility) {
+					case FDKeychainAccessibleAlways:
+						[attributes setObject: (__bridge id)kSecAttrAccessibleAlways
+									   forKey: (__bridge id)kSecAttrAccessible];
+						break;
+					case FDKeychainAccessibleAfterFirstUnlock:
+						[attributes setObject: (__bridge id)kSecAttrAccessibleAfterFirstUnlock
+									   forKey: (__bridge id)kSecAttrAccessible];
+						break;
+					case FDKeychainAccessibleWhenUnlocked:
+						[attributes setObject: (__bridge id)kSecAttrAccessibleWhenUnlocked
+									   forKey: (__bridge id)kSecAttrAccessible];
+						break;
+					case FDKeychainAccessibleAlwaysThisDeviceOnly:
+						[attributes setObject: (__bridge id)kSecAttrAccessibleAlwaysThisDeviceOnly
+									   forKey: (__bridge id)kSecAttrAccessible];
+						break;
+					case FDKeychainAccessibleAfterFirstUnlockThisDeviceOnly:
+						[attributes setObject: (__bridge id)kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly
+									   forKey: (__bridge id)kSecAttrAccessible];
+						break;
+					case FDKeychainAccessibleWhenUnlockedThisDeviceOnly:
+						[attributes setObject: (__bridge id)kSecAttrAccessibleWhenUnlockedThisDeviceOnly
+									   forKey: (__bridge id)kSecAttrAccessible];
+						break;
 				}
 				
 				OSStatus resultCode = SecItemAdd((__bridge CFDictionaryRef)attributes, NULL);

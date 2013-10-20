@@ -98,6 +98,36 @@
 	return item;
 }
 
++ (NSArray*)servicesForKey: (NSString *)key
+             inAccessGroup: (NSString *)accessGroup
+                     error: (NSError **)error
+{
+    NSDictionary *serviceNames = [self _serviceNamesForKey: key
+                                             inAccessGroup: accessGroup
+                                                     error: error];
+	
+	// Extract the items' service names
+    NSMutableArray * array = [NSMutableArray array];
+	
+	for (id dict in serviceNames) {
+ 		NSString * name = [dict objectForKey: (__bridge id)kSecAttrService];
+        [array addObject:[name copy]];
+	}
+    
+    NSLog(@"array is %@", array);
+    return array;
+}
+
++ (NSArray*)servicesForKey: (NSString *)key
+                     error: (NSError **)error
+{
+    NSArray * array = [FDKeychain servicesForKey: key
+                                   inAccessGroup: nil
+                                           error: error];
+    
+    return array;
+}
+
 + (void)saveItem: (id<NSCoding>)item 
 	forKey: (NSString *)key 
 	forService: (NSString *)service 
@@ -301,6 +331,9 @@
 	forService: (NSString *)service
 {
 	NSString *localizedDescription = nil;
+
+    if (!service)
+        service = @"<<none>>";
 	
 	switch (resultCode)
 	{
@@ -360,9 +393,11 @@
 	[baseQueryDictionary setObject: key 
 		forKey: (__bridge id)kSecAttrAccount];
 	
-	[baseQueryDictionary setObject: service 
-		forKey: (__bridge id)kSecAttrService];
-	
+    if (service) {
+        [baseQueryDictionary setObject: service
+                                forKey: (__bridge id)kSecAttrService];
+	}
+    
 #if TARGET_IPHONE_SIMULATOR
 	// Note: If we are running in the Simulator we cannot set the access group. Apps running in the Simulator are not signed so there is no access group for them to check. All apps running in the simulator can see all the keychain items. If you need to test apps that share access groups you will need to install the apps on a device.
 #else
@@ -430,5 +465,48 @@
 	return itemAttributesAndData;
 }
 
-
++ (NSDictionary *)_serviceNamesForKey: (NSString *)key
+                        inAccessGroup: (NSString *)accessGroup
+                                error: (NSError **)error
+{
+	// Raise exception if either the key or the service parameter are empty.
+	if (FDIsEmpty(key) == YES)
+	{
+		[NSException raise: NSInvalidArgumentException
+                    format: @"%s key argument cannot be nil",
+         __PRETTY_FUNCTION__];
+	}
+	
+	// Load the item from the keychain that matches the key, service and access group.
+	NSMutableDictionary *queryDictionary = [FDKeychain _baseQueryDictionaryForKey: key
+                                                                       forService: nil
+                                                                    inAccessGroup: accessGroup];
+	
+	[queryDictionary setObject: (__bridge id)kSecMatchLimitAll
+                        forKey: (__bridge id)kSecMatchLimit];
+	[queryDictionary setObject: (id)kCFBooleanTrue
+                        forKey: (__bridge id)kSecReturnAttributes];
+	
+	CFTypeRef itemAttributesTypeRef = nil;
+	
+	OSStatus resultCode = SecItemCopyMatching((__bridge CFDictionaryRef)queryDictionary, &itemAttributesTypeRef);
+	
+	NSDictionary *itemAttributes = nil;
+	
+	if (resultCode != errSecSuccess)
+	{
+		if (error != NULL)
+		{
+			*error = [self _errorForResultCode: resultCode 
+                                       withKey: key 
+                                    forService: nil];
+		}
+	}
+	else
+	{
+		itemAttributes = (__bridge_transfer NSDictionary *)itemAttributesTypeRef;
+	}
+    
+	return itemAttributes;
+}
 @end

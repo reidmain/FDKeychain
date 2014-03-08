@@ -78,7 +78,7 @@
 	// Unarchive the data that was received from the keychain.
 	id item = nil;
 	
-	if (FDIsEmpty(rawData) == NO)
+	if (rawData != nil)
 	{
 		item = [NSKeyedUnarchiver unarchiveObjectWithData: rawData];
 	}
@@ -106,21 +106,21 @@
 	error: (NSError **)error
 {
 	// Raise exception if either the key or the service parameter are empty.
-	if (FDIsEmpty(key) == YES)
+	if ([key length] == 0)
 	{
 		[NSException raise: NSInvalidArgumentException 
-			format: @"%s key argument cannot be nil", 
+			format: @"%s key argument cannot be empty", 
 				__PRETTY_FUNCTION__];
 	}
-	else if (FDIsEmpty(service) == YES)
+	else if ([service length] == 0)
 	{
 		[NSException raise: NSInvalidArgumentException 
-			format: @"%s service argument cannot be nil", 
+			format: @"%s service argument cannot be empty", 
 				__PRETTY_FUNCTION__];
 	}
 	
-	// If the item is empty attempt to delete it from the keychain.
-	if (FDIsEmpty(item) == YES)
+	// If the item is nil attempt to delete it from the keychain.
+	if (item == nil)
 	{
 		[self deleteItemForKey: key 
 			forService: service 
@@ -149,7 +149,7 @@
 			NSData *valueData = [NSKeyedArchiver archivedDataWithRootObject: item];
 			
 			// If the item does not exist add it to the keychain.
-			if (FDIsEmpty(itemFromKeychain) == YES)
+			if (itemFromKeychain == nil)
 			{
 				NSMutableDictionary *attributes = [FDKeychain _baseQueryDictionaryForKey: key 
 					forService: service 
@@ -224,16 +224,16 @@
 	error: (NSError **)error
 {
 	// Raise exception if either the key or the service parameter are empty.
-	if (FDIsEmpty(key) == YES)
+	if ([key length] == 0)
 	{
 		[NSException raise: NSInvalidArgumentException 
-			format: @"%s key argument cannot be nil", 
+			format: @"%s key argument cannot be empty", 
 				__PRETTY_FUNCTION__];
 	}
-	else if (FDIsEmpty(service) == YES)
+	else if ([service length] == 0)
 	{
 		[NSException raise: NSInvalidArgumentException 
-			format: @"%s service argument cannot be nil", 
+			format: @"%s service argument cannot be empty", 
 				__PRETTY_FUNCTION__];
 	}
 	
@@ -350,7 +350,7 @@
 #if TARGET_IPHONE_SIMULATOR
 	// Note: If we are running in the Simulator we cannot set the access group. Apps running in the Simulator are not signed so there is no access group for them to check. All apps running in the simulator can see all the keychain items. If you need to test apps that share access groups you will need to install the apps on a device.
 #else
-	if (FDIsEmpty(accessGroup) == NO)
+	if ([accessGroup length] > 0)
 	{
 		[baseQueryDictionary setObject: accessGroup 
 			forKey: (__bridge id)kSecAttrAccessGroup];
@@ -366,16 +366,16 @@
 	error: (NSError **)error
 {
 	// Raise exception if either the key or the service parameter are empty.
-	if (FDIsEmpty(key) == YES)
+	if ([key length] == 0)
 	{
 		[NSException raise: NSInvalidArgumentException 
-			format: @"%s key argument cannot be nil", 
+			format: @"%s key argument cannot be empty", 
 				__PRETTY_FUNCTION__];
 	}
-	else if (FDIsEmpty(service) == YES)
+	else if ([service length] == 0)
 	{
 		[NSException raise: NSInvalidArgumentException 
-			format: @"%s service argument cannot be nil", 
+			format: @"%s service argument cannot be empty", 
 				__PRETTY_FUNCTION__];
 	}
 	

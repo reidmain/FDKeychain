@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		27F5117D16AF1FEE00B05F89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F5117C16AF1FEE00B05F89 /* Foundation.framework */; };
 		27F5119516AF204F00B05F89 /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F5119316AF204F00B05F89 /* FDKeychain.m */; };
-		27F5119616AF20E100B05F89 /* FDNullOrEmpty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27F5119416AF204F00B05F89 /* FDNullOrEmpty.h */; };
 		27F5119716AF20E100B05F89 /* FDKeychain.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27F5119216AF204F00B05F89 /* FDKeychain.h */; };
 		27F511BB16AF214500B05F89 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F511BA16AF214500B05F89 /* Security.framework */; };
 /* End PBXBuildFile section */
@@ -21,7 +20,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				27F5119616AF20E100B05F89 /* FDNullOrEmpty.h in CopyFiles */,
 				27F5119716AF20E100B05F89 /* FDKeychain.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -34,7 +32,6 @@
 		27F5118016AF1FEE00B05F89 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		27F5119216AF204F00B05F89 /* FDKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDKeychain.h; sourceTree = "<group>"; };
 		27F5119316AF204F00B05F89 /* FDKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDKeychain.m; sourceTree = "<group>"; usesTabs = 1; };
-		27F5119416AF204F00B05F89 /* FDNullOrEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDNullOrEmpty.h; sourceTree = "<group>"; };
 		27F511BA16AF214500B05F89 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -97,7 +94,6 @@
 		27F5119116AF204F00B05F89 /* FDKeychain */ = {
 			isa = PBXGroup;
 			children = (
-				27F5119416AF204F00B05F89 /* FDNullOrEmpty.h */,
 				27F5119216AF204F00B05F89 /* FDKeychain.h */,
 				27F5119316AF204F00B05F89 /* FDKeychain.m */,
 			);

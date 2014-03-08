@@ -19,7 +19,6 @@ Finally add FDKeychain to the "Link Binary With Libraries" section.
 ## 2. Copy source code files
 Copy the following files into your project:
 
-FDNullOrEmpty.h  
 FDKeychain.h  
 FDKeychain.m  
 

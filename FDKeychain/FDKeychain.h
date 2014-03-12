@@ -2,8 +2,12 @@
 
 typedef NS_ENUM(NSInteger, FDKeychainAccessibility)
 {
+	FDKeychainAccessibleAlways,
 	FDKeychainAccessibleWhenUnlocked,
 	FDKeychainAccessibleAfterFirstUnlock,
+    FDKeychainAccessibleAlwaysThisDeviceOnly,
+    FDKeychainAccessibleAfterFirstUnlockThisDeviceOnly,
+    FDKeychainAccessibleWhenUnlockedThisDeviceOnly
 };
 
 
@@ -49,5 +53,10 @@ typedef NS_ENUM(NSInteger, FDKeychainAccessibility)
 	forService: (NSString *)service 
 	error: (NSError **)error;
 
++ (NSArray*)servicesForKey: (NSString *)key
+             inAccessGroup: (NSString *)accessGroup
+                     error: (NSError **)error;
++ (NSArray*)servicesForKey: (NSString *)key
+                     error: (NSError **)error;
 
 @end

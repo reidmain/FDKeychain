@@ -142,12 +142,14 @@ static NSString * const KeychainItem_AccessGroup_Shared = @"XXXXXXXXXX.com.1414d
 	NSString *candidateString = [textField.text stringByReplacingCharactersInRange: range 
 		withString: string];
 	
+	NSError *error = nil;
+	
 	if (textField == _localPasswordTextField)
 	{
 		[FDKeychain saveItem: candidateString 
 			forKey: KeychainItem_Key_LocalPassword 
 			forService: KeychainItem_Service 
-			error: nil];
+			error: &error];
 	}
 	else if (textField == _sharedPasswordTextField)
 	{
@@ -156,7 +158,12 @@ static NSString * const KeychainItem_AccessGroup_Shared = @"XXXXXXXXXX.com.1414d
 			forService: KeychainItem_Service 
 			inAccessGroup: KeychainItem_AccessGroup_Shared 
 			withAccessibility: FDKeychainAccessibleWhenUnlocked 
-			error: nil];
+			error: &error];
+	}
+	
+	if (error != nil)
+	{
+		NSLog(@"Error occured while attempting to save to the keychain:\t%@", error);
 	}
 	
 	return YES;
@@ -164,18 +171,25 @@ static NSString * const KeychainItem_AccessGroup_Shared = @"XXXXXXXXXX.com.1414d
 
 - (BOOL)textFieldShouldClear: (UITextField *)textField
 {
+	NSError *error = nil;
+	
 	if (textField == _localPasswordTextField)
 	{
 		[FDKeychain deleteItemForKey: KeychainItem_Key_LocalPassword 
 			forService: KeychainItem_Service 
-			error: nil];
+			error: &error];
 	}
 	else if (textField == _sharedPasswordTextField)
 	{
 		[FDKeychain deleteItemForKey: KeychainItem_Key_SharedPassword 
 			forService: KeychainItem_Service 
 			inAccessGroup: KeychainItem_AccessGroup_Shared 
-			error: nil];
+			error: &error];
+	}
+	
+	if (error != nil)
+	{
+		NSLog(@"Error occured while attempting to delete from the keychain:\t%@", error);
 	}
 	
 	return YES;

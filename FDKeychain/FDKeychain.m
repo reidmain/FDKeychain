@@ -98,7 +98,7 @@
 	return item;
 }
 
-+ (void)saveItem: (id<NSCoding>)item 
++ (BOOL)saveItem: (id<NSCoding>)item 
 	forKey: (NSString *)key 
 	forService: (NSString *)service 
 	inAccessGroup: (NSString *)accessGroup 
@@ -119,32 +119,41 @@
 				__PRETTY_FUNCTION__];
 	}
 	
+	// Assume the save is successful.
+	BOOL saveSuccessful = YES;
+	
 	// If the item is nil attempt to delete it from the keychain.
 	if (item == nil)
 	{
-		[self deleteItemForKey: key 
+		saveSuccessful = [self deleteItemForKey: key 
 			forService: service 
 			error: error];
 	}
 	else
 	{
 		// Load the item from the keychain for the key, service and access group to check if it already exists.
+		NSError *itemFromKeychainError = nil;
 		NSDictionary *itemFromKeychain = [self _itemAttributesAndDataForKey: key 
 			forService: service 
 			inAccessGroup: accessGroup 
-			error: error];
+			error: &itemFromKeychainError];
 		
-		// If the keychain did not error out when checking if the item existed proceed with saving the item to the keychain.
-		if (error == NULL 
-			|| *error == nil 
-			|| [*error code] == errSecItemNotFound)
+		// If any error except "Item Not Found" occured when checking if the item existed immediately fail out.
+		if (itemFromKeychain == nil 
+			 && [itemFromKeychainError code] != errSecItemNotFound)
 		{
-			// Ensure that any "Item Not Found" error is cleared.
+			// Return NO because checking if the item existed failed.
+			saveSuccessful = NO;
+			
+			// If an error pointer was passed in update the pointer with an error object describing the problem.
 			if (error != NULL)
 			{
-				*error = nil;
+				*error = itemFromKeychainError;
 			}
-			
+		}
+		// Otherwise, if the keychain did not error out when checking if the item existed proceed with saving the item to the keychain.
+		else
+		{
 			// Archive the item so it can be saved to the keychain.
 			NSData *valueData = [NSKeyedArchiver archivedDataWithRootObject: item];
 			
@@ -171,12 +180,19 @@
 				
 				OSStatus resultCode = SecItemAdd((__bridge CFDictionaryRef)attributes, NULL);
 				
-				if (resultCode != errSecSuccess 
-					&& error != NULL)
+				// Check if the save succeeded.
+				if (resultCode != errSecSuccess)
 				{
-					*error = [self _errorForResultCode: resultCode 
-						withKey: key 
-						forService: service];
+					// Return NO because saving the item failed.
+					saveSuccessful = NO;
+					
+					// If an error pointer was passed in update the pointer with an error object describing the problem.
+					if (error != NULL)
+					{
+						*error = [self _errorForResultCode: resultCode 
+							withKey: key 
+							forService: service];
+					}
 				}
 			}
 			// If the item does exist update the item in the keychain.
@@ -193,32 +209,43 @@
 				
 				OSStatus resultCode = SecItemUpdate((__bridge CFDictionaryRef)queryDictionary, (__bridge CFDictionaryRef)attributesToUpdate);
 				
-				if (resultCode != errSecSuccess 
-					&& error != NULL)
+				// Check if the update succeeded.
+				if (resultCode != errSecSuccess)
 				{
-					*error = [self _errorForResultCode: resultCode 
-						withKey: key 
-						forService: service];
+					// Return NO because updating the item failed.
+					saveSuccessful = NO;
+					
+					// If an error pointer was passed in update the pointer with an error object describing the problem.
+					if (error != NULL)
+					{
+						*error = [self _errorForResultCode: resultCode 
+							withKey: key 
+							forService: service];
+					}
 				}
 			}
 		}
 	}
+	
+	return saveSuccessful;
 }
 
-+ (void)saveItem: (id<NSCoding>)item 
++ (BOOL)saveItem: (id<NSCoding>)item 
 	forKey: (NSString *)key 
 	forService: (NSString *)service 
 	error: (NSError **)error
 {
-	[FDKeychain saveItem: item 
+	BOOL saveSuccessful = [FDKeychain saveItem: item 
 		forKey: key 
 		forService: service 
 		inAccessGroup: nil 
 		withAccessibility: FDKeychainAccessibleWhenUnlocked 
 		error: error];
+	
+	return saveSuccessful;
 }
 
-+ (void)deleteItemForKey: (NSString *)key 
++ (BOOL)deleteItemForKey: (NSString *)key 
 	forService: (NSString *)service 
 	inAccessGroup: (NSString *)accessGroup 
 	error: (NSError **)error
@@ -237,6 +264,9 @@
 				__PRETTY_FUNCTION__];
 	}
 	
+	// Assume the delete will succeed.
+	BOOL deleteSuccessful = YES;
+	
 	// Delete the item from the keychain.
 	NSDictionary *queryDictionary = [FDKeychain _baseQueryDictionaryForKey: key 
 		forService: service 
@@ -244,37 +274,48 @@
 	
 	OSStatus resultCode = SecItemDelete((__bridge CFDictionaryRef)queryDictionary);
 	
-	if (resultCode != errSecSuccess 
-		&& error != NULL)
+	// Check if the deletion succeeded.
+	if (resultCode != errSecSuccess)
 	{
-		*error = [self _errorForResultCode: resultCode 
-			withKey: key 
-			forService: service];
+		// Return NO because deleting the item failed.
+		deleteSuccessful = NO;
 		
-		// If the delete failed bacause the item did not exist in the keychain create a more descriptive error message.
-		if ([*error code] == errSecItemNotFound)
+		// If an error pointer was passed in update the pointer with an error object describing the problem.
+		if (error != NULL)
 		{
-			NSString *localizedDescription = [NSString stringWithFormat: @"Could not delete item with key '%@' for service '%@' from the keychain because it does not exist.", 
-				key, 
-				service];
-			NSDictionary *userInfo = @{ NSLocalizedDescriptionKey : localizedDescription,
-				 NSUnderlyingErrorKey : *error };
+			*error = [self _errorForResultCode: resultCode 
+				withKey: key 
+				forService: service];
 			
-			*error = [NSError errorWithDomain: @"com.1414degrees.FDKeychain" 
-				code: resultCode 
-				userInfo: userInfo];
+			// If the delete failed bacause the item did not exist in the keychain create a more descriptive error message.
+			if ([*error code] == errSecItemNotFound)
+			{
+				NSString *localizedDescription = [NSString stringWithFormat: @"Could not delete item with key '%@' for service '%@' from the keychain because it does not exist.", 
+					key, 
+					service];
+				NSDictionary *userInfo = @{ NSLocalizedDescriptionKey : localizedDescription,
+					 NSUnderlyingErrorKey : *error };
+				
+				*error = [NSError errorWithDomain: @"com.1414degrees.FDKeychain" 
+					code: resultCode 
+					userInfo: userInfo];
+			}
 		}
 	}
+	
+	return deleteSuccessful;
 }
 
-+ (void)deleteItemForKey: (NSString *)key 
++ (BOOL)deleteItemForKey: (NSString *)key 
 	forService: (NSString *)service 
 	error: (NSError **)error
 {
-	[FDKeychain deleteItemForKey: key 
+	BOOL deleteSuccessful = [FDKeychain deleteItemForKey: key 
 		forService: service 
 		inAccessGroup: nil 
 		error: error];
+	
+	return deleteSuccessful;
 }
 
 

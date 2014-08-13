@@ -1,5 +1,5 @@
 #import "FDKeychain.h"
-#import <Security/Security.h>
+@import Security;
 
 
 #pragma mark Class Extension

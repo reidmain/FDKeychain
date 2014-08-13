@@ -1,3 +1,6 @@
+@import Foundation;
+
+
 #pragma mark Enumerations
 
 typedef NS_ENUM(NSInteger, FDKeychainAccessibility)

@@ -1,5 +1,5 @@
 # Overview
-When I first started programming iOS apps, NSUserDefaults seemed like the ideal place to store user preferences. I made the novice mistake (like a lot of programmers do) of storing username/password or tokens in NSUserDefaults as well. When I realized that NSUserDefaults was completely insecure I looked for an alternative and found that Apple had built-in support for the keychain since iOS 2.0. However, the API for the keychain was entirely in C and I was hoping for a simple "object for key" interface similar to NSDictionary. I wanted to simply take any object/key pair and save it to the keychain and then retrieve the same object by using the corresponding key. So what did I do? Well, like any self respecting programmer, I wrote this interface.
+When I first started programming iOS apps, NSUserDefaults seemed like the ideal place to store user preferences. I made the novice mistake (like a lot of programmers do) of storing username/password or tokens in NSUserDefaults as well. When I realized that NSUserDefaults was completely insecure I looked for an alternative and found that Apple had built-in support for the keychain since iOS 2.0. However, the API for the keychain was entirely in C and I was hoping for a simple "object for key" interface similar to NSDictionary. I wanted to take any object/key pair and save it to the keychain and then retrieve the same object by using the corresponding key. So what did I do? Well, like any self respecting programmer, I wrote this interface.
 
 Over the span of three projects I refined my class until I created what we have here: the FDKeychain. This is a static class that has three simple methods: save, load, delete. You can take any object that conforms to the NSCoding protocol and save it to the keychain. That key can then be used to load or delete that object from the keychain.
 
@@ -9,18 +9,22 @@ If you're not familar with the keychain it is a simple password management syste
 2. Any applications that share the same App Id can share access groups in the keychain. By default an application has access to the access group which matches its application identifier (e.g. XXXXXXXXXX.com.1414degrees.keychain). If you give your target an Entitlements file you can specify your keychain access groups and if two appplications reference the same access group, they share items.
 
 # Installation
-First add Security.framework to the build phase of the target that will be using FDKeychain. Next include FDKeychain in your project using either of the following methods:
+There are three ways to use the FDKeychain project:
 
-## 1. Use static library project
-Add the "FDKeychain Static Library" project to your workspace or as a sub-project.  
-Next to go the "Build Phases" tab of the target that will be using FDKeychain and add FDKeychain to the "Target Dependencies" section.  
-Finally add FDKeychain to the "Link Binary With Libraries" section.
+## 1. Use the static library project
+1. Add the "FDKeychain Static Library" project to your workspace or as a sub-project.  
+2. Go to the "Build Phases" tab of the target that will be using FDKeychain and add Security.framework to the "Link Binary With Libraries" section.
+3. Add FDKeychain to the "Target Dependencies" section.  
+4. Finally add FDKeychain to the "Link Binary With Libraries" section.
 
 ## 2. Copy source code files
-Copy the following files into your project:
+Add Security.framework to the build phase of the target that will be using FDKeychain then copy the following files into your project:
 
 FDKeychain.h  
 FDKeychain.m  
+
+## 3. CocoaPods
+Simply add `pod "FDKeychain", "~> 1.0.0"` to your Podfile.
 
 # Usage
 Let us pretend you have an application named "Trambopoline" and you have a password that you want to store securely.

@@ -1,7 +1,13 @@
 @import Foundation;
 
 
-#pragma mark Enumerations
+#pragma mark Constants
+
+extern NSString * const FDKeychainErrorDomain;
+#define FDKeychainUnarchiveErrorCode 21
+
+
+#pragma mark - Enumerations
 
 /**
 Accessibility level of an item in the keychain which determines when it is readable.

@@ -2,7 +2,12 @@
 @import Security;
 
 
-#pragma mark Class Extension
+#pragma mark Constants
+
+NSString * const FDKeychainErrorDomain = @"com.1414degrees.keychain";
+
+
+#pragma mark - Class Extension
 
 @interface FDKeychain ()
 
@@ -80,7 +85,25 @@
 	
 	if (rawData != nil)
 	{
-		item = [NSKeyedUnarchiver unarchiveObjectWithData: rawData];
+		// Catch any exceptions that occur when unarchiving an item and return a appropriate error object.
+		// This is useful for the scenario where the encoded object may have changed and can no longer be decoded properly. Rather than crash the application outright give the user the ability to recover from it.
+		@try
+		{
+			item = [NSKeyedUnarchiver unarchiveObjectWithData: rawData];
+		}
+		@catch (NSException *exception)
+		{
+			if (error != NULL)
+			{
+				NSDictionary *userInfo = @{ 
+					NSLocalizedFailureReasonErrorKey : exception.reason 
+				};
+			
+				*error = [NSError errorWithDomain: FDKeychainErrorDomain 
+					code: FDKeychainUnarchiveErrorCode 
+					userInfo: userInfo];
+			}
+		}
 	}
 	
 	return item;
@@ -296,7 +319,7 @@
 				NSDictionary *userInfo = @{ NSLocalizedDescriptionKey : localizedDescription,
 					 NSUnderlyingErrorKey : *error };
 				
-				*error = [NSError errorWithDomain: @"com.1414degrees.FDKeychain" 
+				*error = [NSError errorWithDomain: FDKeychainErrorDomain 
 					code: resultCode 
 					userInfo: userInfo];
 			}
@@ -364,7 +387,7 @@
 		}
 	}
 	
-	NSError *error = [NSError errorWithDomain: @"com.1414degrees.FDKeychain" 
+	NSError *error = [NSError errorWithDomain: FDKeychainErrorDomain 
 		code: resultCode 
 		userInfo: @{ NSLocalizedDescriptionKey : localizedDescription }];
 	

@@ -9,16 +9,15 @@ If you're not familar with the keychain it is a simple password management syste
 2. Any applications that share the same App Id can share access groups in the keychain. By default an application has access to the access group which matches its application identifier (e.g. XXXXXXXXXX.com.1414degrees.keychain). If you give your target an Entitlements file you can specify your keychain access groups and if two appplications reference the same access group, they share items.
 
 # Installation
-There are three ways to use the FDKeychain project:
+There are three ways to use the FDKeychain project. All three methods assume your Xcode project is using modules. If it is not then you will most likely need to link Security.framework in the build phase of your target.
 
 ## 1. Use the static library project
 1. Add the "FDKeychain Static Library" project to your workspace or as a sub-project.  
-2. Go to the "Build Phases" tab of the target that will be using FDKeychain and add Security.framework to the "Link Binary With Libraries" section.
-3. Add FDKeychain to the "Target Dependencies" section.  
-4. Finally add FDKeychain to the "Link Binary With Libraries" section.
+2. Add FDKeychain to the "Target Dependencies" section.  
+3. Finally add FDKeychain to the "Link Binary With Libraries" section.
 
 ## 2. Copy source code files
-Add Security.framework to the build phase of the target that will be using FDKeychain then copy the following files into your project:
+Copy the following files into your project:
 
 FDKeychain.h  
 FDKeychain.m  

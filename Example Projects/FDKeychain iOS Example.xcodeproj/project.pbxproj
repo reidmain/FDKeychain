@@ -138,7 +138,7 @@
 		07D974C21544F877005B4023 = {
 			isa = PBXGroup;
 			children = (
-				07D974D91544F877005B4023 /* FDKeychain */,
+				07D974D91544F877005B4023 /* FDKeychain iOS Example */,
 				07CE04301613EC7000EC19FA /* Vendors */,
 				07D975301544FEE4005B4023 /* Keychain Alpha */,
 				07D9755E1544FEE4005B4023 /* Keychain Pi */,
@@ -158,14 +158,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		07D974D91544F877005B4023 /* FDKeychain */ = {
+		07D974D91544F877005B4023 /* FDKeychain iOS Example */ = {
 			isa = PBXGroup;
 			children = (
 				2719736B19AFBBB500F12FCF /* Classes */,
 				2719737719AFBBC200F12FCF /* Resources */,
 				07D974DA1544F877005B4023 /* Supporting Files */,
 			);
-			path = FDKeychain;
+			path = "FDKeychain iOS Example";
 			sourceTree = "<group>";
 		};
 		07D974DA1544F877005B4023 /* Supporting Files */ = {
@@ -184,7 +184,7 @@
 				07D975451544FEE4005B4023 /* Supporting Files */,
 			);
 			name = "Keychain Alpha";
-			path = "FDKeychain/Keychain Alpha";
+			path = "FDKeychain iOS Example/Keychain Alpha";
 			sourceTree = "<group>";
 		};
 		07D975451544FEE4005B4023 /* Supporting Files */ = {
@@ -203,7 +203,7 @@
 				07D9755C1544FEE4005B4023 /* Supporting Files */,
 			);
 			name = "Keychain Omega";
-			path = "FDKeychain/Keychain Omega";
+			path = "FDKeychain iOS Example/Keychain Omega";
 			sourceTree = "<group>";
 		};
 		07D9755C1544FEE4005B4023 /* Supporting Files */ = {
@@ -222,7 +222,7 @@
 				07D975731544FEE4005B4023 /* Supporting Files */,
 			);
 			name = "Keychain Pi";
-			path = "FDKeychain/Keychain Pi";
+			path = "FDKeychain iOS Example/Keychain Pi";
 			sourceTree = "<group>";
 		};
 		07D975731544FEE4005B4023 /* Supporting Files */ = {
@@ -292,7 +292,7 @@
 				2719739219AFBC6F00F12FCF /* iTunesArtwork@2x */,
 			);
 			name = Resources;
-			path = "FDKeychain/Keychain Pi/Resources";
+			path = "FDKeychain iOS Example/Keychain Omega/Resources";
 			sourceTree = SOURCE_ROOT;
 		};
 		27F511A016AF210500B05F89 /* Products */ = {
@@ -499,10 +499,10 @@
 		07C5BFFF154652EF0018C348 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "FDKeychain/Keychain Pi/Supporting Files/Entitlements.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "FDKeychain iOS Example/Keychain Pi/Supporting Files/Entitlements.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FDKeychain/Supporting Files/Prefix.pch";
-				INFOPLIST_FILE = "FDKeychain/Keychain Pi/Supporting Files/Info-Pi.plist";
+				GCC_PREFIX_HEADER = "FDKeychain iOS Example/Supporting Files/Prefix.pch";
+				INFOPLIST_FILE = "FDKeychain iOS Example/Keychain Pi/Supporting Files/Info-Pi.plist";
 				PRODUCT_NAME = "Keychain Pi";
 				WRAPPER_EXTENSION = app;
 			};
@@ -511,10 +511,10 @@
 		07C5C000154652EF0018C348 /* Ad Hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "FDKeychain/Keychain Pi/Supporting Files/Entitlements.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "FDKeychain iOS Example/Keychain Pi/Supporting Files/Entitlements.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FDKeychain/Supporting Files/Prefix.pch";
-				INFOPLIST_FILE = "FDKeychain/Keychain Pi/Supporting Files/Info-Pi.plist";
+				GCC_PREFIX_HEADER = "FDKeychain iOS Example/Supporting Files/Prefix.pch";
+				INFOPLIST_FILE = "FDKeychain iOS Example/Keychain Pi/Supporting Files/Info-Pi.plist";
 				PRODUCT_NAME = "Keychain Pi";
 				WRAPPER_EXTENSION = app;
 			};
@@ -523,10 +523,10 @@
 		07C5C001154652EF0018C348 /* App Store */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "FDKeychain/Keychain Pi/Supporting Files/Entitlements.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "FDKeychain iOS Example/Keychain Pi/Supporting Files/Entitlements.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FDKeychain/Supporting Files/Prefix.pch";
-				INFOPLIST_FILE = "FDKeychain/Keychain Pi/Supporting Files/Info-Pi.plist";
+				GCC_PREFIX_HEADER = "FDKeychain iOS Example/Supporting Files/Prefix.pch";
+				INFOPLIST_FILE = "FDKeychain iOS Example/Keychain Pi/Supporting Files/Info-Pi.plist";
 				PRODUCT_NAME = "Keychain Pi";
 				WRAPPER_EXTENSION = app;
 			};
@@ -535,10 +535,10 @@
 		07C5C027154652F10018C348 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "FDKeychain/Keychain Omega/Supporting Files/Entitlements.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "FDKeychain iOS Example/Keychain Omega/Supporting Files/Entitlements.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FDKeychain/Supporting Files/Prefix.pch";
-				INFOPLIST_FILE = "FDKeychain/Keychain Omega/Supporting Files/Info-Omega.plist";
+				GCC_PREFIX_HEADER = "FDKeychain iOS Example/Supporting Files/Prefix.pch";
+				INFOPLIST_FILE = "FDKeychain iOS Example/Keychain Omega/Supporting Files/Info-Omega.plist";
 				PRODUCT_NAME = "Keychain Omega";
 				WRAPPER_EXTENSION = app;
 			};
@@ -547,10 +547,10 @@
 		07C5C028154652F10018C348 /* Ad Hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "FDKeychain/Keychain Omega/Supporting Files/Entitlements.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "FDKeychain iOS Example/Keychain Omega/Supporting Files/Entitlements.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FDKeychain/Supporting Files/Prefix.pch";
-				INFOPLIST_FILE = "FDKeychain/Keychain Omega/Supporting Files/Info-Omega.plist";
+				GCC_PREFIX_HEADER = "FDKeychain iOS Example/Supporting Files/Prefix.pch";
+				INFOPLIST_FILE = "FDKeychain iOS Example/Keychain Omega/Supporting Files/Info-Omega.plist";
 				PRODUCT_NAME = "Keychain Omega";
 				WRAPPER_EXTENSION = app;
 			};
@@ -559,10 +559,10 @@
 		07C5C029154652F10018C348 /* App Store */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "FDKeychain/Keychain Omega/Supporting Files/Entitlements.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "FDKeychain iOS Example/Keychain Omega/Supporting Files/Entitlements.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FDKeychain/Supporting Files/Prefix.pch";
-				INFOPLIST_FILE = "FDKeychain/Keychain Omega/Supporting Files/Info-Omega.plist";
+				GCC_PREFIX_HEADER = "FDKeychain iOS Example/Supporting Files/Prefix.pch";
+				INFOPLIST_FILE = "FDKeychain iOS Example/Keychain Omega/Supporting Files/Info-Omega.plist";
 				PRODUCT_NAME = "Keychain Omega";
 				WRAPPER_EXTENSION = app;
 			};
@@ -675,10 +675,10 @@
 		07D9752D1544F879005B4023 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "FDKeychain/Keychain Alpha/Supporting Files/Entitlements.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "FDKeychain iOS Example/Keychain Alpha/Supporting Files/Entitlements.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FDKeychain/Supporting Files/Prefix.pch";
-				INFOPLIST_FILE = "FDKeychain/Keychain Alpha/Supporting Files/Info-Alpha.plist";
+				GCC_PREFIX_HEADER = "FDKeychain iOS Example/Supporting Files/Prefix.pch";
+				INFOPLIST_FILE = "FDKeychain iOS Example/Keychain Alpha/Supporting Files/Info-Alpha.plist";
 				PRODUCT_NAME = "Keychain Alpha";
 				WRAPPER_EXTENSION = app;
 			};
@@ -687,10 +687,10 @@
 		07D9752E1544F879005B4023 /* Ad Hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "FDKeychain/Keychain Alpha/Supporting Files/Entitlements.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "FDKeychain iOS Example/Keychain Alpha/Supporting Files/Entitlements.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FDKeychain/Supporting Files/Prefix.pch";
-				INFOPLIST_FILE = "FDKeychain/Keychain Alpha/Supporting Files/Info-Alpha.plist";
+				GCC_PREFIX_HEADER = "FDKeychain iOS Example/Supporting Files/Prefix.pch";
+				INFOPLIST_FILE = "FDKeychain iOS Example/Keychain Alpha/Supporting Files/Info-Alpha.plist";
 				PRODUCT_NAME = "Keychain Alpha";
 				WRAPPER_EXTENSION = app;
 			};
@@ -699,10 +699,10 @@
 		07D9752F1544F879005B4023 /* App Store */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "FDKeychain/Keychain Alpha/Supporting Files/Entitlements.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "FDKeychain iOS Example/Keychain Alpha/Supporting Files/Entitlements.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FDKeychain/Supporting Files/Prefix.pch";
-				INFOPLIST_FILE = "FDKeychain/Keychain Alpha/Supporting Files/Info-Alpha.plist";
+				GCC_PREFIX_HEADER = "FDKeychain iOS Example/Supporting Files/Prefix.pch";
+				INFOPLIST_FILE = "FDKeychain iOS Example/Keychain Alpha/Supporting Files/Info-Alpha.plist";
 				PRODUCT_NAME = "Keychain Alpha";
 				WRAPPER_EXTENSION = app;
 			};

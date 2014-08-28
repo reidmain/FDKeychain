@@ -507,7 +507,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "1414 Degrees";
 			};
-			buildConfigurationList = 07D974C71544F877005B4023 /* Build configuration list for PBXProject "FDKeychain" */;
+			buildConfigurationList = 07D974C71544F877005B4023 /* Build configuration list for PBXProject "FDKeychain iOS Example" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -874,7 +874,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		07D974C71544F877005B4023 /* Build configuration list for PBXProject "FDKeychain" */ = {
+		07D974C71544F877005B4023 /* Build configuration list for PBXProject "FDKeychain iOS Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07D975291544F879005B4023 /* Debug */,

@@ -23,27 +23,8 @@
 	
 	_mainWindow.backgroundColor = [UIColor blackColor];
 	
-	// Create the root view controller based on what platform the app is running on.
-	UIDevice *currentDevice = [UIDevice currentDevice];
-	
-	UIUserInterfaceIdiom idiom = currentDevice.userInterfaceIdiom;
-	
-	NSString *nibName = nil;
-	
-	if (idiom == UIUserInterfaceIdiomPad)
-	{
-		nibName = @"FDRootView_iPad";
-	}
-	else
-	{
-		nibName = @"FDRootView_iPhone";
-	}
-
-	FDRootViewController *rootViewController = [[FDRootViewController alloc] 
-		initWithNibName: nibName 
-			bundle: nil];
-	
-	_mainWindow.rootViewController = rootViewController;
+	// Create the root view controller for the window.
+	_mainWindow.rootViewController = [FDRootViewController new];
 	
 	// Show the main window.
     [_mainWindow makeKeyAndVisible];

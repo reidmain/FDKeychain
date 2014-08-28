@@ -18,10 +18,6 @@ static NSString * const KeychainItem_AccessGroup_Shared = @"XXXXXXXXXX.com.1414d
 
 @interface FDRootViewController ()
 
-@property (nonatomic, strong) IBOutlet UITextField *localPasswordTextField;
-@property (nonatomic, strong) IBOutlet UITextField *sharedPasswordTextField;
-
-
 - (void)_updateTextFieldsWithKeychainItems;
 
 
@@ -31,6 +27,10 @@ static NSString * const KeychainItem_AccessGroup_Shared = @"XXXXXXXXXX.com.1414d
 #pragma mark - Class Definition
 
 @implementation FDRootViewController
+{
+	@private __strong UITextField *_localPasswordTextField;
+	@private __strong UITextField *_sharedPasswordTextField;
+}
 
 
 #pragma mark - Constructors
@@ -77,36 +77,54 @@ static NSString * const KeychainItem_AccessGroup_Shared = @"XXXXXXXXXX.com.1414d
 
 #pragma mark - Overridden Methods
 
-- (BOOL)shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation)interfaceOrientation
-{
-	return YES;
-}
-
 - (void)viewDidLoad
 {
 	// Call base implementation.
 	[super viewDidLoad];
 	
-	// Perform additional initialization after nib outlets are bound.
-	[self _updateTextFieldsWithKeychainItems];
-}
-
-- (void)viewDidUnload
-{
-	// Call base implementation.
-	[super viewDidUnload];
+	// Set the controller view's background color.
+	self.view.backgroundColor = [UIColor whiteColor];
 	
-	// Release references to subviews of the controller's view. Only do this for objects that can be easily recreated.
-	self.localPasswordTextField = nil;
-	self.sharedPasswordTextField = nil;
-}
+	// Create the local password text field and add it to the controller's view.
+	_localPasswordTextField = [UITextField new];
+	_localPasswordTextField.delegate = self;
+	_localPasswordTextField.placeholder = @"Local Password";
+	_localPasswordTextField.textColor = [UIColor blueColor];
+	_localPasswordTextField.clearButtonMode = UITextFieldViewModeAlways;
+	
+	[self.view addSubview: _localPasswordTextField];
 
-- (void)viewWillAppear: (BOOL)animated
-{
-	// Call base implementation.
-	[super viewWillAppear: animated];
-
-	// Prepare view to be displayed onscreen.
+	// Create the shared password text field and add it to the controller's view.	
+	_sharedPasswordTextField = [UITextField new];
+	_sharedPasswordTextField.delegate = self;
+	_sharedPasswordTextField.placeholder = @"Shared Password";
+	_sharedPasswordTextField.textColor = _localPasswordTextField.textColor;
+	_sharedPasswordTextField.clearButtonMode = _localPasswordTextField.clearButtonMode;
+	
+	[self.view addSubview: _sharedPasswordTextField];
+	
+	// Set the auto layout constraint of the text fields.
+	_localPasswordTextField.translatesAutoresizingMaskIntoConstraints = NO;
+	_sharedPasswordTextField.translatesAutoresizingMaskIntoConstraints = NO;
+	
+	NSDictionary *autoLayoutViews = NSDictionaryOfVariableBindings(_localPasswordTextField, _sharedPasswordTextField);
+	
+	[self.view addConstraints: [NSLayoutConstraint constraintsWithVisualFormat: @"H:|-[_localPasswordTextField]-|" 
+		options: 0 
+		metrics: nil 
+		views: autoLayoutViews]];
+		
+	[self.view addConstraints: [NSLayoutConstraint constraintsWithVisualFormat: @"H:|-[_sharedPasswordTextField]-|" 
+		options: 0 
+		metrics: nil 
+		views: autoLayoutViews]];
+	
+	[self.view addConstraints: [NSLayoutConstraint constraintsWithVisualFormat: @"V:|-75-[_localPasswordTextField]-30-[_sharedPasswordTextField]" 
+		options: 0 
+		metrics: nil 
+		views: autoLayoutViews]];
+	
+	// Ensure the text fields are populated with their keychain items.
 	[self _updateTextFieldsWithKeychainItems];
 }
 

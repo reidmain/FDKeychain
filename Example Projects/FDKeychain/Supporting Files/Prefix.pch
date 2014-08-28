@@ -1,10 +1,11 @@
 //
-// Prefix header for all source files in the 'FDKeychain' project
+// Prefix header for all source files in the 'FDKeychain iOS Example' project
 //
 
 #ifdef __OBJC__
-	#import <Foundation/Foundation.h>
-	#import <QuartzCore/QuartzCore.h>
-	#import <UIKIt/UIKit.h>
+	@import Foundation;
+	@import QuartzCore;
+	@import UIKit;
+	
 	#import <FDKeychain/FDKeychain.h>
 #endif

@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		07C5BFC3154642610018C348 /* FDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C5BFC2154642610018C348 /* FDRootViewController.m */; };
-		07C5BFC9154647580018C348 /* FDRootView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C5BFC8154647580018C348 /* FDRootView_iPhone.xib */; };
-		07C5BFCB154647680018C348 /* FDRootView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C5BFCA154647680018C348 /* FDRootView_iPad.xib */; };
 		07C5BFDF154652EF0018C348 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D974DD1544F878005B4023 /* main.m */; };
 		07C5BFE0154652EF0018C348 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D974E11544F878005B4023 /* AppDelegate.m */; };
 		07C5BFE2154652EF0018C348 /* FDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C5BFC2154642610018C348 /* FDRootViewController.m */; };
@@ -18,8 +16,6 @@
 		07C5BFE6154652EF0018C348 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D31544F877005B4023 /* CoreGraphics.framework */; };
 		07C5BFE7154652EF0018C348 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D51544F877005B4023 /* QuartzCore.framework */; };
 		07C5BFE8154652EF0018C348 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D71544F877005B4023 /* UIKit.framework */; };
-		07C5BFFC154652EF0018C348 /* FDRootView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C5BFC8154647580018C348 /* FDRootView_iPhone.xib */; };
-		07C5BFFD154652EF0018C348 /* FDRootView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C5BFCA154647680018C348 /* FDRootView_iPad.xib */; };
 		07C5C007154652F10018C348 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D974DD1544F878005B4023 /* main.m */; };
 		07C5C008154652F10018C348 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D974E11544F878005B4023 /* AppDelegate.m */; };
 		07C5C00A154652F10018C348 /* FDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C5BFC2154642610018C348 /* FDRootViewController.m */; };
@@ -28,8 +24,6 @@
 		07C5C00E154652F10018C348 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D31544F877005B4023 /* CoreGraphics.framework */; };
 		07C5C00F154652F10018C348 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D51544F877005B4023 /* QuartzCore.framework */; };
 		07C5C010154652F10018C348 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D71544F877005B4023 /* UIKit.framework */; };
-		07C5C024154652F10018C348 /* FDRootView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C5BFC8154647580018C348 /* FDRootView_iPhone.xib */; };
-		07C5C025154652F10018C348 /* FDRootView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C5BFCA154647680018C348 /* FDRootView_iPad.xib */; };
 		07C5C035154653590018C348 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07D9759B1544FF62005B4023 /* InfoPlist.strings */; };
 		07C5C0371546535C0018C348 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 07D975711544FEE4005B4023 /* iTunesArtwork */; };
 		07C5C0381546535C0018C348 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 07D975721544FEE4005B4023 /* iTunesArtwork@2x */; };
@@ -94,8 +88,6 @@
 		0760B4651546FC0C00AC1232 /* Entitlements.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Entitlements.entitlements; sourceTree = "<group>"; };
 		07C5BFC1154642610018C348 /* FDRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDRootViewController.h; sourceTree = "<group>"; };
 		07C5BFC2154642610018C348 /* FDRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDRootViewController.m; sourceTree = "<group>"; };
-		07C5BFC8154647580018C348 /* FDRootView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FDRootView_iPhone.xib; sourceTree = "<group>"; };
-		07C5BFCA154647680018C348 /* FDRootView_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FDRootView_iPad.xib; sourceTree = "<group>"; };
 		07C5C002154652EF0018C348 /* Keychain Pi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keychain Pi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C5C02A154652F10018C348 /* Keychain Omega.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keychain Omega.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D974CD1544F877005B4023 /* Keychain Alpha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keychain Alpha.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,8 +209,6 @@
 		07D974D91544F877005B4023 /* FDKeychain */ = {
 			isa = PBXGroup;
 			children = (
-				07D9750F1544F878005B4023 /* iPad */,
-				07D974F91544F878005B4023 /* iPhone */,
 				07D974DF1544F878005B4023 /* Shared */,
 				07D974DA1544F877005B4023 /* Supporting Files */,
 			);
@@ -258,54 +248,6 @@
 			children = (
 				07C5BFC1154642610018C348 /* FDRootViewController.h */,
 				07C5BFC2154642610018C348 /* FDRootViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		07D974F91544F878005B4023 /* iPhone */ = {
-			isa = PBXGroup;
-			children = (
-				07D9750C1544F878005B4023 /* Views */,
-			);
-			path = iPhone;
-			sourceTree = "<group>";
-		};
-		07D9750C1544F878005B4023 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				07D9750D1544F878005B4023 /* Controllers */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		07D9750D1544F878005B4023 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				07C5BFC8154647580018C348 /* FDRootView_iPhone.xib */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		07D9750F1544F878005B4023 /* iPad */ = {
-			isa = PBXGroup;
-			children = (
-				07D975101544F878005B4023 /* Views */,
-			);
-			path = iPad;
-			sourceTree = "<group>";
-		};
-		07D975101544F878005B4023 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				07D975111544F878005B4023 /* Controllers */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		07D975111544F878005B4023 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				07C5BFCA154647680018C348 /* FDRootView_iPad.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -547,8 +489,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C5BFFC154652EF0018C348 /* FDRootView_iPhone.xib in Resources */,
-				07C5BFFD154652EF0018C348 /* FDRootView_iPad.xib in Resources */,
 				278A94311808A81D00B43DCB /* Images.xcassets in Resources */,
 				278A943D1808ABBF00B43DCB /* Images.xcassets in Resources */,
 				07C5C035154653590018C348 /* InfoPlist.strings in Resources */,
@@ -561,9 +501,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C5C024154652F10018C348 /* FDRootView_iPhone.xib in Resources */,
 				278A943A1808ABB400B43DCB /* Images.xcassets in Resources */,
-				07C5C025154652F10018C348 /* FDRootView_iPad.xib in Resources */,
 				278A94321808A81D00B43DCB /* Images.xcassets in Resources */,
 				07C5C0411546536C0018C348 /* InfoPlist.strings in Resources */,
 				07C5C043154653700018C348 /* iTunesArtwork in Resources */,
@@ -580,8 +518,6 @@
 				07D9757E1544FEE4005B4023 /* iTunesArtwork in Resources */,
 				07D9757F1544FEE4005B4023 /* iTunesArtwork@2x in Resources */,
 				07D975A01544FF96005B4023 /* InfoPlist.strings in Resources */,
-				07C5BFC9154647580018C348 /* FDRootView_iPhone.xib in Resources */,
-				07C5BFCB154647680018C348 /* FDRootView_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

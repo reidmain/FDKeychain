@@ -3,7 +3,14 @@
 
 #pragma mark Constants
 
+/**
+Error domain for FDKeychain. Error codes correspond to either codes found in FDKeychain.h or SecBase.h
+*/
 extern NSString * const FDKeychainErrorDomain;
+
+/**
+Error code for when an item cannot be succesfully unarchived from the keychain.
+*/
 #define FDKeychainUnarchiveErrorCode 21
 
 
@@ -14,8 +21,11 @@ Accessibility level of an item in the keychain which determines when it is reada
 */
 typedef NS_ENUM(NSInteger, FDKeychainAccessibility)
 {
-	FDKeychainAccessibleWhenUnlocked, /// The item in the keychain can only be accessed while the device is unlocked.
-	FDKeychainAccessibleAfterFirstUnlock, /// The item in the keychain cannot be accessed after a restart until the device has been unlocked once.
+	/// The item in the keychain can only be accessed while the device is unlocked.
+	FDKeychainAccessibleWhenUnlocked,
+	
+	/// The item in the keychain cannot be accessed after a restart until the device has been unlocked once.
+	FDKeychainAccessibleAfterFirstUnlock,
 };
 
 
@@ -32,6 +42,10 @@ All items that are saved using FDKeychain must adhear to the NSCoding protocol b
 
 
 #pragma mark - Static Methods
+
+/// ----------
+/// @name Load
+/// ----------
 
 /**
 Attempts to retrieve the raw serialized NSData from the keychain with the specified key, service and access group.
@@ -51,6 +65,8 @@ This is useful for migration purposes if the item that was serialized to the key
 	error: (NSError **)error;
 
 /**
+Helper method for rawDataForKey:forService:inAccessGroup:error: that omits the access group.
+
 @see rawDataForKey:forService:inAccessGroup:error:
 */
 + (NSData *)rawDataForKey: (NSString *)key 
@@ -73,11 +89,17 @@ Attempts to retrieve the item from the keychain with the specified key, service 
 	error: (NSError **)error;
 
 /**
+Helper method for itemForKey:forService:inAccessGroup:error: that omits the access group.
+
 @see itemForKey:forService:inAccessGroup:error:
 */
 + (id)itemForKey: (NSString *)key 
 	forService: (NSString *)service 
 	error: (NSError **)error;
+
+/// ----------
+/// @name Save
+/// ----------
 
 /**
 Attempts to save the item to the keychain under the associated key, service and access group with the specified accessibility level.
@@ -95,16 +117,22 @@ Attempts to save the item to the keychain under the associated key, service and 
 	forKey: (NSString *)key 
 	forService: (NSString *)service 
 	inAccessGroup: (NSString *)accessGroup 
-	withAccessibility: (FDKeychainAccessibility)accessibility
+	withAccessibility: (FDKeychainAccessibility)accessibility 
 	error: (NSError **)error;
 
 /**
+Helper method for saveItem:forKey:forService:inAccessGroup:withAccessibility:error: that omits the access group.
+
 @see saveItem:forKey:forService:inAccessGroup:withAccessibility:error:
 */
 + (BOOL)saveItem: (id<NSCoding>)item 
 	forKey: (NSString *)key 
 	forService: (NSString *)service 
 	error: (NSError **)error;
+
+/// ------------
+/// @name Delete
+/// ------------
 
 /**
 Attempts to delete the item from the keychain with the specified key, service and access group.
@@ -122,6 +150,8 @@ Attempts to delete the item from the keychain with the specified key, service an
 	error: (NSError **)error;
 
 /**
+Helper method for deleteItemForKey:forService:inAccessGroup:error: that omits the access group.
+
 @see deleteItemForKey:forService:inAccessGroup:error:
 */
 + (BOOL)deleteItemForKey: (NSString *)key 

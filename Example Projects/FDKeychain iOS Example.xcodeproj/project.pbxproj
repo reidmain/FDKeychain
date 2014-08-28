@@ -7,46 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07C5BFC3154642610018C348 /* FDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C5BFC2154642610018C348 /* FDRootViewController.m */; };
 		07C5BFDF154652EF0018C348 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D974DD1544F878005B4023 /* main.m */; };
-		07C5BFE0154652EF0018C348 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D974E11544F878005B4023 /* AppDelegate.m */; };
-		07C5BFE2154652EF0018C348 /* FDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C5BFC2154642610018C348 /* FDRootViewController.m */; };
-		07C5BFE4154652EF0018C348 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D975991544FEEE005B4023 /* Security.framework */; };
-		07C5BFE5154652EF0018C348 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D11544F877005B4023 /* Foundation.framework */; };
-		07C5BFE6154652EF0018C348 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D31544F877005B4023 /* CoreGraphics.framework */; };
-		07C5BFE7154652EF0018C348 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D51544F877005B4023 /* QuartzCore.framework */; };
-		07C5BFE8154652EF0018C348 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D71544F877005B4023 /* UIKit.framework */; };
 		07C5C007154652F10018C348 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D974DD1544F878005B4023 /* main.m */; };
-		07C5C008154652F10018C348 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D974E11544F878005B4023 /* AppDelegate.m */; };
-		07C5C00A154652F10018C348 /* FDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C5BFC2154642610018C348 /* FDRootViewController.m */; };
-		07C5C00C154652F10018C348 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D975991544FEEE005B4023 /* Security.framework */; };
-		07C5C00D154652F10018C348 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D11544F877005B4023 /* Foundation.framework */; };
-		07C5C00E154652F10018C348 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D31544F877005B4023 /* CoreGraphics.framework */; };
-		07C5C00F154652F10018C348 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D51544F877005B4023 /* QuartzCore.framework */; };
-		07C5C010154652F10018C348 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D71544F877005B4023 /* UIKit.framework */; };
-		07C5C035154653590018C348 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07D9759B1544FF62005B4023 /* InfoPlist.strings */; };
-		07C5C0371546535C0018C348 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 07D975711544FEE4005B4023 /* iTunesArtwork */; };
-		07C5C0381546535C0018C348 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 07D975721544FEE4005B4023 /* iTunesArtwork@2x */; };
-		07C5C0411546536C0018C348 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07D9759D1544FF70005B4023 /* InfoPlist.strings */; };
-		07C5C043154653700018C348 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 07D9755A1544FEE4005B4023 /* iTunesArtwork */; };
-		07C5C044154653700018C348 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 07D9755B1544FEE4005B4023 /* iTunesArtwork@2x */; };
-		07D974D21544F877005B4023 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D11544F877005B4023 /* Foundation.framework */; };
-		07D974D41544F877005B4023 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D31544F877005B4023 /* CoreGraphics.framework */; };
-		07D974D61544F877005B4023 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D51544F877005B4023 /* QuartzCore.framework */; };
-		07D974D81544F877005B4023 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D974D71544F877005B4023 /* UIKit.framework */; };
 		07D974DE1544F878005B4023 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D974DD1544F878005B4023 /* main.m */; };
-		07D974E21544F878005B4023 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D974E11544F878005B4023 /* AppDelegate.m */; };
-		07D9757E1544FEE4005B4023 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 07D975431544FEE4005B4023 /* iTunesArtwork */; };
-		07D9757F1544FEE4005B4023 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 07D975441544FEE4005B4023 /* iTunesArtwork@2x */; };
-		07D975A01544FF96005B4023 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07D9759F1544FF96005B4023 /* InfoPlist.strings */; };
-		278A94301808A81D00B43DCB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278A942F1808A81D00B43DCB /* Images.xcassets */; };
-		278A94311808A81D00B43DCB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278A942F1808A81D00B43DCB /* Images.xcassets */; };
-		278A94321808A81D00B43DCB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278A942F1808A81D00B43DCB /* Images.xcassets */; };
-		278A94341808ABA900B43DCB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278A94331808ABA900B43DCB /* Images.xcassets */; };
-		278A943A1808ABB400B43DCB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278A94371808ABB400B43DCB /* Images.xcassets */; };
-		278A943D1808ABBF00B43DCB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278A943B1808ABBF00B43DCB /* Images.xcassets */; };
+		2719737119AFBBB500F12FCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2719736D19AFBBB500F12FCF /* AppDelegate.m */; };
+		2719737219AFBBB500F12FCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2719736D19AFBBB500F12FCF /* AppDelegate.m */; };
+		2719737319AFBBB500F12FCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2719736D19AFBBB500F12FCF /* AppDelegate.m */; };
+		2719737419AFBBB500F12FCF /* FDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2719737019AFBBB500F12FCF /* FDRootViewController.m */; };
+		2719737519AFBBB500F12FCF /* FDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2719737019AFBBB500F12FCF /* FDRootViewController.m */; };
+		2719737619AFBBB500F12FCF /* FDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2719737019AFBBB500F12FCF /* FDRootViewController.m */; };
+		2719737919AFBBC200F12FCF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2719737819AFBBC200F12FCF /* Images.xcassets */; };
+		2719737A19AFBBC200F12FCF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2719737819AFBBC200F12FCF /* Images.xcassets */; };
+		2719737B19AFBBC200F12FCF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2719737819AFBBC200F12FCF /* Images.xcassets */; };
+		2719738119AFBC5000F12FCF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2719737D19AFBC5000F12FCF /* Images.xcassets */; };
+		2719738219AFBC5000F12FCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2719737E19AFBC5000F12FCF /* InfoPlist.strings */; };
+		2719738319AFBC5000F12FCF /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 2719737F19AFBC5000F12FCF /* iTunesArtwork */; };
+		2719738419AFBC5000F12FCF /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 2719738019AFBC5000F12FCF /* iTunesArtwork@2x */; };
+		2719738A19AFBC5D00F12FCF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2719738619AFBC5D00F12FCF /* Images.xcassets */; };
+		2719738B19AFBC5D00F12FCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2719738719AFBC5D00F12FCF /* InfoPlist.strings */; };
+		2719738C19AFBC5D00F12FCF /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 2719738819AFBC5D00F12FCF /* iTunesArtwork */; };
+		2719738D19AFBC5D00F12FCF /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 2719738919AFBC5D00F12FCF /* iTunesArtwork@2x */; };
+		2719739319AFBC6F00F12FCF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2719738F19AFBC6F00F12FCF /* Images.xcassets */; };
+		2719739419AFBC6F00F12FCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2719739019AFBC6F00F12FCF /* InfoPlist.strings */; };
+		2719739519AFBC6F00F12FCF /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 2719739119AFBC6F00F12FCF /* iTunesArtwork */; };
+		2719739619AFBC6F00F12FCF /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 2719739219AFBC6F00F12FCF /* iTunesArtwork@2x */; };
 		27F511CB16AF218E00B05F89 /* libFDKeychain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F511A716AF210500B05F89 /* libFDKeychain.a */; };
-		27F511CC16AF236F00B05F89 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D975991544FEEE005B4023 /* Security.framework */; };
 		27F511CD16AF246700B05F89 /* libFDKeychain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F511A716AF210500B05F89 /* libFDKeychain.a */; };
 		27F511D016AF247300B05F89 /* libFDKeychain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F511A716AF210500B05F89 /* libFDKeychain.a */; };
 /* End PBXBuildFile section */
@@ -86,36 +71,31 @@
 		0760B4621546FBDD00AC1232 /* Entitlements.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Entitlements.entitlements; sourceTree = "<group>"; };
 		0760B4641546FBEF00AC1232 /* Entitlements.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Entitlements.entitlements; sourceTree = "<group>"; };
 		0760B4651546FC0C00AC1232 /* Entitlements.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Entitlements.entitlements; sourceTree = "<group>"; };
-		07C5BFC1154642610018C348 /* FDRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDRootViewController.h; sourceTree = "<group>"; };
-		07C5BFC2154642610018C348 /* FDRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDRootViewController.m; sourceTree = "<group>"; };
 		07C5C002154652EF0018C348 /* Keychain Pi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keychain Pi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C5C02A154652F10018C348 /* Keychain Omega.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keychain Omega.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D974CD1544F877005B4023 /* Keychain Alpha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keychain Alpha.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		07D974D11544F877005B4023 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		07D974D31544F877005B4023 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		07D974D51544F877005B4023 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		07D974D71544F877005B4023 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		07D974DC1544F877005B4023 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		07D974DD1544F878005B4023 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		07D974E01544F878005B4023 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		07D974E11544F878005B4023 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		07D975431544FEE4005B4023 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
-		07D975441544FEE4005B4023 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
 		07D975461544FEE4005B4023 /* Info-Alpha.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Alpha.plist"; sourceTree = "<group>"; };
-		07D9755A1544FEE4005B4023 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Images/iTunesArtwork; sourceTree = "<group>"; };
-		07D9755B1544FEE4005B4023 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iTunesArtwork@2x"; path = "Images/iTunesArtwork@2x"; sourceTree = "<group>"; };
 		07D9755D1544FEE4005B4023 /* Info-Omega.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Omega.plist"; sourceTree = "<group>"; };
-		07D975711544FEE4005B4023 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Images/iTunesArtwork; sourceTree = "<group>"; };
-		07D975721544FEE4005B4023 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iTunesArtwork@2x"; path = "Images/iTunesArtwork@2x"; sourceTree = "<group>"; };
 		07D975741544FEE4005B4023 /* Info-Pi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Pi.plist"; sourceTree = "<group>"; };
-		07D975991544FEEE005B4023 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		07D9759B1544FF62005B4023 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
-		07D9759D1544FF70005B4023 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
-		07D9759F1544FF96005B4023 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
-		278A942F1808A81D00B43DCB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		278A94331808ABA900B43DCB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		278A94371808ABB400B43DCB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "FDKeychain/Keychain Omega/Shared/Resources/Images.xcassets"; sourceTree = SOURCE_ROOT; };
-		278A943B1808ABBF00B43DCB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2719736C19AFBBB500F12FCF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2719736D19AFBBB500F12FCF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2719736F19AFBBB500F12FCF /* FDRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDRootViewController.h; sourceTree = "<group>"; };
+		2719737019AFBBB500F12FCF /* FDRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDRootViewController.m; sourceTree = "<group>"; };
+		2719737819AFBBC200F12FCF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2719737D19AFBC5000F12FCF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2719737E19AFBC5000F12FCF /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		2719737F19AFBC5000F12FCF /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		2719738019AFBC5000F12FCF /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
+		2719738619AFBC5D00F12FCF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2719738719AFBC5D00F12FCF /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		2719738819AFBC5D00F12FCF /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		2719738919AFBC5D00F12FCF /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
+		2719738F19AFBC6F00F12FCF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2719739019AFBC6F00F12FCF /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		2719739119AFBC6F00F12FCF /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		2719739219AFBC6F00F12FCF /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
 		27F5119F16AF210500B05F89 /* FDKeychain Static Library.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "FDKeychain Static Library.xcodeproj"; path = "../Static Library Project/FDKeychain Static Library.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,11 +104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C5BFE5154652EF0018C348 /* Foundation.framework in Frameworks */,
-				07C5BFE6154652EF0018C348 /* CoreGraphics.framework in Frameworks */,
-				07C5BFE7154652EF0018C348 /* QuartzCore.framework in Frameworks */,
-				07C5BFE8154652EF0018C348 /* UIKit.framework in Frameworks */,
-				07C5BFE4154652EF0018C348 /* Security.framework in Frameworks */,
 				27F511CD16AF246700B05F89 /* libFDKeychain.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,11 +112,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C5C00D154652F10018C348 /* Foundation.framework in Frameworks */,
-				07C5C00E154652F10018C348 /* CoreGraphics.framework in Frameworks */,
-				07C5C00F154652F10018C348 /* QuartzCore.framework in Frameworks */,
-				07C5C010154652F10018C348 /* UIKit.framework in Frameworks */,
-				07C5C00C154652F10018C348 /* Security.framework in Frameworks */,
 				27F511D016AF247300B05F89 /* libFDKeychain.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,11 +120,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07D974D21544F877005B4023 /* Foundation.framework in Frameworks */,
-				07D974D41544F877005B4023 /* CoreGraphics.framework in Frameworks */,
-				07D974D61544F877005B4023 /* QuartzCore.framework in Frameworks */,
-				07D974D81544F877005B4023 /* UIKit.framework in Frameworks */,
-				27F511CC16AF236F00B05F89 /* Security.framework in Frameworks */,
 				27F511CB16AF218E00B05F89 /* libFDKeychain.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,7 +143,6 @@
 				07D975301544FEE4005B4023 /* Keychain Alpha */,
 				07D9755E1544FEE4005B4023 /* Keychain Pi */,
 				07D975471544FEE4005B4023 /* Keychain Omega */,
-				07D974D01544F877005B4023 /* Frameworks */,
 				07D974CE1544F877005B4023 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -194,22 +158,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		07D974D01544F877005B4023 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				07D974D11544F877005B4023 /* Foundation.framework */,
-				07D974D31544F877005B4023 /* CoreGraphics.framework */,
-				07D974D51544F877005B4023 /* QuartzCore.framework */,
-				07D974D71544F877005B4023 /* UIKit.framework */,
-				07D975991544FEEE005B4023 /* Security.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		07D974D91544F877005B4023 /* FDKeychain */ = {
 			isa = PBXGroup;
 			children = (
-				07D974DF1544F878005B4023 /* Shared */,
+				2719736B19AFBBB500F12FCF /* Classes */,
+				2719737719AFBBC200F12FCF /* Resources */,
 				07D974DA1544F877005B4023 /* Supporting Files */,
 			);
 			path = FDKeychain;
@@ -224,61 +177,14 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		07D974DF1544F878005B4023 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				07D974F11544F878005B4023 /* Classes */,
-				278A942E1808A80C00B43DCB /* Resources */,
-				07D974E01544F878005B4023 /* AppDelegate.h */,
-				07D974E11544F878005B4023 /* AppDelegate.m */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		07D974F11544F878005B4023 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				07D974F61544F878005B4023 /* Controllers */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		07D974F61544F878005B4023 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				07C5BFC1154642610018C348 /* FDRootViewController.h */,
-				07C5BFC2154642610018C348 /* FDRootViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		07D975301544FEE4005B4023 /* Keychain Alpha */ = {
 			isa = PBXGroup;
 			children = (
-				07D9753F1544FEE4005B4023 /* Shared */,
+				2719737C19AFBC5000F12FCF /* Resources */,
 				07D975451544FEE4005B4023 /* Supporting Files */,
 			);
 			name = "Keychain Alpha";
 			path = "FDKeychain/Keychain Alpha";
-			sourceTree = "<group>";
-		};
-		07D9753F1544FEE4005B4023 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				07D975401544FEE4005B4023 /* Resources */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		07D975401544FEE4005B4023 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				278A94331808ABA900B43DCB /* Images.xcassets */,
-				07D9759F1544FF96005B4023 /* InfoPlist.strings */,
-				07D975431544FEE4005B4023 /* iTunesArtwork */,
-				07D975441544FEE4005B4023 /* iTunesArtwork@2x */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		07D975451544FEE4005B4023 /* Supporting Files */ = {
@@ -293,30 +199,11 @@
 		07D975471544FEE4005B4023 /* Keychain Omega */ = {
 			isa = PBXGroup;
 			children = (
-				07D975561544FEE4005B4023 /* Shared */,
+				2719738E19AFBC6F00F12FCF /* Resources */,
 				07D9755C1544FEE4005B4023 /* Supporting Files */,
 			);
 			name = "Keychain Omega";
 			path = "FDKeychain/Keychain Omega";
-			sourceTree = "<group>";
-		};
-		07D975561544FEE4005B4023 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				07D975571544FEE4005B4023 /* Resources */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		07D975571544FEE4005B4023 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				278A94371808ABB400B43DCB /* Images.xcassets */,
-				07D9759D1544FF70005B4023 /* InfoPlist.strings */,
-				07D9755A1544FEE4005B4023 /* iTunesArtwork */,
-				07D9755B1544FEE4005B4023 /* iTunesArtwork@2x */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		07D9755C1544FEE4005B4023 /* Supporting Files */ = {
@@ -331,30 +218,11 @@
 		07D9755E1544FEE4005B4023 /* Keychain Pi */ = {
 			isa = PBXGroup;
 			children = (
-				07D9756D1544FEE4005B4023 /* Shared */,
+				2719738519AFBC5D00F12FCF /* Resources */,
 				07D975731544FEE4005B4023 /* Supporting Files */,
 			);
 			name = "Keychain Pi";
 			path = "FDKeychain/Keychain Pi";
-			sourceTree = "<group>";
-		};
-		07D9756D1544FEE4005B4023 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				07D9756E1544FEE4005B4023 /* Resources */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		07D9756E1544FEE4005B4023 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				278A943B1808ABBF00B43DCB /* Images.xcassets */,
-				07D9759B1544FF62005B4023 /* InfoPlist.strings */,
-				07D975711544FEE4005B4023 /* iTunesArtwork */,
-				07D975721544FEE4005B4023 /* iTunesArtwork@2x */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		07D975731544FEE4005B4023 /* Supporting Files */ = {
@@ -366,13 +234,66 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		278A942E1808A80C00B43DCB /* Resources */ = {
+		2719736B19AFBBB500F12FCF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				278A942F1808A81D00B43DCB /* Images.xcassets */,
+				2719736E19AFBBB500F12FCF /* Controllers */,
+				2719736C19AFBBB500F12FCF /* AppDelegate.h */,
+				2719736D19AFBBB500F12FCF /* AppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2719736E19AFBBB500F12FCF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2719736F19AFBBB500F12FCF /* FDRootViewController.h */,
+				2719737019AFBBB500F12FCF /* FDRootViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2719737719AFBBC200F12FCF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2719737819AFBBC200F12FCF /* Images.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
+		};
+		2719737C19AFBC5000F12FCF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2719737D19AFBC5000F12FCF /* Images.xcassets */,
+				2719737E19AFBC5000F12FCF /* InfoPlist.strings */,
+				2719737F19AFBC5000F12FCF /* iTunesArtwork */,
+				2719738019AFBC5000F12FCF /* iTunesArtwork@2x */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2719738519AFBC5D00F12FCF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2719738619AFBC5D00F12FCF /* Images.xcassets */,
+				2719738719AFBC5D00F12FCF /* InfoPlist.strings */,
+				2719738819AFBC5D00F12FCF /* iTunesArtwork */,
+				2719738919AFBC5D00F12FCF /* iTunesArtwork@2x */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2719738E19AFBC6F00F12FCF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2719738F19AFBC6F00F12FCF /* Images.xcassets */,
+				2719739019AFBC6F00F12FCF /* InfoPlist.strings */,
+				2719739119AFBC6F00F12FCF /* iTunesArtwork */,
+				2719739219AFBC6F00F12FCF /* iTunesArtwork@2x */,
+			);
+			name = Resources;
+			path = "FDKeychain/Keychain Pi/Resources";
+			sourceTree = SOURCE_ROOT;
 		};
 		27F511A016AF210500B05F89 /* Products */ = {
 			isa = PBXGroup;
@@ -489,11 +410,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				278A94311808A81D00B43DCB /* Images.xcassets in Resources */,
-				278A943D1808ABBF00B43DCB /* Images.xcassets in Resources */,
-				07C5C035154653590018C348 /* InfoPlist.strings in Resources */,
-				07C5C0371546535C0018C348 /* iTunesArtwork in Resources */,
-				07C5C0381546535C0018C348 /* iTunesArtwork@2x in Resources */,
+				2719738D19AFBC5D00F12FCF /* iTunesArtwork@2x in Resources */,
+				2719737A19AFBBC200F12FCF /* Images.xcassets in Resources */,
+				2719738B19AFBC5D00F12FCF /* InfoPlist.strings in Resources */,
+				2719738A19AFBC5D00F12FCF /* Images.xcassets in Resources */,
+				2719738C19AFBC5D00F12FCF /* iTunesArtwork in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,11 +422,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				278A943A1808ABB400B43DCB /* Images.xcassets in Resources */,
-				278A94321808A81D00B43DCB /* Images.xcassets in Resources */,
-				07C5C0411546536C0018C348 /* InfoPlist.strings in Resources */,
-				07C5C043154653700018C348 /* iTunesArtwork in Resources */,
-				07C5C044154653700018C348 /* iTunesArtwork@2x in Resources */,
+				2719739619AFBC6F00F12FCF /* iTunesArtwork@2x in Resources */,
+				2719737B19AFBBC200F12FCF /* Images.xcassets in Resources */,
+				2719739419AFBC6F00F12FCF /* InfoPlist.strings in Resources */,
+				2719739319AFBC6F00F12FCF /* Images.xcassets in Resources */,
+				2719739519AFBC6F00F12FCF /* iTunesArtwork in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,11 +434,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				278A94301808A81D00B43DCB /* Images.xcassets in Resources */,
-				278A94341808ABA900B43DCB /* Images.xcassets in Resources */,
-				07D9757E1544FEE4005B4023 /* iTunesArtwork in Resources */,
-				07D9757F1544FEE4005B4023 /* iTunesArtwork@2x in Resources */,
-				07D975A01544FF96005B4023 /* InfoPlist.strings in Resources */,
+				2719738419AFBC5000F12FCF /* iTunesArtwork@2x in Resources */,
+				2719737919AFBBC200F12FCF /* Images.xcassets in Resources */,
+				2719738219AFBC5000F12FCF /* InfoPlist.strings in Resources */,
+				2719738119AFBC5000F12FCF /* Images.xcassets in Resources */,
+				2719738319AFBC5000F12FCF /* iTunesArtwork in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,9 +449,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2719737219AFBBB500F12FCF /* AppDelegate.m in Sources */,
+				2719737519AFBBB500F12FCF /* FDRootViewController.m in Sources */,
 				07C5BFDF154652EF0018C348 /* main.m in Sources */,
-				07C5BFE0154652EF0018C348 /* AppDelegate.m in Sources */,
-				07C5BFE2154652EF0018C348 /* FDRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,9 +459,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2719737319AFBBB500F12FCF /* AppDelegate.m in Sources */,
+				2719737619AFBBB500F12FCF /* FDRootViewController.m in Sources */,
 				07C5C007154652F10018C348 /* main.m in Sources */,
-				07C5C008154652F10018C348 /* AppDelegate.m in Sources */,
-				07C5C00A154652F10018C348 /* FDRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,9 +469,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2719737119AFBBB500F12FCF /* AppDelegate.m in Sources */,
+				2719737419AFBBB500F12FCF /* FDRootViewController.m in Sources */,
 				07D974DE1544F878005B4023 /* main.m in Sources */,
-				07D974E21544F878005B4023 /* AppDelegate.m in Sources */,
-				07C5BFC3154642610018C348 /* FDRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

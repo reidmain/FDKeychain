@@ -36,7 +36,7 @@ FDKeychain is a class that provides the ability to save, load and delete items f
 
 FDKeychain is not designed to be instantiated because it does not maintain any state. Every method is static and acts directly on the keychain when it is called. There is no need to persist any state and minimize accessing the keychain because speed is very rarely a factor and, with the addition if the iCloud keychain, ensuring that your data is never stale can be a pain.
 
-All items that are saved using FDKeychain must adhear to the NSCoding protocol because they are serialized before they are saved to the keychain. This allows users to store arbitrary objects in the keychain and not have to worry about the serialize/deserialize process themselves.
+All items that are saved using FDKeychain must adhere to the NSCoding protocol because they are serialized before they are saved to the keychain. This allows users to store arbitrary objects in the keychain and not have to worry about the serialize/deserialize process themselves.
 */
 @interface FDKeychain : NSObject
 
@@ -104,7 +104,7 @@ Helper method for itemForKey:forService:inAccessGroup:error: that omits the acce
 /**
 Attempts to save the item to the keychain under the associated key, service and access group with the specified accessibility level.
 
-@param item The item to be saved to the keychain. The item must adhear to the NSCoding protocol because it will be serialized before it is stored in the keychain. If the item is nil FDKeychain will attempt to delete the item from the keychain instead.
+@param item The item to be saved to the keychain. The item must adhere to the NSCoding protocol because it will be serialized before it is stored in the keychain. If the item is nil FDKeychain will attempt to delete the item from the keychain instead.
 @param key The key that the item will be associated with. This parameter must not be nil.
 @param service The service that the item will be associated with. This is usually the name of the application using the keychain. This parameter must not be nil.
 @param accessGroup The access group that the item will be saved to in the keychain. If this parameter is nil the first access group in the application entitlements file is used by default.

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		279762C919B6638200B55F7B /* FDKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 27F71A0D199AF84200C5AD3C /* FDKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		279762CA19B6638C00B55F7B /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F71A0E199AF84200C5AD3C /* FDKeychain.m */; };
 		27F71A0F199AF84200C5AD3C /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F71A0E199AF84200C5AD3C /* FDKeychain.m */; };
 		27F71A10199AF84600C5AD3C /* FDKeychain.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27F71A0D199AF84200C5AD3C /* FDKeychain.h */; };
 /* End PBXBuildFile section */
@@ -25,12 +27,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2739252619B662790045EA4B /* FDKeychain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FDKeychain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		279762DB19B669A300B55F7B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27F5117916AF1FEE00B05F89 /* libFDKeychain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFDKeychain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		27F71A0D199AF84200C5AD3C /* FDKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDKeychain.h; sourceTree = "<group>"; };
 		27F71A0E199AF84200C5AD3C /* FDKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDKeychain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2739252219B662790045EA4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27F5117616AF1FEE00B05F89 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		279762DA19B669A300B55F7B /* OS X Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				279762DB19B669A300B55F7B /* Info.plist */,
+			);
+			path = "OS X Supporting Files";
+			sourceTree = "<group>";
+		};
 		27F5116E16AF1FEE00B05F89 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				27F5117916AF1FEE00B05F89 /* libFDKeychain.a */,
+				2739252619B662790045EA4B /* FDKeychain.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				27F71A0C199AF84200C5AD3C /* FDKeychain */,
+				279762DA19B669A300B55F7B /* OS X Supporting Files */,
 			);
 			name = "FDKeychain Static Library";
 			sourceTree = "<group>";
@@ -77,10 +98,39 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		2739252319B662790045EA4B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				279762C919B6638200B55F7B /* FDKeychain.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		27F5117816AF1FEE00B05F89 /* FDKeychain */ = {
+		2739252519B662790045EA4B /* FDKeychain OS X */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27F5118716AF1FEE00B05F89 /* Build configuration list for PBXNativeTarget "FDKeychain" */;
+			buildConfigurationList = 2739254F19B662790045EA4B /* Build configuration list for PBXNativeTarget "FDKeychain OS X" */;
+			buildPhases = (
+				2739252119B662790045EA4B /* Sources */,
+				2739252219B662790045EA4B /* Frameworks */,
+				2739252319B662790045EA4B /* Headers */,
+				2739252419B662790045EA4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FDKeychain OS X";
+			productName = "FDKeychain OS X";
+			productReference = 2739252619B662790045EA4B /* FDKeychain.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		27F5117816AF1FEE00B05F89 /* FDKeychain iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27F5118716AF1FEE00B05F89 /* Build configuration list for PBXNativeTarget "FDKeychain iOS" */;
 			buildPhases = (
 				27F5117516AF1FEE00B05F89 /* Sources */,
 				27F5117616AF1FEE00B05F89 /* Frameworks */,
@@ -90,7 +140,7 @@
 			);
 			dependencies = (
 			);
-			name = FDKeychain;
+			name = "FDKeychain iOS";
 			productName = "FDKeychain Static Library";
 			productReference = 27F5117916AF1FEE00B05F89 /* libFDKeychain.a */;
 			productType = "com.apple.product-type.library.static";
@@ -116,12 +166,31 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				27F5117816AF1FEE00B05F89 /* FDKeychain */,
+				27F5117816AF1FEE00B05F89 /* FDKeychain iOS */,
+				2739252519B662790045EA4B /* FDKeychain OS X */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		2739252419B662790045EA4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		2739252119B662790045EA4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				279762CA19B6638C00B55F7B /* FDKeychain.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27F5117516AF1FEE00B05F89 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,6 +202,35 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		2739254B19B662790045EA4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "OS X Supporting Files/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		2739254C19B662790045EA4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "OS X Supporting Files/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
 		27F5118516AF1FEE00B05F89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -162,6 +260,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = FDKeychain;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -193,6 +292,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = FDKeychain;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -203,7 +303,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -212,7 +311,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -220,6 +318,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2739254F19B662790045EA4B /* Build configuration list for PBXNativeTarget "FDKeychain OS X" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2739254B19B662790045EA4B /* Debug */,
+				2739254C19B662790045EA4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		27F5117316AF1FEE00B05F89 /* Build configuration list for PBXProject "FDKeychain Static Library" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -229,7 +336,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27F5118716AF1FEE00B05F89 /* Build configuration list for PBXNativeTarget "FDKeychain" */ = {
+		27F5118716AF1FEE00B05F89 /* Build configuration list for PBXNativeTarget "FDKeychain iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27F5118816AF1FEE00B05F89 /* Debug */,

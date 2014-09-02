@@ -1,0 +1,11 @@
+//
+// Prefix header for all source files in the 'FDKeychain Mac Example' project
+//
+
+#ifdef __OBJC__
+	@import Foundation;
+	@import QuartzCore;
+	@import AppKit;
+	
+	#import <FDKeychain/FDKeychain.h>
+#endif

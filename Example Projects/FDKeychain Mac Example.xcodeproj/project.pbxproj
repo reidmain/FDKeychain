@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		279762D919B6658B00B55F7B /* FDKeychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 279762D819B6658700B55F7B /* FDKeychain.framework */; };
+		27CC278619B644C4006588D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CC278519B644C4006588D1 /* main.m */; };
+		27CC278B19B644C4006588D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27CC278A19B644C4006588D1 /* Images.xcassets */; };
+		27CC278D19B644C4006588D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27CC278C19B644C4006588D1 /* InfoPlist.strings */; };
+		27CC278F19B644C4006588D1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 27CC278E19B644C4006588D1 /* Credits.rtf */; };
+		27CC279219B644C4006588D1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CC279119B644C4006588D1 /* MainMenu.xib */; };
+		27CC27A019B644C4006588D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CC279F19B644C4006588D1 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27020FBE19B64C6C00660AEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27020FBA19B64C6C00660AEC /* FDKeychain Static Library.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 27F5117916AF1FEE00B05F89;
+			remoteInfo = FDKeychain;
+		};
+		279762D319B6658700B55F7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27020FBA19B64C6C00660AEC /* FDKeychain Static Library.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2739252519B662790045EA4B;
+			remoteInfo = "FDKeychain OS X";
+		};
+		279762D719B6658700B55F7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27020FBA19B64C6C00660AEC /* FDKeychain Static Library.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2739252619B662790045EA4B;
+			remoteInfo = "FDKeychain OS X";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		27020FBA19B64C6C00660AEC /* FDKeychain Static Library.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "FDKeychain Static Library.xcodeproj"; path = "../../Static Library Project/FDKeychain Static Library.xcodeproj"; sourceTree = "<group>"; };
+		279CE4F819B654E200FDA91D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		279CE4FB19B654E200FDA91D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		279CE4FC19B654E200FDA91D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		279CE4FD19B654E200FDA91D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		279CE50D19B654E200FDA91D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		27CC277F19B644C4006588D1 /* FDKeychain Mac Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FDKeychain Mac Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27CC278319B644C4006588D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27CC278419B644C4006588D1 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		27CC278519B644C4006588D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		27CC278719B644C4006588D1 /* Entitlements.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Entitlements.entitlements; sourceTree = "<group>"; };
+		27CC278A19B644C4006588D1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		27CC278C19B644C4006588D1 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		27CC278E19B644C4006588D1 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		27CC279119B644C4006588D1 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		27CC279E19B644C4006588D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		27CC279F19B644C4006588D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27CC277C19B644C4006588D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				279762D919B6658B00B55F7B /* FDKeychain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27020FBB19B64C6C00660AEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27020FBF19B64C6C00660AEC /* libFDKeychain.a */,
+				279762D819B6658700B55F7B /* FDKeychain.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		279CE4F719B654E200FDA91D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				279CE4F819B654E200FDA91D /* Cocoa.framework */,
+				279CE50D19B654E200FDA91D /* XCTest.framework */,
+				279CE4FA19B654E200FDA91D /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		279CE4FA19B654E200FDA91D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				279CE4FB19B654E200FDA91D /* Foundation.framework */,
+				279CE4FC19B654E200FDA91D /* CoreData.framework */,
+				279CE4FD19B654E200FDA91D /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		27CC277619B644C4006588D1 = {
+			isa = PBXGroup;
+			children = (
+				27CC278119B644C4006588D1 /* FDKeychain Mac Example */,
+				27CC278819B644C4006588D1 /* Vendors */,
+				279CE4F719B654E200FDA91D /* Frameworks */,
+				27CC278019B644C4006588D1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27CC278019B644C4006588D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27CC277F19B644C4006588D1 /* FDKeychain Mac Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27CC278119B644C4006588D1 /* FDKeychain Mac Example */ = {
+			isa = PBXGroup;
+			children = (
+				27CC279519B644C4006588D1 /* Classes */,
+				27CC279019B644C4006588D1 /* Views */,
+				27CC278919B644C4006588D1 /* Resources */,
+				27CC278219B644C4006588D1 /* Supporting Files */,
+			);
+			path = "FDKeychain Mac Example";
+			sourceTree = "<group>";
+		};
+		27CC278219B644C4006588D1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27CC278319B644C4006588D1 /* Info.plist */,
+				27CC278419B644C4006588D1 /* Prefix.pch */,
+				27CC278519B644C4006588D1 /* main.m */,
+				27CC278719B644C4006588D1 /* Entitlements.entitlements */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27CC278819B644C4006588D1 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				27020FBA19B64C6C00660AEC /* FDKeychain Static Library.xcodeproj */,
+			);
+			name = Vendors;
+			path = "FDKeychain Mac Example";
+			sourceTree = "<group>";
+		};
+		27CC278919B644C4006588D1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				27CC278A19B644C4006588D1 /* Images.xcassets */,
+				27CC278C19B644C4006588D1 /* InfoPlist.strings */,
+				27CC278E19B644C4006588D1 /* Credits.rtf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		27CC279019B644C4006588D1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				27CC279119B644C4006588D1 /* MainMenu.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		27CC279519B644C4006588D1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				27CC279E19B644C4006588D1 /* AppDelegate.h */,
+				27CC279F19B644C4006588D1 /* AppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27CC277E19B644C4006588D1 /* FDKeychain Mac Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27CC27A419B644C4006588D1 /* Build configuration list for PBXNativeTarget "FDKeychain Mac Example" */;
+			buildPhases = (
+				27CC277B19B644C4006588D1 /* Sources */,
+				27CC277C19B644C4006588D1 /* Frameworks */,
+				27CC277D19B644C4006588D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				279762D419B6658700B55F7B /* PBXTargetDependency */,
+			);
+			name = "FDKeychain Mac Example";
+			productName = "FDKeychain Mac Example";
+			productReference = 27CC277F19B644C4006588D1 /* FDKeychain Mac Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27CC277719B644C4006588D1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FD;
+				LastUpgradeCheck = 0510;
+				TargetAttributes = {
+					27CC277E19B644C4006588D1 = {
+						DevelopmentTeam = 7VTD8EK7Z4;
+					};
+				};
+			};
+			buildConfigurationList = 27CC277A19B644C4006588D1 /* Build configuration list for PBXProject "FDKeychain Mac Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 27CC277619B644C4006588D1;
+			productRefGroup = 27CC278019B644C4006588D1 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 27020FBB19B64C6C00660AEC /* Products */;
+					ProjectRef = 27020FBA19B64C6C00660AEC /* FDKeychain Static Library.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				27CC277E19B644C4006588D1 /* FDKeychain Mac Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		27020FBF19B64C6C00660AEC /* libFDKeychain.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFDKeychain.a;
+			remoteRef = 27020FBE19B64C6C00660AEC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		279762D819B6658700B55F7B /* FDKeychain.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FDKeychain.framework;
+			remoteRef = 279762D719B6658700B55F7B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27CC277D19B644C4006588D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27CC278B19B644C4006588D1 /* Images.xcassets in Resources */,
+				27CC278F19B644C4006588D1 /* Credits.rtf in Resources */,
+				27CC278D19B644C4006588D1 /* InfoPlist.strings in Resources */,
+				27CC279219B644C4006588D1 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27CC277B19B644C4006588D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27CC27A019B644C4006588D1 /* AppDelegate.m in Sources */,
+				27CC278619B644C4006588D1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		279762D419B6658700B55F7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "FDKeychain OS X";
+			targetProxy = 279762D319B6658700B55F7B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		27CC27A119B644C4006588D1 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_IDENTIFIER = "com.1414degrees.FDKeychain-Mac-Example.adhoc";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "FDKeychain Mac Example/Supporting Files/Entitlements.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Distribution";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = AD_HOC;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)\"/**";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)\"/**";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Ad Hoc";
+		};
+		27CC27A219B644C4006588D1 /* App Store */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_IDENTIFIER = "com.1414degrees.FDKeychain-Mac-Example";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "FDKeychain Mac Example/Supporting Files/Entitlements.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Distribution";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = APP_STORE;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)\"/**";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)\"/**";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "App Store";
+		};
+		27CC27A319B644C4006588D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_IDENTIFIER = "com.1414degrees.FDKeychain-Mac-Example.debug";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "FDKeychain Mac Example/Supporting Files/Entitlements.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		27CC27A519B644C4006588D1 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FDKeychain Mac Example/Supporting Files/Prefix.pch";
+				INFOPLIST_FILE = "FDKeychain Mac Example/Supporting Files/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = "Ad Hoc";
+		};
+		27CC27A619B644C4006588D1 /* App Store */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FDKeychain Mac Example/Supporting Files/Prefix.pch";
+				INFOPLIST_FILE = "FDKeychain Mac Example/Supporting Files/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = "App Store";
+		};
+		27CC27A719B644C4006588D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FDKeychain Mac Example/Supporting Files/Prefix.pch";
+				INFOPLIST_FILE = "FDKeychain Mac Example/Supporting Files/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27CC277A19B644C4006588D1 /* Build configuration list for PBXProject "FDKeychain Mac Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27CC27A119B644C4006588D1 /* Ad Hoc */,
+				27CC27A219B644C4006588D1 /* App Store */,
+				27CC27A319B644C4006588D1 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Ad Hoc";
+		};
+		27CC27A419B644C4006588D1 /* Build configuration list for PBXNativeTarget "FDKeychain Mac Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27CC27A519B644C4006588D1 /* Ad Hoc */,
+				27CC27A619B644C4006588D1 /* App Store */,
+				27CC27A719B644C4006588D1 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Ad Hoc";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27CC277719B644C4006588D1 /* Project object */;
+}

@@ -30,42 +30,59 @@ Let us pretend you have an application named "Trambopoline" and you have a passw
 
 To save the password to the keychain:  
 
-	NSString *password = @"My super secret password";	
+	NSString *password = @"My super secret password";
+	NSError *error = nil;
 
-	[FDKeychain saveItem: password  
-		forKey: @"password"  
-		forService: @"Trambopoline"];
+	[FDKeychain saveItem: password 
+		forKey: @"password" 
+		forService: @"Trambopoline" 
+		error: &error];
 
 To get the password from the keychain:  
 
-	NSString *password = [FDKeychain itemForKey: @"password"  
-		forService: @"Trambopoline"];
+	NSError *error = nil;
+
+	NSString *password = [FDKeychain itemForKey: @"password" 
+		forService: @"Trambopoline" 
+		error: &error];
 
 To delete the password from the keychain:  
 
+	NSError *error = nil;
+
 	[FDKeychain deleteItemForKey: @"password" 
-		forService: @"Trambopoline"];
+		forService: @"Trambopoline" 
+		error: &error];
 
 Now let us pretend you have two applications named "Moon Unit Alpha" and "Moon Until Zappa" and you want them to share a OAuth token so the user does not need to login to both applications. First, you will need to add an entitlements file to the target of both applications and ensure "XXXXXXXXXX.com.1414degrees.moonunit" is one of the possible keychain access groups (Replace XXXXXXXXXX with the App Id of the provisioning profile you are using to sign the application).
 
 Saving:  
 
+	NSError *error = nil;
+
 	[FDKeychain saveItem: token 
 		forKey: @"token" 
 		forService: @"Moon Unit" 
-		inAccessGroup: @"XXXXXXXXXX.com.1414degrees.moonunit"];
+		inAccessGroup: @"XXXXXXXXXX.com.1414degrees.moonunit" 
+		error: &error];
 
 Loading:  
 
+	NSError *error = nil;
+
 	OAuthToken *token = [FDKeychain itemForKey: @"token" 
 		forService: @"Moon Unit" 
-		inAccessGroup: @"XXXXXXXXXX.com.1414degrees.moonunit"];
+		inAccessGroup: @"XXXXXXXXXX.com.1414degrees.moonunit" 
+		error: &error];
 
 Deleting:  
 
+	NSError *error = nil;
+
 	[FDKeychain deleteItemForKey: @"token" 
 		forService: @"Moon Unit" 
-		inAccessGroup: @"XXXXXXXXXX.com.1414degrees.moonunit"];
+		inAccessGroup: @"XXXXXXXXXX.com.1414degrees.moonunit" 
+		error: &error];
 
 This code will allow you to manipulate the same keychain item in both apps.
 

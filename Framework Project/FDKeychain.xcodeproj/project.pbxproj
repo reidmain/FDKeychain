@@ -63,7 +63,7 @@
 		27F5116E16AF1FEE00B05F89 = {
 			isa = PBXGroup;
 			children = (
-				27F71A07199AF7F500C5AD3C /* FDKeychain Static Library */,
+				27F71A07199AF7F500C5AD3C /* FDKeychain Framework */,
 				27F5117A16AF1FEE00B05F89 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,13 +77,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		27F71A07199AF7F500C5AD3C /* FDKeychain Static Library */ = {
+		27F71A07199AF7F500C5AD3C /* FDKeychain Framework */ = {
 			isa = PBXGroup;
 			children = (
 				27F71A0C199AF84200C5AD3C /* FDKeychain */,
 				279762DA19B669A300B55F7B /* OS X Supporting Files */,
 			);
-			name = "FDKeychain Static Library";
+			name = "FDKeychain Framework";
 			sourceTree = "<group>";
 		};
 		27F71A0C199AF84200C5AD3C /* FDKeychain */ = {
@@ -154,7 +154,7 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "1414 Degrees";
 			};
-			buildConfigurationList = 27F5117316AF1FEE00B05F89 /* Build configuration list for PBXProject "FDKeychain Static Library" */;
+			buildConfigurationList = 27F5117316AF1FEE00B05F89 /* Build configuration list for PBXProject "FDKeychain" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -327,7 +327,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27F5117316AF1FEE00B05F89 /* Build configuration list for PBXProject "FDKeychain Static Library" */ = {
+		27F5117316AF1FEE00B05F89 /* Build configuration list for PBXProject "FDKeychain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27F5118516AF1FEE00B05F89 /* Debug */,

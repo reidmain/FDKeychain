@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name = "FDKeychain"
   s.version = "1.1.0"
-  s.summary = "Save, load and delete items from the iOS keychain with a single Objective-C message."
+  s.summary = "Save, load and delete items from the keychain with a single Objective-C message."
   s.license = { :type => "MIT", :file => "LICENSE.md" }
 
   s.homepage = "https://github.com/reidmain/FDKeychain"

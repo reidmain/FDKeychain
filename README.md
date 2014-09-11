@@ -9,7 +9,7 @@ If you're not familar with the keychain it is a simple password management syste
 2. Any applications that share the same App Id can share access groups in the keychain. By default an application has access to the access group which matches its application identifier (e.g. XXXXXXXXXX.com.1414degrees.keychain). If you give your target an Entitlements file you can specify your keychain access groups and if two appplications reference the same access group, they share items.
 
 # Installation
-There are three supported ways to use FDKeychain. All three methods assume your Xcode project is using modules.
+There are three supported methods for FDKeychain. All three methods assume your Xcode project is using modules.
 
 ### 1. Subprojects
 1. Add the "FDKeychain" project inside the "Framework Project" directory as a subproject or add it to your workspace.

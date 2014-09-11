@@ -7,5 +7,5 @@
 	@import QuartzCore;
 	@import UIKit;
 	
-	#import <FDKeychain/FDKeychain.h>
+	@import FDKeychain;
 #endif

@@ -31,9 +31,6 @@
 		2719739419AFBC6F00F12FCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2719739019AFBC6F00F12FCF /* InfoPlist.strings */; };
 		2719739519AFBC6F00F12FCF /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 2719739119AFBC6F00F12FCF /* iTunesArtwork */; };
 		2719739619AFBC6F00F12FCF /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 2719739219AFBC6F00F12FCF /* iTunesArtwork@2x */; };
-		2737201219B67C2800D235F4 /* libFDKeychain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2737200D19B67C1E00D235F4 /* libFDKeychain.a */; };
-		2737201519B67C2E00D235F4 /* libFDKeychain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2737200D19B67C1E00D235F4 /* libFDKeychain.a */; };
-		2737201819B67C3400D235F4 /* libFDKeychain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2737200D19B67C1E00D235F4 /* libFDKeychain.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,25 +48,32 @@
 			remoteGlobalIDString = 2739252619B662790045EA4B;
 			remoteInfo = "FDKeychain OS X";
 		};
-		2737201019B67C2500D235F4 /* PBXContainerItemProxy */ = {
+		27FCB42719C2144900BB1123 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 27F5119F16AF210500B05F89 /* FDKeychain.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 27F5117816AF1FEE00B05F89;
+			proxyType = 2;
+			remoteGlobalIDString = 27FCB40C19C212D700BB1123;
 			remoteInfo = "FDKeychain iOS";
 		};
-		2737201319B67C2B00D235F4 /* PBXContainerItemProxy */ = {
+		27FCB42919C2145B00BB1123 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 27F5119F16AF210500B05F89 /* FDKeychain.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 27F5117816AF1FEE00B05F89;
+			remoteGlobalIDString = 27FCB40B19C212D700BB1123;
 			remoteInfo = "FDKeychain iOS";
 		};
-		2737201619B67C3200D235F4 /* PBXContainerItemProxy */ = {
+		27FCB42B19C2145E00BB1123 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 27F5119F16AF210500B05F89 /* FDKeychain.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 27F5117816AF1FEE00B05F89;
+			remoteGlobalIDString = 27FCB40B19C212D700BB1123;
+			remoteInfo = "FDKeychain iOS";
+		};
+		27FCB42D19C2146200BB1123 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27F5119F16AF210500B05F89 /* FDKeychain.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 27FCB40B19C212D700BB1123;
 			remoteInfo = "FDKeychain iOS";
 		};
 /* End PBXContainerItemProxy section */
@@ -111,7 +115,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2737201519B67C2E00D235F4 /* libFDKeychain.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +122,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2737201819B67C3400D235F4 /* libFDKeychain.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +129,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2737201219B67C2800D235F4 /* libFDKeychain.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,8 +306,9 @@
 		2737200819B67C1E00D235F4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2737200D19B67C1E00D235F4 /* libFDKeychain.a */,
+				27FCB42819C2144900BB1123 /* FDKeychain.framework */,
 				2737200F19B67C1E00D235F4 /* FDKeychain.framework */,
+				2737200D19B67C1E00D235F4 /* libFDKeychain.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -325,7 +327,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				2737201419B67C2B00D235F4 /* PBXTargetDependency */,
+				27FCB42E19C2146200BB1123 /* PBXTargetDependency */,
 			);
 			name = "Keychain Pi";
 			productName = FDKeychain;
@@ -343,7 +345,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				2737201719B67C3200D235F4 /* PBXTargetDependency */,
+				27FCB42C19C2145E00BB1123 /* PBXTargetDependency */,
 			);
 			name = "Keychain Omega";
 			productName = FDKeychain;
@@ -361,7 +363,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				2737201119B67C2500D235F4 /* PBXTargetDependency */,
+				27FCB42A19C2145B00BB1123 /* PBXTargetDependency */,
 			);
 			name = "Keychain Alpha";
 			productName = FDKeychain;
@@ -416,6 +418,13 @@
 			fileType = wrapper.framework;
 			path = FDKeychain.framework;
 			remoteRef = 2737200E19B67C1E00D235F4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		27FCB42819C2144900BB1123 /* FDKeychain.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FDKeychain.framework;
+			remoteRef = 27FCB42719C2144900BB1123 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -493,20 +502,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2737201119B67C2500D235F4 /* PBXTargetDependency */ = {
+		27FCB42A19C2145B00BB1123 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "FDKeychain iOS";
-			targetProxy = 2737201019B67C2500D235F4 /* PBXContainerItemProxy */;
+			targetProxy = 27FCB42919C2145B00BB1123 /* PBXContainerItemProxy */;
 		};
-		2737201419B67C2B00D235F4 /* PBXTargetDependency */ = {
+		27FCB42C19C2145E00BB1123 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "FDKeychain iOS";
-			targetProxy = 2737201319B67C2B00D235F4 /* PBXContainerItemProxy */;
+			targetProxy = 27FCB42B19C2145E00BB1123 /* PBXContainerItemProxy */;
 		};
-		2737201719B67C3200D235F4 /* PBXTargetDependency */ = {
+		27FCB42E19C2146200BB1123 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "FDKeychain iOS";
-			targetProxy = 2737201619B67C3200D235F4 /* PBXContainerItemProxy */;
+			targetProxy = 27FCB42D19C2146200BB1123 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

@@ -14,7 +14,7 @@ There are three supported ways to use FDKeychain. All three methods assume your 
 ### 1. Subprojects
 1. Add the "FDKeychain" project inside the "Framework Project" directory as a subproject or add it to your workspace.
 2. Add "FDKeychain (iOS/Mac)" to the "Target Dependencies" section of your target.
-3. Use "@import FDFoundationKit" inside any file that will be using FDFoundationKit.
+3. Use "@import FDKeychain" inside any file that will be using FDKeychain.
 
 ### 2. CocoaPods
 Simply add `pod "FDKeychain", "~> 1.0.0"` to your Podfile.

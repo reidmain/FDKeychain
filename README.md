@@ -9,11 +9,12 @@ If you're not familar with the keychain it is a simple password management syste
 2. Any applications that share the same App Id can share access groups in the keychain. By default an application has access to the access group which matches its application identifier (e.g. XXXXXXXXXX.com.1414degrees.keychain). If you give your target an Entitlements file you can specify your keychain access groups and if two appplications reference the same access group, they share items.
 
 # Installation
-There are three supported ways to use FDKeychain. All three methods assume your Xcode project is using modules. If it is not then you will most likely need to link Security.framework in the build phase of your target.
+There are three supported ways to use FDKeychain. All three methods assume your Xcode project is using modules.
 
-### 1. Use subprojects
-1. Add the "FDKeychain" framework project as a subproject or add it to your workspace.
+### 1. Subprojects
+1. Add the "FDKeychain" project inside the "Framework Project" directory as a subproject or add it to your workspace.
 2. Add "FDKeychain (iOS/Mac)" to the "Target Dependencies" section of your target.
+3. Use "@import FDFoundationKit" inside any file that will be using FDFoundationKit.
 
 ### 2. CocoaPods
 Simply add `pod "FDKeychain", "~> 1.0.0"` to your Podfile.
@@ -88,9 +89,9 @@ This code will allow you to manipulate the same keychain item in both apps.
 # Example Projects
 
 ### iOS
-The example project has three targets. Each target will install an application that shows two UITextFields: one for local password and another for shared password. Anything you enter in the "Local Password" field will be accessible only in the application it was entered and anything entered in "Shared Password" will be shared amongst the three applications.
+The iOS example project has three targets. Each target will install an application that shows two UITextFields: one for local password and another for shared password. Anything you enter in the "Local Password" field will be accessible only in the application it was entered and anything entered in "Shared Password" will be shared amongst the three applications.
 
 If you change the access group in FDRootViewController.m to have the App Id of the provisioning profile you are going to use to sign the app you can then install all three targets to your device and see an example of shared keychain items.
 
 ### Mac
-The example project is incredibly rudimentary at the moment. It brings up a simple window with a text field and any information in that text field is saved to the keychain.
+The Mac example project is incredibly rudimentary at the moment. It brings up a simple window with a text field and any information in that text field is saved to the keychain.

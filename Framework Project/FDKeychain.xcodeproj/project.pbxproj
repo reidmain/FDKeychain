@@ -128,9 +128,9 @@
 			productReference = 2739252619B662790045EA4B /* FDKeychain.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		27F5117816AF1FEE00B05F89 /* FDKeychain iOS */ = {
+		27F5117816AF1FEE00B05F89 /* FDKeychain iOS (Static) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27F5118716AF1FEE00B05F89 /* Build configuration list for PBXNativeTarget "FDKeychain iOS" */;
+			buildConfigurationList = 27F5118716AF1FEE00B05F89 /* Build configuration list for PBXNativeTarget "FDKeychain iOS (Static)" */;
 			buildPhases = (
 				27F5117516AF1FEE00B05F89 /* Sources */,
 				27F5117616AF1FEE00B05F89 /* Frameworks */,
@@ -140,7 +140,7 @@
 			);
 			dependencies = (
 			);
-			name = "FDKeychain iOS";
+			name = "FDKeychain iOS (Static)";
 			productName = "FDKeychain Static Library";
 			productReference = 27F5117916AF1FEE00B05F89 /* libFDKeychain.a */;
 			productType = "com.apple.product-type.library.static";
@@ -166,8 +166,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				27F5117816AF1FEE00B05F89 /* FDKeychain iOS */,
 				2739252519B662790045EA4B /* FDKeychain OS X */,
+				27F5117816AF1FEE00B05F89 /* FDKeychain iOS (Static) */,
 			);
 		};
 /* End PBXProject section */
@@ -336,7 +336,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27F5118716AF1FEE00B05F89 /* Build configuration list for PBXNativeTarget "FDKeychain iOS" */ = {
+		27F5118716AF1FEE00B05F89 /* Build configuration list for PBXNativeTarget "FDKeychain iOS (Static)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27F5118816AF1FEE00B05F89 /* Debug */,

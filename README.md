@@ -11,19 +11,18 @@ If you're not familar with the keychain it is a simple password management syste
 # Installation
 There are three supported ways to use FDKeychain. All three methods assume your Xcode project is using modules. If it is not then you will most likely need to link Security.framework in the build phase of your target.
 
-## 1. Use subprojects
-1. Add the "FDKeychain" project as a subproject or add it to your workspace.
-2. Add "FDKeychain (iOS/Mac)" to the "Target Dependencies" section.
-3. Finally add "FDKeychain (iOS/Mac)" to the "Link Binary With Libraries" section.
+### 1. Use subprojects
+1. Add the "FDKeychain" framework project as a subproject or add it to your workspace.
+2. Add "FDKeychain (iOS/Mac)" to the "Target Dependencies" section of your target.
 
-## 2. Copy source code files
+### 2. CocoaPods
+Simply add `pod "FDKeychain", "~> 1.0.0"` to your Podfile.
+
+### 3. Copy source code files
 Copy the following files into your project:
 
 FDKeychain.h  
 FDKeychain.m  
-
-## 3. CocoaPods
-Simply add `pod "FDKeychain", "~> 1.0.0"` to your Podfile.
 
 # Usage
 Let us pretend you have an application named "Trambopoline" and you have a password that you want to store securely.
@@ -88,10 +87,10 @@ This code will allow you to manipulate the same keychain item in both apps.
 
 # Example Projects
 
-## iOS
+### iOS
 The example project has three targets. Each target will install an application that shows two UITextFields: one for local password and another for shared password. Anything you enter in the "Local Password" field will be accessible only in the application it was entered and anything entered in "Shared Password" will be shared amongst the three applications.
 
 If you change the access group in FDRootViewController.m to have the App Id of the provisioning profile you are going to use to sign the app you can then install all three targets to your device and see an example of shared keychain items.
 
-## Mac
+### Mac
 The example project is incredibly rudimentary at the moment. It brings up a simple window with a text field and any information in that text field is saved to the keychain.

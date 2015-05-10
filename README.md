@@ -17,13 +17,10 @@ There are three supported methods for FDKeychain. All three methods assume your 
 3. Use "@import FDKeychain" inside any file that will be using FDKeychain.
 
 ### 2. CocoaPods
-Simply add `pod "FDKeychain", "~> 1.0.0"` to your Podfile.
+Simply add `pod "FDKeychain", "~> 1.2"` to your Podfile.
 
 ### 3. Copy source code files
-Copy the following files into your project:
-
-FDKeychain.h  
-FDKeychain.m  
+Copy the FDKeychain.h and FDKeychain.m files into your project and link your project against the Security framework.
 
 # Usage
 Let us pretend you have an application named "Trambopoline" and you have a password that you want to store securely.

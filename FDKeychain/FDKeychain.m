@@ -190,15 +190,23 @@ NSString * const FDKeychainErrorDomain = @"com.1414degrees.keychain";
 				[attributes setObject: valueData 
 					forKey: (__bridge id)kSecValueData];
 				
-				if (accessibility == FDKeychainAccessibleAfterFirstUnlock)
+				switch (accessibility)
 				{
-					[attributes setObject: (__bridge id)kSecAttrAccessibleAfterFirstUnlock 
-						forKey: (__bridge id)kSecAttrAccessible];
-				}
-				else
-				{
-					[attributes setObject: (__bridge id)kSecAttrAccessibleWhenUnlocked 
-						forKey: (__bridge id)kSecAttrAccessible];
+					case FDKeychainAccessibleWhenUnlocked:
+					{
+						[attributes setObject: (__bridge id)kSecAttrAccessibleWhenUnlocked 
+							forKey: (__bridge id)kSecAttrAccessible];
+						
+						break;
+					}
+					
+					case FDKeychainAccessibleAfterFirstUnlock:
+					{
+						[attributes setObject: (__bridge id)kSecAttrAccessibleAfterFirstUnlock 
+							forKey: (__bridge id)kSecAttrAccessible];
+						
+						break;
+					}
 				}
 				
 				OSStatus resultCode = SecItemAdd((__bridge CFDictionaryRef)attributes, NULL);
@@ -262,7 +270,7 @@ NSString * const FDKeychainErrorDomain = @"com.1414degrees.keychain";
 		forKey: key 
 		forService: service 
 		inAccessGroup: nil 
-		withAccessibility: FDKeychainAccessibleWhenUnlocked 
+		withAccessibility: FDKeychainAccessibleAfterFirstUnlock 
 		error: error];
 	
 	return saveSuccessful;

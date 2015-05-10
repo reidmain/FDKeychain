@@ -7,3 +7,4 @@
 # Xcode
 project.xcworkspace/
 xcuserdata/
+*.xccheckout

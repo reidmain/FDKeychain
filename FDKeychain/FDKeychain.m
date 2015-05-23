@@ -233,10 +233,29 @@ NSString * const FDKeychainErrorDomain = @"com.1414degrees.keychain";
 					forService: service 
 					inAccessGroup: accessGroup];
 				
-				NSDictionary *attributesToUpdate = [NSDictionary dictionaryWithObjectsAndKeys: 
+				NSMutableDictionary *attributesToUpdate = [NSMutableDictionary dictionaryWithObjectsAndKeys: 
 					valueData, 
 					(__bridge id)kSecValueData, 
 					nil];
+				
+				switch (accessibility)
+				{
+					case FDKeychainAccessibleWhenUnlocked:
+					{
+						[attributesToUpdate setObject: (__bridge id)kSecAttrAccessibleWhenUnlocked 
+							forKey: (__bridge id)kSecAttrAccessible];
+						
+						break;
+					}
+					
+					case FDKeychainAccessibleAfterFirstUnlock:
+					{
+						[attributesToUpdate setObject: (__bridge id)kSecAttrAccessibleAfterFirstUnlock 
+							forKey: (__bridge id)kSecAttrAccessible];
+						
+						break;
+					}
+				}
 				
 				OSStatus resultCode = SecItemUpdate((__bridge CFDictionaryRef)queryDictionary, (__bridge CFDictionaryRef)attributesToUpdate);
 				

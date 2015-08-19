@@ -117,7 +117,7 @@ Attempts to save the item to the keychain under the associated key, service and 
 	forKey: (NSString *)key 
 	forService: (NSString *)service 
 	inAccessGroup: (NSString *)accessGroup 
-	withAccessibility: (FDKeychainAccessibility)accessibility 
+	withAccessibility: (CFTypeRef)accessibility 
 	error: (NSError **)error;
 
 /**

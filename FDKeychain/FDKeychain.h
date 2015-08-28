@@ -14,21 +14,6 @@ Error code for when an item cannot be succesfully unarchived from the keychain.
 #define FDKeychainUnarchiveErrorCode 21
 
 
-#pragma mark - Enumerations
-
-/**
-Accessibility level of an item in the keychain which determines when it is readable.
-*/
-typedef NS_ENUM(NSInteger, FDKeychainAccessibility)
-{
-	/// The item in the keychain can only be accessed while the device is unlocked.
-	FDKeychainAccessibleWhenUnlocked,
-	
-	/// The item in the keychain cannot be accessed after a restart until the device has been unlocked once.
-	FDKeychainAccessibleAfterFirstUnlock,
-};
-
-
 #pragma mark - Class Interface
 
 /**
@@ -96,6 +81,8 @@ Helper method for itemForKey:forService:inAccessGroup:error: that omits the acce
 + (id)itemForKey: (NSString *)key 
 	forService: (NSString *)service 
 	error: (NSError **)error;
+
++ (NSArray *)items:(NSError **)error;
 
 /// ----------
 /// @name Save

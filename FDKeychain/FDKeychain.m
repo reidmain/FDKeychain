@@ -35,6 +35,24 @@ NSString * const FDKeychainErrorDomain = @"com.1414degrees.keychain";
 
 #pragma mark - Public Methods
 
++ (NSArray *)items:(NSError **)error
+{
+    OSStatus status;
+    NSMutableDictionary *query = [NSMutableDictionary dictionary];
+    [query setObject:@YES forKey:(__bridge id)kSecReturnAttributes];
+    [query setObject:(__bridge id)kSecMatchLimitAll forKey:(__bridge id)kSecMatchLimit];
+    [query setObject:(__bridge id)kSecClassGenericPassword forKey:(__bridge id)kSecClass];
+    
+    CFTypeRef result = NULL;
+    status = SecItemCopyMatching((__bridge CFDictionaryRef)query, &result);
+    if (status != errSecSuccess) {
+        *error = [NSError errorWithDomain:FDKeychainErrorDomain code:status userInfo:nil];
+        return nil;
+    }
+    
+    return (__bridge_transfer NSArray *)result;
+}
+
 + (NSData *)rawDataForKey: (NSString *)key 
 	forService: (NSString *)service 
 	inAccessGroup: (NSString *)accessGroup 

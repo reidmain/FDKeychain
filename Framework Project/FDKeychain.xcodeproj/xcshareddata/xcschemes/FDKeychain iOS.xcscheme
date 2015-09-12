@@ -29,7 +29,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2737F4531BA4C21F00A4BF30"
+               BuildableName = "FDKeychain iOS Tests.xctest"
+               BlueprintName = "FDKeychain iOS Tests"
+               ReferencedContainer = "container:FDKeychain.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "27FCB40B19C212D700BB1123"
+            BuildableName = "FDKeychain.framework"
+            BlueprintName = "FDKeychain iOS"
+            ReferencedContainer = "container:FDKeychain.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

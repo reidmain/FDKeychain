@@ -29,7 +29,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2737F4621BA4C22600A4BF30"
+               BuildableName = "FDKeychain OS X Tests.xctest"
+               BlueprintName = "FDKeychain OS X Tests"
+               ReferencedContainer = "container:FDKeychain.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2739252519B662790045EA4B"
+            BuildableName = "FDKeychain.framework"
+            BlueprintName = "FDKeychain OS X"
+            ReferencedContainer = "container:FDKeychain.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -61,6 +80,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2739252519B662790045EA4B"
+            BuildableName = "FDKeychain.framework"
+            BlueprintName = "FDKeychain OS X"
+            ReferencedContainer = "container:FDKeychain.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

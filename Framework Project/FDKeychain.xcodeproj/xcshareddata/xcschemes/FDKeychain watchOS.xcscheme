@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2737F4421BA4C17E00A4BF30"
-               BuildableName = "FDKeychain watchOS.framework"
+               BuildableName = "FDKeychain.framework"
                BlueprintName = "FDKeychain watchOS"
                ReferencedContainer = "container:FDKeychain.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2737F4421BA4C17E00A4BF30"
-            BuildableName = "FDKeychain watchOS.framework"
+            BuildableName = "FDKeychain.framework"
             BlueprintName = "FDKeychain watchOS"
             ReferencedContainer = "container:FDKeychain.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2737F4421BA4C17E00A4BF30"
-            BuildableName = "FDKeychain watchOS.framework"
+            BuildableName = "FDKeychain.framework"
             BlueprintName = "FDKeychain watchOS"
             ReferencedContainer = "container:FDKeychain.xcodeproj">
          </BuildableReference>

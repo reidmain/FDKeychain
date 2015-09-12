@@ -34,13 +34,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2737200C19B67C1E00D235F4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 27F5119F16AF210500B05F89 /* FDKeychain.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 27F5117916AF1FEE00B05F89;
-			remoteInfo = "FDKeychain iOS";
-		};
 		2737200E19B67C1E00D235F4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 27F5119F16AF210500B05F89 /* FDKeychain.xcodeproj */;
@@ -147,10 +140,10 @@
 			isa = PBXGroup;
 			children = (
 				07D974D91544F877005B4023 /* FDKeychain iOS Example */,
-				07CE04301613EC7000EC19FA /* Vendors */,
 				07D975301544FEE4005B4023 /* Keychain Alpha */,
 				07D9755E1544FEE4005B4023 /* Keychain Pi */,
 				07D975471544FEE4005B4023 /* Keychain Omega */,
+				07CE04301613EC7000EC19FA /* Vendors */,
 				07D974CE1544F877005B4023 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -308,7 +301,6 @@
 			children = (
 				27FCB42819C2144900BB1123 /* FDKeychain.framework */,
 				2737200F19B67C1E00D235F4 /* FDKeychain.framework */,
-				2737200D19B67C1E00D235F4 /* libFDKeychain.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -377,7 +369,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = FD;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "1414 Degrees";
 			};
 			buildConfigurationList = 07D974C71544F877005B4023 /* Build configuration list for PBXProject "FDKeychain iOS Example" */;
@@ -406,13 +398,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		2737200D19B67C1E00D235F4 /* libFDKeychain.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libFDKeychain.a;
-			remoteRef = 2737200C19B67C1E00D235F4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		2737200F19B67C1E00D235F4 /* FDKeychain.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -527,6 +512,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FDKeychain iOS Example/Supporting Files/Prefix.pch";
 				INFOPLIST_FILE = "FDKeychain iOS Example/Keychain Pi/Supporting Files/Info-Pi.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1414degrees.keychain.pi;
 				PRODUCT_NAME = "Keychain Pi";
 				WRAPPER_EXTENSION = app;
 			};
@@ -539,6 +525,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FDKeychain iOS Example/Supporting Files/Prefix.pch";
 				INFOPLIST_FILE = "FDKeychain iOS Example/Keychain Pi/Supporting Files/Info-Pi.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1414degrees.keychain.pi;
 				PRODUCT_NAME = "Keychain Pi";
 				WRAPPER_EXTENSION = app;
 			};
@@ -551,6 +538,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FDKeychain iOS Example/Supporting Files/Prefix.pch";
 				INFOPLIST_FILE = "FDKeychain iOS Example/Keychain Pi/Supporting Files/Info-Pi.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1414degrees.keychain.pi;
 				PRODUCT_NAME = "Keychain Pi";
 				WRAPPER_EXTENSION = app;
 			};
@@ -563,6 +551,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FDKeychain iOS Example/Supporting Files/Prefix.pch";
 				INFOPLIST_FILE = "FDKeychain iOS Example/Keychain Omega/Supporting Files/Info-Omega.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1414degrees.keychain.omega;
 				PRODUCT_NAME = "Keychain Omega";
 				WRAPPER_EXTENSION = app;
 			};
@@ -575,6 +564,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FDKeychain iOS Example/Supporting Files/Prefix.pch";
 				INFOPLIST_FILE = "FDKeychain iOS Example/Keychain Omega/Supporting Files/Info-Omega.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1414degrees.keychain.omega;
 				PRODUCT_NAME = "Keychain Omega";
 				WRAPPER_EXTENSION = app;
 			};
@@ -587,6 +577,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FDKeychain iOS Example/Supporting Files/Prefix.pch";
 				INFOPLIST_FILE = "FDKeychain iOS Example/Keychain Omega/Supporting Files/Info-Omega.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1414degrees.keychain.omega;
 				PRODUCT_NAME = "Keychain Omega";
 				WRAPPER_EXTENSION = app;
 			};
@@ -609,7 +600,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				ENABLE_TESTABILITY = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -645,7 +636,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = AD_HOC;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -680,7 +670,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = APP_STORE;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -703,6 +692,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FDKeychain iOS Example/Supporting Files/Prefix.pch";
 				INFOPLIST_FILE = "FDKeychain iOS Example/Keychain Alpha/Supporting Files/Info-Alpha.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1414degrees.keychain.alpha;
 				PRODUCT_NAME = "Keychain Alpha";
 				WRAPPER_EXTENSION = app;
 			};
@@ -715,6 +705,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FDKeychain iOS Example/Supporting Files/Prefix.pch";
 				INFOPLIST_FILE = "FDKeychain iOS Example/Keychain Alpha/Supporting Files/Info-Alpha.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1414degrees.keychain.alpha;
 				PRODUCT_NAME = "Keychain Alpha";
 				WRAPPER_EXTENSION = app;
 			};
@@ -727,6 +718,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FDKeychain iOS Example/Supporting Files/Prefix.pch";
 				INFOPLIST_FILE = "FDKeychain iOS Example/Keychain Alpha/Supporting Files/Info-Alpha.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1414degrees.keychain.alpha;
 				PRODUCT_NAME = "Keychain Alpha";
 				WRAPPER_EXTENSION = app;
 			};

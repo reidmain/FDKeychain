@@ -20,7 +20,7 @@
 		<string>icon_ipad_spotlight@2x.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>com.1414degrees.keychain.omega</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

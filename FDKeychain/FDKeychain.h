@@ -1,7 +1,7 @@
 @import Foundation;
 
 
-#pragma mark Constants
+#pragma mark - Constants
 
 /**
 Error domain for FDKeychain. Error codes correspond to either codes found in FDKeychain.h or SecBase.h

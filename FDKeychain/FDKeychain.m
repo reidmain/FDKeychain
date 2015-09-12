@@ -1,31 +1,11 @@
 #import "FDKeychain.h"
+
 @import Security;
 
 
-#pragma mark Constants
+#pragma mark - Constants
 
 NSString * const FDKeychainErrorDomain = @"com.1414degrees.keychain";
-
-
-#pragma mark - Class Extension
-
-@interface FDKeychain ()
-
-+ (NSError *)_errorForResultCode: (OSStatus)resultCode 
-	withKey: (NSString *)key 
-	forService: (NSString *)service;
-
-+ (NSMutableDictionary *)_baseQueryDictionaryForKey: (NSString *)key 
-	forService: (NSString *)service 
-	inAccessGroup: (NSString *)accessGroup;
-
-+ (NSDictionary *)_itemAttributesAndDataForKey: (NSString *)key 
-	forService: (NSString *)service 
-	inAccessGroup: (NSString *)accessGroup 
-	error: (NSError **)error;
-
-
-@end
 
 
 #pragma mark - Class Definition

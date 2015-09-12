@@ -9,12 +9,11 @@ Pod::Spec.new do |s|
   s.author = "Reid Main"
   s.social_media_url = "http://twitter.com/reidmain"
   
-  s.ios.deployment_target = "7.0"
+  s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.9"
   
   s.frameworks = "Foundation", "Security"
   s.requires_arc = true
   
   s.source_files = "#{s.name}/**/*.{h,m}"
-  #s.private_header_files = "#{s.name}/**/*+Private.h"
 end

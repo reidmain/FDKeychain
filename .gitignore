@@ -8,3 +8,4 @@
 project.xcworkspace/
 xcuserdata/
 *.xccheckout
+*.xcscmblueprint

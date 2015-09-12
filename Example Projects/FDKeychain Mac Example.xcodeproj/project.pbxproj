@@ -17,6 +17,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2737F43F1BA4BF6800A4BF30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27020FBA19B64C6C00660AEC /* FDKeychain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 27FCB40C19C212D700BB1123;
+			remoteInfo = "FDKeychain iOS";
+		};
 		278233AF19B67C4E004D04A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 27020FBA19B64C6C00660AEC /* FDKeychain.xcodeproj */;
@@ -75,8 +82,9 @@
 		278233AB19B67C4E004D04A7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				278233B019B67C4E004D04A7 /* libFDKeychain.a */,
+				2737F4401BA4BF6800A4BF30 /* FDKeychain.framework */,
 				278233B219B67C4E004D04A7 /* FDKeychain.framework */,
+				278233B019B67C4E004D04A7 /* libFDKeychain.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -205,7 +213,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = FD;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0700;
 				TargetAttributes = {
 					27CC277E19B644C4006588D1 = {
 						DevelopmentTeam = 7VTD8EK7Z4;
@@ -236,6 +244,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		2737F4401BA4BF6800A4BF30 /* FDKeychain.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FDKeychain.framework;
+			remoteRef = 2737F43F1BA4BF6800A4BF30 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		278233B019B67C4E004D04A7 /* libFDKeychain.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -380,6 +395,7 @@
 				CODE_SIGN_ENTITLEMENTS = "FDKeychain Mac Example/Supporting Files/Entitlements.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -405,6 +421,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FDKeychain Mac Example/Supporting Files/Prefix.pch";
 				INFOPLIST_FILE = "FDKeychain Mac Example/Supporting Files/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "${BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Ad Hoc";
@@ -417,6 +434,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FDKeychain Mac Example/Supporting Files/Prefix.pch";
 				INFOPLIST_FILE = "FDKeychain Mac Example/Supporting Files/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "${BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "App Store";
@@ -429,6 +447,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FDKeychain Mac Example/Supporting Files/Prefix.pch";
 				INFOPLIST_FILE = "FDKeychain Mac Example/Supporting Files/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "${BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;

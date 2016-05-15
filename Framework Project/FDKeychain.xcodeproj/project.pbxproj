@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		2737F4441BA4C17E00A4BF30 /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F71A0E199AF84200C5AD3C /* FDKeychain.m */; };
 		2737F4471BA4C17E00A4BF30 /* FDKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 27F71A0D199AF84200C5AD3C /* FDKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2737F4721BA4C27800A4BF30 /* FDKeychainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2737F46F1BA4C27800A4BF30 /* FDKeychainTests.m */; settings = {ASSET_TAGS = (); }; };
-		2737F4731BA4C27800A4BF30 /* FDKeychainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2737F46F1BA4C27800A4BF30 /* FDKeychainTests.m */; settings = {ASSET_TAGS = (); }; };
+		2737F4721BA4C27800A4BF30 /* FDKeychainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2737F46F1BA4C27800A4BF30 /* FDKeychainTests.m */; };
+		2737F4731BA4C27800A4BF30 /* FDKeychainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2737F46F1BA4C27800A4BF30 /* FDKeychainTests.m */; };
+		276FF8AA1CE9177A00C4CFDE /* FDKeychainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2737F46F1BA4C27800A4BF30 /* FDKeychainTests.m */; };
+		276FF8AB1CE9195F00C4CFDE /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F71A0E199AF84200C5AD3C /* FDKeychain.m */; };
 		279762C919B6638200B55F7B /* FDKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 27F71A0D199AF84200C5AD3C /* FDKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		279762CA19B6638C00B55F7B /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F71A0E199AF84200C5AD3C /* FDKeychain.m */; };
+		27E4DA801CE91A2500B89366 /* FDKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 27F71A0D199AF84200C5AD3C /* FDKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27FCB42F19C2147E00BB1123 /* FDKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 27F71A0D199AF84200C5AD3C /* FDKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27FCB43019C2147E00BB1123 /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F71A0E199AF84200C5AD3C /* FDKeychain.m */; };
 /* End PBXBuildFile section */
@@ -32,6 +35,13 @@
 			remoteGlobalIDString = 2739252519B662790045EA4B;
 			remoteInfo = "FDKeychain OS X";
 		};
+		276FF89B1CE9171C00C4CFDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27F5117016AF1FEE00B05F89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 276FF88F1CE9171C00C4CFDE;
+			remoteInfo = "FDKeychain tVOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +52,9 @@
 		2737F46F1BA4C27800A4BF30 /* FDKeychainTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDKeychainTests.m; sourceTree = "<group>"; };
 		2737F4711BA4C27800A4BF30 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2739252619B662790045EA4B /* FDKeychain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FDKeychain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		276FF8901CE9171C00C4CFDE /* FDKeychain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FDKeychain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		276FF8991CE9171C00C4CFDE /* FDKeychain tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FDKeychain tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		276FF8A81CE9174D00C4CFDE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		279762DB19B669A300B55F7B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27F71A0D199AF84200C5AD3C /* FDKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDKeychain.h; sourceTree = "<group>"; };
 		27F71A0E199AF84200C5AD3C /* FDKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDKeychain.m; sourceTree = "<group>"; };
@@ -72,6 +85,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2739252219B662790045EA4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		276FF88C1CE9171C00C4CFDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		276FF8961CE9171C00C4CFDE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -121,6 +148,14 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		276FF8A71CE9174D00C4CFDE /* tvOS Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				276FF8A81CE9174D00C4CFDE /* Info.plist */,
+			);
+			path = "tvOS Supporting Files";
+			sourceTree = "<group>";
+		};
 		279762DA19B669A300B55F7B /* OS X Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +181,8 @@
 				2737F44C1BA4C17E00A4BF30 /* FDKeychain.framework */,
 				2737F4541BA4C21F00A4BF30 /* FDKeychain iOS Tests.xctest */,
 				2737F4631BA4C22600A4BF30 /* FDKeychain OS X Tests.xctest */,
+				276FF8901CE9171C00C4CFDE /* FDKeychain.framework */,
+				276FF8991CE9171C00C4CFDE /* FDKeychain tvOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +193,7 @@
 				27F71A0C199AF84200C5AD3C /* FDKeychain */,
 				27FCB42319C2143800BB1123 /* iOS Supporting Files */,
 				2737F44E1BA4C1D800A4BF30 /* watchOS Supporting Files */,
+				276FF8A71CE9174D00C4CFDE /* tvOS Supporting Files */,
 				279762DA19B669A300B55F7B /* OS X Supporting Files */,
 			);
 			name = "FDKeychain Framework";
@@ -195,6 +233,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				279762C919B6638200B55F7B /* FDKeychain.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		276FF88D1CE9171C00C4CFDE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27E4DA801CE91A2500B89366 /* FDKeychain.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +327,42 @@
 			productReference = 2739252619B662790045EA4B /* FDKeychain.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		276FF88F1CE9171C00C4CFDE /* FDKeychain tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 276FF8A51CE9171C00C4CFDE /* Build configuration list for PBXNativeTarget "FDKeychain tvOS" */;
+			buildPhases = (
+				276FF88B1CE9171C00C4CFDE /* Sources */,
+				276FF88C1CE9171C00C4CFDE /* Frameworks */,
+				276FF88D1CE9171C00C4CFDE /* Headers */,
+				276FF88E1CE9171C00C4CFDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FDKeychain tvOS";
+			productName = "FDKeychain tVOS";
+			productReference = 276FF8901CE9171C00C4CFDE /* FDKeychain.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		276FF8981CE9171C00C4CFDE /* FDKeychain tvOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 276FF8A61CE9171C00C4CFDE /* Build configuration list for PBXNativeTarget "FDKeychain tvOS Tests" */;
+			buildPhases = (
+				276FF8951CE9171C00C4CFDE /* Sources */,
+				276FF8961CE9171C00C4CFDE /* Frameworks */,
+				276FF8971CE9171C00C4CFDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				276FF89C1CE9171C00C4CFDE /* PBXTargetDependency */,
+			);
+			name = "FDKeychain tvOS Tests";
+			productName = "FDKeychain tVOSTests";
+			productReference = 276FF8991CE9171C00C4CFDE /* FDKeychain tvOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		27FCB40B19C212D700BB1123 /* FDKeychain iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27FCB41C19C212D700BB1123 /* Build configuration list for PBXNativeTarget "FDKeychain iOS" */;
@@ -314,6 +396,12 @@
 					2737F4621BA4C22600A4BF30 = {
 						CreatedOnToolsVersion = 7.0;
 					};
+					276FF88F1CE9171C00C4CFDE = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					276FF8981CE9171C00C4CFDE = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					27FCB40B19C212D700BB1123 = {
 						CreatedOnToolsVersion = 6.0;
 					};
@@ -333,9 +421,11 @@
 			targets = (
 				27FCB40B19C212D700BB1123 /* FDKeychain iOS */,
 				2737F4421BA4C17E00A4BF30 /* FDKeychain watchOS */,
+				276FF88F1CE9171C00C4CFDE /* FDKeychain tvOS */,
 				2739252519B662790045EA4B /* FDKeychain OS X */,
 				2737F4531BA4C21F00A4BF30 /* FDKeychain iOS Tests */,
 				2737F4621BA4C22600A4BF30 /* FDKeychain OS X Tests */,
+				276FF8981CE9171C00C4CFDE /* FDKeychain tvOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -363,6 +453,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2739252419B662790045EA4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		276FF88E1CE9171C00C4CFDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		276FF8971CE9171C00C4CFDE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -411,6 +515,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		276FF88B1CE9171C00C4CFDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				276FF8AB1CE9195F00C4CFDE /* FDKeychain.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		276FF8951CE9171C00C4CFDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				276FF8AA1CE9177A00C4CFDE /* FDKeychainTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27FCB40719C212D700BB1123 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -431,6 +551,11 @@
 			isa = PBXTargetDependency;
 			target = 2739252519B662790045EA4B /* FDKeychain OS X */;
 			targetProxy = 2737F4761BA4C6D600A4BF30 /* PBXContainerItemProxy */;
+		};
+		276FF89C1CE9171C00C4CFDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 276FF88F1CE9171C00C4CFDE /* FDKeychain tvOS */;
+			targetProxy = 276FF89B1CE9171C00C4CFDE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -562,6 +687,86 @@
 			};
 			name = Release;
 		};
+		276FF8A11CE9171C00C4CFDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "tvOS Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		276FF8A21CE9171C00C4CFDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Distribution";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "tvOS Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		276FF8A31CE9171C00C4CFDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "FDKeychain Tests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1414degrees.keychain.tvos.tests;
+				PRODUCT_NAME = "FDKeychain tvOS Tests";
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		276FF8A41CE9171C00C4CFDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "FDKeychain Tests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1414degrees.keychain.tvos.tests;
+				PRODUCT_NAME = "FDKeychain tvOS Tests";
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Release;
+		};
 		27F5118516AF1FEE00B05F89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -685,6 +890,7 @@
 				2737F45E1BA4C21F00A4BF30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2737F46B1BA4C22600A4BF30 /* Build configuration list for PBXNativeTarget "FDKeychain OS X Tests" */ = {
 			isa = XCConfigurationList;
@@ -693,12 +899,31 @@
 				2737F46D1BA4C22600A4BF30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2739254F19B662790045EA4B /* Build configuration list for PBXNativeTarget "FDKeychain OS X" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2739254B19B662790045EA4B /* Debug */,
 				2739254C19B662790045EA4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		276FF8A51CE9171C00C4CFDE /* Build configuration list for PBXNativeTarget "FDKeychain tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				276FF8A11CE9171C00C4CFDE /* Debug */,
+				276FF8A21CE9171C00C4CFDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		276FF8A61CE9171C00C4CFDE /* Build configuration list for PBXNativeTarget "FDKeychain tvOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				276FF8A31CE9171C00C4CFDE /* Debug */,
+				276FF8A41CE9171C00C4CFDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

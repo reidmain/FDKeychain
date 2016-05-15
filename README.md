@@ -13,11 +13,11 @@ There are three supported methods for FDKeychain. All three methods assume your 
 
 ### 1. Subprojects
 1. Add the "FDKeychain" project inside the "Framework Project" directory as a subproject or add it to your workspace.
-2. Add "FDKeychain (iOS/Mac)" to the "Target Dependencies" section of your target.
+2. Add "FDKeychain (iOS/watchOS|tvOS|Mac)" to the "Target Dependencies" section of your target.
 3. Use "@import FDKeychain" inside any file that will be using FDKeychain.
 
 ### 2. CocoaPods
-Simply add `pod "FDKeychain", "~> 1.2"` to your Podfile.
+Simply add `pod "FDKeychain", "~> 1.3"` to your Podfile.
 
 ### 3. Copy source code files
 Copy the FDKeychain.h and FDKeychain.m files into your project and link your project against the Security framework.

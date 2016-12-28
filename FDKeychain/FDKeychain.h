@@ -97,6 +97,27 @@ Helper method for itemForKey:forService:inAccessGroup:error: that omits the acce
 	forService: (NSString *)service 
 	error: (NSError **)error;
 
+/**
+An array of all the keys for the specified service and access group.
+ 
+@param service The service that the item is associated with. This is usually the name of the application using the keychain. This parameter must not be nil.
+@param accessGroup The access group that the item is saved to in the keychain. If this parameter is nil the first access group in the application entitlements file is used by default.
+@param error A pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+ 
+@return An array of the keys that exist in the keychain for the specified service or the empty array if there are no items. If nil, an error ocurred.
+*/
++ (NSArray *)keysForService: (NSString *)service
+    inAccessGroup: (NSString *)accessGroup
+    error: (NSError **)error;
+
+/**
+Helper method for keysForService:inAccessGroup:error: that omits the access group.
+
+@see keysForService:inAccessGroup:error:
+*/
++ (NSArray *)keysForService: (NSString *)service
+    error: (NSError **)error;
+
 /// ----------
 /// @name Save
 /// ----------

@@ -101,6 +101,70 @@ NSString * const FDKeychainErrorDomain = @"com.1414degrees.keychain";
 	return item;
 }
 
++ (NSArray *)keysForService:(NSString *)service inAccessGroup:(NSString *)accessGroup error:(NSError **)error
+{
+    // Raise exception if the service parameter is empty.
+    if ([service length] == 0)
+    {
+        [NSException raise: NSInvalidArgumentException
+                    format: @"%s service argument cannot be empty",
+         __PRETTY_FUNCTION__];
+    }
+    
+    // Load the item from the keychain that matches the service and access group.
+    NSMutableDictionary *queryDictionary = [FDKeychain _baseQueryDictionaryForKey: nil
+        forService: service
+        inAccessGroup: accessGroup];
+    
+    [queryDictionary setObject: (__bridge id)kSecMatchLimitAll
+        forKey: (__bridge id)kSecMatchLimit];
+    [queryDictionary setObject: (id)kCFBooleanTrue
+        forKey: (__bridge id)kSecReturnAttributes];
+    [queryDictionary setObject: (id)kCFBooleanFalse
+        forKey: (__bridge id)kSecReturnData];
+    
+    CFTypeRef itemAttributesAndDataTypeRef = nil;
+    
+    OSStatus resultCode = SecItemCopyMatching((__bridge CFDictionaryRef)queryDictionary, &itemAttributesAndDataTypeRef);
+    
+    NSMutableArray *keys = nil;
+    
+    if (resultCode != errSecSuccess)
+    {
+        if (error != NULL)
+        {
+            *error = [self _errorForResultCode: resultCode
+                withKey: nil
+                forService: service];
+        }
+    }
+    else
+    {
+        NSArray *itemAttributesAndData = (__bridge_transfer NSArray *)itemAttributesAndDataTypeRef;
+        
+        if (itemAttributesAndData)
+        {
+            keys = [[NSMutableArray alloc] initWithCapacity: itemAttributesAndData.count];
+            for (NSDictionary *entry in itemAttributesAndData)
+            {
+                NSString *accountName = [entry objectForKey: (__bridge id)kSecAttrAccount];
+                [keys addObject:accountName];
+            }
+        }
+    }
+    
+    return keys;
+}
+
++ (NSArray *)keysForService:(NSString *)service error:(NSError **)error
+{
+    NSArray *keys = [self keysForService: service
+        inAccessGroup: nil
+        error: error];
+    
+    return keys;
+}
+
 + (BOOL)saveItem: (id<NSCoding>)item 
 	forKey: (NSString *)key 
 	forService: (NSString *)service 
@@ -412,11 +476,17 @@ NSString * const FDKeychainErrorDomain = @"com.1414degrees.keychain";
 	[baseQueryDictionary setObject: (__bridge id)kSecClassGenericPassword 
 		forKey: (__bridge id)kSecClass];
 	
-	[baseQueryDictionary setObject: key 
-		forKey: (__bridge id)kSecAttrAccount];
+    if ([key length] > 0)
+    {
+        [baseQueryDictionary setObject: key
+            forKey: (__bridge id)kSecAttrAccount];
+    }
 	
-	[baseQueryDictionary setObject: service 
-		forKey: (__bridge id)kSecAttrService];
+    if ([service length] > 0)
+    {
+        [baseQueryDictionary setObject: service
+            forKey: (__bridge id)kSecAttrService];
+    }
 	
 #if TARGET_IPHONE_SIMULATOR
 	// Note: If we are running in the Simulator we cannot set the access group. Apps running in the Simulator are not signed so there is no access group for them to check. All apps running in the simulator can see all the keychain items. If you need to test apps that share access groups you will need to install the apps on a device.

@@ -172,6 +172,7 @@
 				27F5117A16AF1FEE00B05F89 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		27F5117A16AF1FEE00B05F89 /* Products */ = {
 			isa = PBXGroup;

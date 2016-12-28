@@ -24,13 +24,6 @@
 			remoteGlobalIDString = 27FCB40C19C212D700BB1123;
 			remoteInfo = "FDKeychain iOS";
 		};
-		278233AF19B67C4E004D04A7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 27020FBA19B64C6C00660AEC /* FDKeychain.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 27F5117916AF1FEE00B05F89;
-			remoteInfo = "FDKeychain iOS";
-		};
 		278233B119B67C4E004D04A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 27020FBA19B64C6C00660AEC /* FDKeychain.xcodeproj */;
@@ -44,6 +37,41 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2739252519B662790045EA4B;
 			remoteInfo = "FDKeychain OS X";
+		};
+		27DDC17E1E136C4C000E03BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27020FBA19B64C6C00660AEC /* FDKeychain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2737F44C1BA4C17E00A4BF30;
+			remoteInfo = "FDKeychain watchOS";
+		};
+		27DDC1801E136C4C000E03BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27020FBA19B64C6C00660AEC /* FDKeychain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 276FF8901CE9171C00C4CFDE;
+			remoteInfo = "FDKeychain tvOS";
+		};
+		27DDC1821E136C4C000E03BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27020FBA19B64C6C00660AEC /* FDKeychain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2737F4541BA4C21F00A4BF30;
+			remoteInfo = "FDKeychain iOS Tests";
+		};
+		27DDC1841E136C4C000E03BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27020FBA19B64C6C00660AEC /* FDKeychain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2737F4631BA4C22600A4BF30;
+			remoteInfo = "FDKeychain OS X Tests";
+		};
+		27DDC1861E136C4C000E03BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27020FBA19B64C6C00660AEC /* FDKeychain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 276FF8991CE9171C00C4CFDE;
+			remoteInfo = "FDKeychain tvOS Tests";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -83,8 +111,12 @@
 			isa = PBXGroup;
 			children = (
 				2737F4401BA4BF6800A4BF30 /* FDKeychain.framework */,
+				27DDC17F1E136C4C000E03BC /* FDKeychain.framework */,
+				27DDC1811E136C4C000E03BC /* FDKeychain.framework */,
 				278233B219B67C4E004D04A7 /* FDKeychain.framework */,
-				278233B019B67C4E004D04A7 /* libFDKeychain.a */,
+				27DDC1831E136C4C000E03BC /* FDKeychain iOS Tests.xctest */,
+				27DDC1851E136C4C000E03BC /* FDKeychain OS X Tests.xctest */,
+				27DDC1871E136C4C000E03BC /* FDKeychain tvOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,6 +150,7 @@
 				27CC278019B644C4006588D1 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		27CC278019B644C4006588D1 /* Products */ = {
 			isa = PBXGroup;
@@ -251,18 +284,46 @@
 			remoteRef = 2737F43F1BA4BF6800A4BF30 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		278233B019B67C4E004D04A7 /* libFDKeychain.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libFDKeychain.a;
-			remoteRef = 278233AF19B67C4E004D04A7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		278233B219B67C4E004D04A7 /* FDKeychain.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = FDKeychain.framework;
 			remoteRef = 278233B119B67C4E004D04A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		27DDC17F1E136C4C000E03BC /* FDKeychain.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FDKeychain.framework;
+			remoteRef = 27DDC17E1E136C4C000E03BC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		27DDC1811E136C4C000E03BC /* FDKeychain.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FDKeychain.framework;
+			remoteRef = 27DDC1801E136C4C000E03BC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		27DDC1831E136C4C000E03BC /* FDKeychain iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "FDKeychain iOS Tests.xctest";
+			remoteRef = 27DDC1821E136C4C000E03BC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		27DDC1851E136C4C000E03BC /* FDKeychain OS X Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "FDKeychain OS X Tests.xctest";
+			remoteRef = 27DDC1841E136C4C000E03BC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		27DDC1871E136C4C000E03BC /* FDKeychain tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "FDKeychain tvOS Tests.xctest";
+			remoteRef = 27DDC1861E136C4C000E03BC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

@@ -60,7 +60,8 @@ Saving:
 	[FDKeychain saveItem: token 
 		forKey: @"token" 
 		forService: @"Moon Unit" 
-		inAccessGroup: @"XXXXXXXXXX.com.1414degrees.moonunit" 
+		inAccessGroup: @"XXXXXXXXXX.com.1414degrees.moonunit"
+		withAccessibility: FDKeychainAccessibleAfterFirstUnlock
 		error: &error];
 
 Loading:  
